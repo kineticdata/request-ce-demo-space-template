@@ -16,6 +16,7 @@
   ],
   "createdAt": "2016-04-14T16:26:28.722Z",
   "createdBy": "marcin.zarycki@kineticdata.com",
+  "customHeadContent": null,
   "description": "Allows for creating and management of groups and their members.",
   "name": "Group Management",
   "notes": null,
@@ -42,6 +43,6 @@
   "status": "New",
   "submissionLabelExpression": null,
   "type": "Console",
-  "updatedAt": "2016-06-14T21:58:03.704Z",
-  "updatedBy": "james.davies@kineticdata.com"
+  "updatedAt": "2016-06-14T23:20:55.684Z",
+  "updatedBy": "demo.taskman@kineticdata.com"
 }

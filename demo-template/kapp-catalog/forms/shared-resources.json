@@ -19,6 +19,7 @@
   ],
   "createdAt": "2016-06-03T21:44:02.964Z",
   "createdBy": "james.davies@kineticdata.com",
+  "customHeadContent": null,
   "description": "",
   "name": "Shared Resources",
   "notes": null,
@@ -86,6 +87,6 @@
   "status": "Active",
   "submissionLabelExpression": null,
   "type": "Console",
-  "updatedAt": "2016-06-14T21:58:27.606Z",
-  "updatedBy": "james.davies@kineticdata.com"
+  "updatedAt": "2016-06-14T22:17:49.595Z",
+  "updatedBy": "demo.taskman@kineticdata.com"
 }

@@ -16,6 +16,7 @@
   ],
   "createdAt": "2016-02-03T23:10:20.246Z",
   "createdBy": "john.sundberg@kineticdata.com",
+  "customHeadContent": null,
   "description": "Approval",
   "name": "Approval",
   "notes": "",
@@ -552,6 +553,6 @@
   "status": "Active",
   "submissionLabelExpression": "${values('Summary')}",
   "type": "Approval",
-  "updatedAt": "2016-06-14T21:58:24.674Z",
-  "updatedBy": "james.davies@kineticdata.com"
+  "updatedAt": "2016-06-14T22:17:47.117Z",
+  "updatedBy": "demo.taskman@kineticdata.com"
 }

@@ -35,6 +35,7 @@
   ],
   "createdAt": "2016-06-13T22:02:28.504Z",
   "createdBy": "james.davies@kineticdata.com",
+  "customHeadContent": "<div class=\"modal fade\" id=\"subform-modal\" aria-labelledby=\"subform-modal-title\">\n  <div class=\"modal-dialog modal-lg\">\n    <div class=\"modal-content\">\n      <div class=\"modal-body\">\n        <i class=\"fa fa-cog fa-spin\"></i>\n      </div>\n    </div>\n  </div>\n</div>\n\n<style>\n/** Twitter Typeahead **/\n.twitter-typeahead, .typeahead, .empty-message  {\n    width: 100%;\n    float:left;\n}\n.tt-menu {\n    background: white;\n    width: 100%;\n}\n.tt-suggestion {\n    overflow: hidden;\n    display: table;\n    width: 100%;\n    padding: 10px 10px;\n    border-bottom: 1px solid #e9ecf2;\n}\n/** Movie Card (Movie Suggestions) **/\n.movie-card {\n    position: relative;\n    padding: 8px;\n}\n.movie-card-poster {\n    position: absolute;\n    top: 8px;\n    left: 8px;\n    width: 52px;\n    height: 52px;\n    border: 2px solid #ccd6dd;\n    border-radius: 5px;\n}\n.movie-card:hover .movie-card-poster {\n    border-color: #f5f8fa;\n}\n.movie-card-details {\n    min-height: 60px;\n    padding-left: 60px;\n}\n.movie-card-name,\n.movie-card-year {\n    display: inline-block;\n}\n.movie-card-name {\n    font-weight: 700;\n}\n.movie-card-year {\n    color: #8899a6;\n}\n.movie-card:hover .movie-card-year {\n    color: #fff;\n}\n.movie-card-plot {\n    margin-top: 5px;\n    font-size: 14px;\n    line-height: 18px;\n}\n.movie-card:hover,\n.movie-card.is-active {\n    color: #fff;\n    background: #0088CC;\n    cursor: pointer;\n}\n.empty-message {\n    position: relative;\n    padding: 10px;\n    font-size: 16px;\n    line-height: 30px;\n    text-align: center;\n}\n</style>",
   "description": "",
   "name": "Change RAM on Existing Server (Multiple)",
   "notes": null,
@@ -287,6 +288,6 @@
   "status": "New",
   "submissionLabelExpression": null,
   "type": null,
-  "updatedAt": "2016-06-14T03:59:30.424Z",
+  "updatedAt": "2016-06-14T23:33:02.571Z",
   "updatedBy": "james.davies@kineticdata.com"
 }

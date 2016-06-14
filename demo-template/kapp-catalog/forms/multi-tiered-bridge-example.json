@@ -52,6 +52,7 @@
   ],
   "createdAt": "2016-05-31T23:04:32.882Z",
   "createdBy": "james.davies@kineticdata.com",
+  "customHeadContent": null,
   "description": "Multi Tiered Example pulling data from two different locations. One from the States Datastore, the other from Cities, by passing the state.",
   "name": "Multi-Tiered Bridge Example",
   "notes": null,
@@ -197,6 +198,6 @@
   "status": "Active",
   "submissionLabelExpression": "Multi Test - ${values('Tier 1')} ${values('Tier 2')} ${values('Tier 3')}",
   "type": "Service",
-  "updatedAt": "2016-06-14T21:58:26.981Z",
-  "updatedBy": "james.davies@kineticdata.com"
+  "updatedAt": "2016-06-14T22:17:48.871Z",
+  "updatedBy": "demo.taskman@kineticdata.com"
 }

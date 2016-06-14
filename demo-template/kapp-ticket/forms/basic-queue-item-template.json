@@ -11,6 +11,7 @@
   ],
   "createdAt": "2016-06-07T16:58:34.867Z",
   "createdBy": "john",
+  "customHeadContent": null,
   "description": "This template is of a basic queue item. All elements in Hidden Metadata and Status Information are required for the Queue to function.",
   "name": "Basic Queue Item Template",
   "notes": null,
@@ -337,6 +338,6 @@
   "status": "New",
   "submissionLabelExpression": "${form('name')}",
   "type": "Template",
-  "updatedAt": "2016-06-14T21:58:40.287Z",
-  "updatedBy": "james.davies@kineticdata.com"
+  "updatedAt": "2016-06-14T22:18:01.421Z",
+  "updatedBy": "demo.taskman@kineticdata.com"
 }

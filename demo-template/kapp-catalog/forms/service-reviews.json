@@ -11,6 +11,7 @@
   ],
   "createdAt": "2016-02-12T20:41:42.885Z",
   "createdBy": "user@kineticdata.com",
+  "customHeadContent": null,
   "description": "Keeps track of what's being searched for in the Catalog",
   "name": "Service Reviews",
   "notes": "a",
@@ -151,6 +152,6 @@
   "status": "Active",
   "submissionLabelExpression": "${values('Form Slug')} - ${values('Rating')}",
   "type": "Console",
-  "updatedAt": "2016-06-14T21:58:27.277Z",
-  "updatedBy": "james.davies@kineticdata.com"
+  "updatedAt": "2016-06-14T22:17:49.212Z",
+  "updatedBy": "demo.taskman@kineticdata.com"
 }

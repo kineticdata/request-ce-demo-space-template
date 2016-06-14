@@ -11,6 +11,7 @@
   ],
   "createdAt": "2016-05-11T16:05:44.136Z",
   "createdBy": "marcin.zarycki@kineticdata.com",
+  "customHeadContent": null,
   "description": "Stores members within a group.",
   "name": "Group Membership",
   "notes": null,
@@ -126,6 +127,6 @@
   "status": "Active",
   "submissionLabelExpression": "${values('Group Id')} - ${values('Username')}",
   "type": "Content",
-  "updatedAt": "2016-06-14T21:58:03.994Z",
-  "updatedBy": "james.davies@kineticdata.com"
+  "updatedAt": "2016-06-14T23:20:56.222Z",
+  "updatedBy": "demo.taskman@kineticdata.com"
 }

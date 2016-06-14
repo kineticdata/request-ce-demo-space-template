@@ -33,6 +33,7 @@
   ],
   "createdAt": "2015-12-09T12:41:13.380Z",
   "createdBy": "jeff.lockemy@kineticdata.com",
+  "customHeadContent": null,
   "description": "This request is used for requesting if an item exists in inventory.",
   "name": "Stock Check Request",
   "notes": "a",
@@ -278,6 +279,6 @@
   "status": "Active",
   "submissionLabelExpression": "${form('name')} - ${values('Description')}",
   "type": "Service",
-  "updatedAt": "2016-06-14T21:58:27.870Z",
-  "updatedBy": "james.davies@kineticdata.com"
+  "updatedAt": "2016-06-14T22:17:49.837Z",
+  "updatedBy": "demo.taskman@kineticdata.com"
 }

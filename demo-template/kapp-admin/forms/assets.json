@@ -11,6 +11,7 @@
   ],
   "createdAt": "2016-05-26T15:39:45.047Z",
   "createdBy": "sharms2010",
+  "customHeadContent": null,
   "description": "",
   "name": "Assets",
   "notes": null,
@@ -125,6 +126,6 @@
   "status": "Active",
   "submissionLabelExpression": null,
   "type": "Console",
-  "updatedAt": "2016-06-14T21:58:01.625Z",
-  "updatedBy": "james.davies@kineticdata.com"
+  "updatedAt": "2016-06-14T23:20:52.173Z",
+  "updatedBy": "demo.taskman@kineticdata.com"
 }

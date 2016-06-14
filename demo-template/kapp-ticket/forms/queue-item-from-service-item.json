@@ -11,6 +11,7 @@
   ],
   "createdAt": "2016-06-07T16:58:34.868Z",
   "createdBy": "john",
+  "customHeadContent": null,
   "description": "This queue item templates is for items which will be created from service item submissions.",
   "name": "Queue Item From Service Item",
   "notes": null,
@@ -454,6 +455,6 @@
   "status": "New",
   "submissionLabelExpression": "${form('name')}",
   "type": "Template",
-  "updatedAt": "2016-06-14T21:58:40.999Z",
-  "updatedBy": "james.davies@kineticdata.com"
+  "updatedAt": "2016-06-14T22:18:02.076Z",
+  "updatedBy": "demo.taskman@kineticdata.com"
 }

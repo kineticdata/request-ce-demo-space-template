@@ -16,6 +16,7 @@
   ],
   "createdAt": "2016-04-20T17:39:35.163Z",
   "createdBy": "marcin.zarycki@kineticdata.com",
+  "customHeadContent": null,
   "description": "Allows users to store supporting data used within their application.",
   "name": "Datastore",
   "notes": null,
@@ -42,6 +43,6 @@
   "status": "New",
   "submissionLabelExpression": null,
   "type": "Console",
-  "updatedAt": "2016-06-14T21:58:03.329Z",
-  "updatedBy": "james.davies@kineticdata.com"
+  "updatedAt": "2016-06-14T23:20:55.081Z",
+  "updatedBy": "demo.taskman@kineticdata.com"
 }

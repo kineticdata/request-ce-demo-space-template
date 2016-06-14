@@ -28,6 +28,7 @@
   ],
   "createdAt": "2016-06-08T20:47:57.087Z",
   "createdBy": "stephanie.harms@kineticdata.com",
+  "customHeadContent": null,
   "description": "",
   "name": "Help",
   "notes": null,
@@ -90,6 +91,6 @@
   "status": "Active",
   "submissionLabelExpression": null,
   "type": "Service",
-  "updatedAt": "2016-06-14T21:58:26.410Z",
-  "updatedBy": "james.davies@kineticdata.com"
+  "updatedAt": "2016-06-14T22:17:48.351Z",
+  "updatedBy": "demo.taskman@kineticdata.com"
 }

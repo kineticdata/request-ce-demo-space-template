@@ -16,6 +16,7 @@
   ],
   "createdAt": "2016-05-04T14:14:04.289Z",
   "createdBy": "james.davies@kineticdata.com",
+  "customHeadContent": null,
   "description": "Stores Types of Computers. Used in Onboarding Request",
   "name": "Computers",
   "notes": null,
@@ -337,6 +338,6 @@
   "status": "Active",
   "submissionLabelExpression": "${values('Type')} - ${values('Manufacturer')}",
   "type": "Datastore",
-  "updatedAt": "2016-06-14T21:58:02.949Z",
-  "updatedBy": "james.davies@kineticdata.com"
+  "updatedAt": "2016-06-14T23:20:54.436Z",
+  "updatedBy": "demo.taskman@kineticdata.com"
 }

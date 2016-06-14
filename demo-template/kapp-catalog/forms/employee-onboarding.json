@@ -45,6 +45,7 @@
   ],
   "createdAt": "2016-02-03T23:10:21.161Z",
   "createdBy": "john.sundberg@kineticdata.com",
+  "customHeadContent": null,
   "description": "This service allows HR Managers to setup new Employees within the organization. HR Managers should use this service to setup the user in the appropriate systems, order business cards, and setup their workspaces.",
   "name": "Employee Onboarding Request",
   "notes": "",
@@ -2289,6 +2290,6 @@
   "status": "Active",
   "submissionLabelExpression": "${values('First Name')} ${values('Last Name')}",
   "type": "Service",
-  "updatedAt": "2016-06-14T21:58:25.730Z",
-  "updatedBy": "james.davies@kineticdata.com"
+  "updatedAt": "2016-06-14T22:17:47.704Z",
+  "updatedBy": "demo.taskman@kineticdata.com"
 }

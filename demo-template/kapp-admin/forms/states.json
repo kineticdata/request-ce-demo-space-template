@@ -16,6 +16,7 @@
   ],
   "createdAt": "2016-05-18T18:27:02.935Z",
   "createdBy": "james.davies@kineticdata.com",
+  "customHeadContent": null,
   "description": "",
   "name": "States",
   "notes": null,
@@ -155,6 +156,6 @@
   "status": "Active",
   "submissionLabelExpression": "${values('Name')}",
   "type": "Datastore",
-  "updatedAt": "2016-06-14T21:58:04.503Z",
-  "updatedBy": "james.davies@kineticdata.com"
+  "updatedAt": "2016-06-14T23:20:57.331Z",
+  "updatedBy": "demo.taskman@kineticdata.com"
 }

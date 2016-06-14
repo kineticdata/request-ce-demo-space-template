@@ -51,6 +51,7 @@
   ],
   "createdAt": "2016-02-16T16:24:37.109Z",
   "createdBy": "user@kineticdata.com",
+  "customHeadContent": null,
   "description": "iPad Request",
   "name": "iPad Request",
   "notes": "a",
@@ -240,6 +241,6 @@
   "status": "Active",
   "submissionLabelExpression": "ipad ${values('Color')} / ${values('Size')}",
   "type": "Service",
-  "updatedAt": "2016-06-14T21:58:26.682Z",
-  "updatedBy": "james.davies@kineticdata.com"
+  "updatedAt": "2016-06-14T22:17:48.613Z",
+  "updatedBy": "demo.taskman@kineticdata.com"
 }

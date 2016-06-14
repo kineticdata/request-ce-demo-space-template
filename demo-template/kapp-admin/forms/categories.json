@@ -22,6 +22,7 @@
   ],
   "createdAt": "2016-04-11T17:24:10.681Z",
   "createdBy": "stephanie.harms@kineticdata.com",
+  "customHeadContent": null,
   "description": "Console to visually manage categories for individual kapps.",
   "name": "Categories",
   "notes": null,
@@ -48,6 +49,6 @@
   "status": "Active",
   "submissionLabelExpression": "${form('name')}",
   "type": "Console",
-  "updatedAt": "2016-06-14T21:58:02.278Z",
-  "updatedBy": "james.davies@kineticdata.com"
+  "updatedAt": "2016-06-14T23:20:53.465Z",
+  "updatedBy": "demo.taskman@kineticdata.com"
 }
