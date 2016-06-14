@@ -1,0 +1,18 @@
+[
+  {
+    "name": "All",
+    "query": "'AssetInstanceId' = \"${parameters('Reconciliation Id')}\""
+  },
+  {
+    "name": "By Role",
+    "query": "'AssetInstanceId' = \"${parameters('Reconciliation Id')}\" AND 'PersonRole' = \"${parameters('Role')}\""
+  },
+  {
+    "name": "Specific",
+    "query": "'AssetInstanceId' = \"REGAP9YFBCAX2ANJWH1YYSWL81NVBN\""
+  },
+  {
+    "name": "Approved By",
+    "query": "'AssetInstanceId' = \"${parameters('Reconciliation Id')}\" AND 'PersonRole' = \"Approved by\""
+  }
+]

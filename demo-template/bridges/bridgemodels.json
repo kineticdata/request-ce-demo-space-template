@@ -28,5 +28,20 @@
     "activeMappingName": null,
     "name": "Ticket Count",
     "status": "Active"
+  },
+  {
+    "activeMappingName": "CMDB Asset",
+    "name": "CMDB Asset",
+    "status": "Active"
+  },
+  {
+    "activeMappingName": "CMDB Asset Role Relationship",
+    "name": "CMDB Asset Role Relationships",
+    "status": "Active"
+  },
+  {
+    "activeMappingName": "CMDB ComputerSystem",
+    "name": "CMDB ComputerSystem",
+    "status": "Active"
   }
 ]

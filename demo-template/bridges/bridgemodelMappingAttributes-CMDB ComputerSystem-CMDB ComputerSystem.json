@@ -1,0 +1,22 @@
+[
+  {
+    "name": "isVirtual",
+    "structureField": "${fields('isVirtual')}"
+  },
+  {
+    "name": "VirtualSystemType",
+    "structureField": "${fields('VirtualSystemType')}"
+  },
+  {
+    "name": "TotalPhysicalMemory",
+    "structureField": "${fields('TotalPhysicalMemory')}"
+  },
+  {
+    "name": "SystemType",
+    "structureField": "${fields('SystemType')}"
+  },
+  {
+    "name": "HostName",
+    "structureField": "${fields('HostName')}"
+  }
+]

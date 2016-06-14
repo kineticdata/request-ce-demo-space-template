@@ -1,0 +1,34 @@
+{
+  "activeMappingName": "CMDB ComputerSystem",
+  "attributes": [
+    {
+      "name": "HostName"
+    },
+    {
+      "name": "isVirtual"
+    },
+    {
+      "name": "SystemType"
+    },
+    {
+      "name": "TotalPhysicalMemory"
+    },
+    {
+      "name": "VirtualSystemType"
+    }
+  ],
+  "name": "CMDB ComputerSystem",
+  "qualifications": [
+    {
+      "name": "By Reconciliation Id",
+      "parameters": [
+        {
+          "name": "Reconciliation Id",
+          "notes": null
+        }
+      ],
+      "resultType": "Single"
+    }
+  ],
+  "status": "Active"
+}

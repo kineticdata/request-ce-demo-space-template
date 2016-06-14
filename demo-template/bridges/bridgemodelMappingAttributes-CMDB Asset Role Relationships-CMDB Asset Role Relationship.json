@@ -1,0 +1,18 @@
+[
+  {
+    "name": "PersonRole",
+    "structureField": "${fields('PersonRole')}"
+  },
+  {
+    "name": "PeopleGroup Form Entry ID",
+    "structureField": "${fields('PeopleGroup Form Entry ID')}"
+  },
+  {
+    "name": "Login Name",
+    "structureField": "${fields('Login Name')}"
+  },
+  {
+    "name": "Full Name",
+    "structureField": "${fields('Full Name')}"
+  }
+]

@@ -1,0 +1,7 @@
+[
+  {
+    "bridgeName": "Remedy ITSM",
+    "name": "CMDB Asset Role Relationship",
+    "structure": "AST:AssetPeople"
+  }
+]
