@@ -1,10 +1,10 @@
 [
   {
     "name": "By City and State",
-    "query": "kappSlug=admin&formSlug=cities-with-population&limit=999&values[City]=${parameters('City')}&values[State]=${parameters('State')}"
+    "query": "kappSlug=admin&formSlug=cities-with-population&limit=999&direction=ASC&values[City]=${parameters('City')}&values[State]=${parameters('State')}"
   },
   {
     "name": "By State",
-    "query": "kappSlug=admin&formSlug=cities-with-population&limit=999&values[State]=${parameters('State')}"
+    "query": "kappSlug=admin&formSlug=cities-with-population&limit=999&direction=ASC&values[State]=${parameters('State')}"
   }
 ]
