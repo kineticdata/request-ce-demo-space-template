@@ -4,20 +4,20 @@
     "filter": "submission('type')===\"Approval\"",
     "name": "Approval Submitted",
     "type": "Submission",
-    "url": "https://developer.kineticdata.com/kinetic-task/app/api/v1/run-tree/Training%20Spaces/Approval/Complete"
+    "url": "https://demo.kineticdata.com/kinetic-task/app/api/v1/run-tree/Training%20Spaces/Approval/Complete"
   },
   {
     "event": "Submitted",
     "filter": "submission('type')===\"Service\"",
     "name": "Submission Submitted",
     "type": "Submission",
-    "url": "https://developer.kineticdata.com/kinetic-task/app/api/v1/run-tree/Training%20Spaces/Submission/Complete"
+    "url": "https://demo.kineticdata.com/kinetic-task/app/api/v1/run-tree/Training%20Spaces/Submission/Complete"
   },
   {
     "event": "Submitted",
     "filter": "submission('type')===\"Work Order\"",
     "name": "Work Order Submitted",
     "type": "Submission",
-    "url": "https://developer.kineticdata.com/kinetic-task/app/api/v1/run-tree/Training%20Spaces/Work%20Order/Complete"
+    "url": "https://demo.kineticdata.com/kinetic-task/app/api/v1/run-tree/Training%20Spaces/Work%20Order/Complete"
   }
 ]

@@ -1,0 +1,7 @@
+[
+  {
+    "bridgeName": "Remedy ITSM",
+    "name": "BMC Product Categories",
+    "structure": "PCT:ProductCompanyAssocLookup"
+  }
+]

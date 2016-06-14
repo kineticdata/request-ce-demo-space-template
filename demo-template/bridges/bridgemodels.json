@@ -23,5 +23,10 @@
     "activeMappingName": null,
     "name": "Ticket Count",
     "status": "Active"
+  },
+  {
+    "activeMappingName": "BMC Product Categories",
+    "name": "Product Categories",
+    "status": "Active"
   }
 ]

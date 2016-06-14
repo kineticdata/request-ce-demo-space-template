@@ -22,7 +22,7 @@
     {
       "name": "Task Server Url",
       "values": [
-        "https://developer.kineticdata.com/kinetic-task"
+        "https://demo.kineticdata.com/kinetic-task"
       ]
     },
     {
@@ -34,7 +34,7 @@
     {
       "name": "Web Server Url",
       "values": [
-        "https://developer.kineticdata.com/kinetic"
+        "https://demo.kineticdata.com/kinetic"
       ]
     }
   ],
