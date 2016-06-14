@@ -145,9 +145,33 @@
     {
       "endpoint": "Default Submission Modification",
       "name": "Submitter"
+    },
+    {
+      "endpoint": "Modification",
+      "name": "Admins"
+    },
+    {
+      "endpoint": "Form Creation",
+      "name": "Admins"
+    },
+    {
+      "endpoint": "Default Form Modification",
+      "name": "Admins"
+    },
+    {
+      "endpoint": "Default Form Display",
+      "name": "Authenticated Users"
+    },
+    {
+      "endpoint": "Default Submission Access",
+      "name": "Submitter"
+    },
+    {
+      "endpoint": "Default Submission Modification",
+      "name": "Submitter"
     }
   ],
   "slug": "catalog",
-  "updatedAt": "2016-06-10T18:15:13.678Z",
-  "updatedBy": "john.sundberg@kineticdata.com"
+  "updatedAt": "2016-06-14T21:58:24.112Z",
+  "updatedBy": "james.davies@kineticdata.com"
 }

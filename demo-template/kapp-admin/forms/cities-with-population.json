@@ -181,6 +181,6 @@
   "status": "Active",
   "submissionLabelExpression": "${values('State')} - ${values('City')}",
   "type": "Datastore",
-  "updatedAt": "2016-06-14T19:09:33.709Z",
+  "updatedAt": "2016-06-14T21:58:02.665Z",
   "updatedBy": "james.davies@kineticdata.com"
 }
