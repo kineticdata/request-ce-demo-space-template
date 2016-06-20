@@ -468,6 +468,6 @@
   "status": "Active",
   "submissionLabelExpression": "${values('Request Summary')}",
   "type": "Service",
-  "updatedAt": "2016-06-14T22:17:50.254Z",
-  "updatedBy": "demo.taskman@kineticdata.com"
+  "updatedAt": "2016-06-20T23:02:24.631Z",
+  "updatedBy": "james.davies@kineticdata.com"
 }

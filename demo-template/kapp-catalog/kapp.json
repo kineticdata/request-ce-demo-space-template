@@ -8,6 +8,12 @@
       ]
     },
     {
+      "name": "Custom Task Source Name",
+      "values": [
+        "Demo Template"
+      ]
+    },
+    {
       "name": "Icon",
       "values": [
         "fa-circle"
@@ -172,6 +178,6 @@
     }
   ],
   "slug": "catalog",
-  "updatedAt": "2016-06-14T23:21:22.744Z",
-  "updatedBy": "demo.taskman@kineticdata.com"
+  "updatedAt": "2016-06-20T22:50:49.389Z",
+  "updatedBy": "james.davies@kineticdata.com"
 }

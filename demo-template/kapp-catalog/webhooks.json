@@ -8,8 +8,15 @@
   },
   {
     "event": "Submitted",
-    "filter": "submission('type')===\"Service\"",
-    "name": "Submission Submitted",
+    "filter": "form('attribute:Uses Custom Tree')",
+    "name": "Submission Submitted Custom",
+    "type": "Submission",
+    "url": "https://demo.kineticdata.com/kinetic-task/app/api/v1/run-tree/${kapp('attribute:Custom Task Source Name')}/${kapp('slug')}%20%3E%20${form('slug')}/Complete"
+  },
+  {
+    "event": "Submitted",
+    "filter": "submission('type')===\"Service\" && !form('attribute:Uses Custom Tree')",
+    "name": "Submission Submitted Generic",
     "type": "Submission",
     "url": "https://demo.kineticdata.com/kinetic-task/app/api/v1/run-tree/Training%20Spaces/Submission/Complete"
   },

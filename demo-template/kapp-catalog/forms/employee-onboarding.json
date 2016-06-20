@@ -850,24 +850,24 @@
                   "choicesResourceName": null,
                   "choices": [
                     {
-                      "label": "North East",
-                      "value": "North East"
+                      "label": "Northeast",
+                      "value": "Northeast"
                     },
                     {
-                      "label": "South East",
-                      "value": "South East"
+                      "label": "Southeast",
+                      "value": "Southeast"
                     },
                     {
-                      "label": "Mid-West",
-                      "value": "Mid-West"
+                      "label": "Midwest",
+                      "value": "Midwest"
                     },
                     {
-                      "label": "South West",
-                      "value": "South West"
+                      "label": "Southwest",
+                      "value": "Southwest"
                     },
                     {
-                      "label": "North West",
-                      "value": "North West"
+                      "label": "Northwest",
+                      "value": "Northwest"
                     }
                   ],
                   "choicesRunIf": null,
@@ -904,12 +904,12 @@
                   "choicesResourceName": null,
                   "choices": [
                     {
-                      "label": "Part Time Employee",
-                      "value": "Part Time Employee"
+                      "label": "Part-time Employee",
+                      "value": "Part-time Employee"
                     },
                     {
-                      "label": "Full Time Employee",
-                      "value": "Full Time Employee"
+                      "label": "Full-time Employee",
+                      "value": "Full-time Employee"
                     },
                     {
                       "label": "Manager",
@@ -1700,7 +1700,7 @@
                 {
                   "type": "field",
                   "name": "Computer Type",
-                  "label": "Cell Phone Carrier",
+                  "label": "Computer Type",
                   "key": "f101",
                   "defaultValue": "",
                   "defaultResourceName": null,
@@ -2290,6 +2290,6 @@
   "status": "Active",
   "submissionLabelExpression": "${values('First Name')} ${values('Last Name')}",
   "type": "Service",
-  "updatedAt": "2016-06-14T22:17:47.704Z",
-  "updatedBy": "demo.taskman@kineticdata.com"
+  "updatedAt": "2016-06-20T23:01:05.350Z",
+  "updatedBy": "james.davies@kineticdata.com"
 }

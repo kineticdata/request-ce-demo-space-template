@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Cell Phone",
+    "structureField": "${fields('mobile')}"
+  },
+  {
+    "name": "Email",
+    "structureField": "${fields('mail')}"
+  },
+  {
+    "name": "First Name",
+    "structureField": "${fields('givenName')}"
+  },
+  {
+    "name": "Full Name",
+    "structureField": "${fields('cn')}"
+  },
+  {
+    "name": "Id",
+    "structureField": "${fields('uid')}"
+  },
+  {
+    "name": "Last Name",
+    "structureField": "${fields('sn')}"
+  },
+  {
+    "name": "Telephone Number",
+    "structureField": "${fields('telephoneNumber')}"
+  }
+]

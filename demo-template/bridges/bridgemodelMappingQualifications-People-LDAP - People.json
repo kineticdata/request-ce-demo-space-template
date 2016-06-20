@@ -1,0 +1,10 @@
+[
+  {
+    "name": "By Id",
+    "query": "(uid=${parameters('Id')})"
+  },
+  {
+    "name": "By Name",
+    "query": "(sn=${parameters('Name')}*)"
+  }
+]

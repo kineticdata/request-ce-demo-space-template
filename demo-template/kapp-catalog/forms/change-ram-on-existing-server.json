@@ -10,13 +10,19 @@
     {
       "name": "Image",
       "values": [
-        "ram.jpg"
+        "change-request.png"
       ]
     },
     {
       "name": "SLA",
       "values": [
         "4 Hours"
+      ]
+    },
+    {
+      "name": "Uses Custom Tree",
+      "values": [
+        "Yes"
       ]
     },
     {
@@ -94,7 +100,7 @@
   ],
   "createdAt": "2016-06-06T14:17:20.738Z",
   "createdBy": "matthew.howe@kineticdata.com",
-  "customHeadContent": "<style>\n/** Twitter Typeahead **/\n.twitter-typeahead, .typeahead, .empty-message  {\n    width: 100%;\n    float:left;\n}\n.tt-menu {\n    background: white;\n    width: 100%;\n}\n.tt-suggestion {\n    overflow: hidden;\n    display: table;\n    width: 100%;\n    padding: 10px 10px;\n    border-bottom: 1px solid #e9ecf2;\n}\n/** Movie Card (Movie Suggestions) **/\n.movie-card {\n    position: relative;\n    padding: 8px;\n}\n.movie-card-poster {\n    position: absolute;\n    top: 8px;\n    left: 8px;\n    width: 52px;\n    height: 52px;\n    border: 2px solid #ccd6dd;\n    border-radius: 5px;\n}\n.movie-card:hover .movie-card-poster {\n    border-color: #f5f8fa;\n}\n.movie-card-details {\n    min-height: 60px;\n    padding-left: 60px;\n}\n.movie-card-name,\n.movie-card-year {\n    display: inline-block;\n}\n.movie-card-name {\n    font-weight: 700;\n}\n.movie-card-year {\n    color: #8899a6;\n}\n.movie-card:hover .movie-card-year {\n    color: #fff;\n}\n.movie-card-plot {\n    margin-top: 5px;\n    font-size: 14px;\n    line-height: 18px;\n}\n.movie-card:hover,\n.movie-card.is-active {\n    color: #fff;\n    background: #0088CC;\n    cursor: pointer;\n}\n.empty-message {\n    position: relative;\n    padding: 10px;\n    font-size: 16px;\n    line-height: 30px;\n    text-align: center;\n}  \n</style>",
+  "customHeadContent": "",
   "description": "Request this service to change the amount of RAM on an existing server.",
   "name": "Change RAM on Existing Server",
   "notes": null,
@@ -135,7 +141,8 @@
 
               ],
               "renderAttributes": {
-                "host-name-search": "Host Name=CI Name,Reconciliation Identity=ReconciliationId"
+                "typeahead-config-object": "searchForRam",
+                "uses-typeahead": "yes"
               },
               "dataType": "string",
               "renderType": "text",
@@ -576,6 +583,6 @@
   "status": "Active",
   "submissionLabelExpression": "${form('name')} - ${values('Host Name')}",
   "type": "Service",
-  "updatedAt": "2016-06-14T23:27:13.692Z",
+  "updatedAt": "2016-06-20T22:53:46.984Z",
   "updatedBy": "james.davies@kineticdata.com"
 }

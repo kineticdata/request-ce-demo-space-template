@@ -9,6 +9,10 @@
   },
   {
     "allowsMultiple": false,
+    "name": "Custom Task Source Name"
+  },
+  {
+    "allowsMultiple": false,
     "name": "Icon"
   },
   {

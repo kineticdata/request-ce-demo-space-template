@@ -5,6 +5,10 @@
   },
   {
     "allowsMultiple": false,
+    "name": "Company Name"
+  },
+  {
+    "allowsMultiple": false,
     "name": "QApp Slug"
   }
 ]

@@ -1,0 +1,91 @@
+{
+  "anonymous": false,
+  "attributes": [
+
+  ],
+  "bridgedResources": [
+
+  ],
+  "categorizations": [
+
+  ],
+  "createdAt": "2016-06-16T20:09:21.893Z",
+  "createdBy": "james.davies@kineticdata.com",
+  "customHeadContent": null,
+  "description": "",
+  "name": "Subform Example",
+  "notes": null,
+  "pages": [
+    {
+      "advanceCondition": null,
+      "displayCondition": null,
+      "displayPage": null,
+      "elements": [
+        {
+          "type": "section",
+          "renderType": null,
+          "name": "Subform Functionality",
+          "title": "Subform Functionality",
+          "visible": true,
+          "omitWhenHidden": null,
+          "renderAttributes": {
+
+          },
+          "elements": [
+            {
+              "type": "content",
+              "renderType": "html",
+              "name": "Table",
+              "text": null,
+              "visible": true,
+              "renderAttributes": {
+                "uses-subform": "yes",
+                "subform-slug": "change-ram-on-existing-server",
+                "subform-modal": "yes"
+              }
+            }
+          ]
+        },
+        {
+          "type": "section",
+          "renderType": null,
+          "name": "Buttons",
+          "title": null,
+          "visible": true,
+          "omitWhenHidden": null,
+          "renderAttributes": {
+
+          },
+          "elements": [
+            {
+              "type": "button",
+              "label": "Submit",
+              "name": "Submit Button",
+              "visible": true,
+              "enabled": true,
+              "renderType": "submit-page",
+              "renderAttributes": {
+
+              }
+            }
+          ]
+        }
+      ],
+      "events": [
+
+      ],
+      "name": "Page 1",
+      "renderType": "submittable",
+      "type": "page"
+    }
+  ],
+  "securityPolicies": [
+
+  ],
+  "slug": "subform-example",
+  "status": "Active",
+  "submissionLabelExpression": null,
+  "type": "Service",
+  "updatedAt": "2016-06-20T16:29:35.996Z",
+  "updatedBy": "james.davies@kineticdata.com"
+}

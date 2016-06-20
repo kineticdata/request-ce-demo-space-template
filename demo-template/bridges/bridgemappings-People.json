@@ -1,0 +1,7 @@
+[
+  {
+    "bridgeName": "LDAP",
+    "name": "LDAP - People",
+    "structure": "person"
+  }
+]

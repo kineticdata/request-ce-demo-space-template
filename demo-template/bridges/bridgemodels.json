@@ -35,6 +35,11 @@
     "status": "Active"
   },
   {
+    "activeMappingName": "LDAP - People",
+    "name": "People",
+    "status": "Active"
+  },
+  {
     "activeMappingName": "BMC Product Categories",
     "name": "Product Categories",
     "status": "Active"

@@ -4,36 +4,21 @@
 
   ],
   "bridgedResources": [
-    {
-      "model": "Datastore - Broadcast Alerts",
-      "name": "Broadcast Alerts - All",
-      "parameters": [
 
-      ],
-      "qualification": "All",
-      "status": "Active"
-    },
-    {
-      "model": "People",
-      "name": "People - By Name",
-      "parameters": [
-        {
-          "mapping": "${values('Name')}",
-          "name": "Name"
-        }
-      ],
-      "qualification": "By Name",
-      "status": "Active"
-    }
   ],
   "categorizations": [
-
+    {
+      "category": {
+        "name": "Example Services",
+        "slug": "example-services"
+      }
+    }
   ],
-  "createdAt": "2016-06-03T21:44:02.964Z",
+  "createdAt": "2016-06-15T01:40:15.404Z",
   "createdBy": "james.davies@kineticdata.com",
-  "customHeadContent": null,
-  "description": "",
-  "name": "Shared Resources",
+  "customHeadContent": "",
+  "description": "This form uses typeahead searching to set fields from a bridge",
+  "name": "Typeahead Search Example",
   "notes": null,
   "pages": [
     {
@@ -44,8 +29,8 @@
         {
           "type": "section",
           "renderType": null,
-          "name": "Broadcast Alerts",
-          "title": null,
+          "name": "Typeahead Search Box",
+          "title": "Typeahead Search Box",
           "visible": true,
           "omitWhenHidden": null,
           "renderAttributes": {
@@ -54,9 +39,49 @@
           "elements": [
             {
               "type": "field",
-              "name": "Alerts",
-              "label": "Alerts",
+              "name": "Typeahead Field",
+              "label": "Typeahead Field",
               "key": "f1",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": false,
+              "requiredMessage": null,
+              "omitWhenHidden": null,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+                "uses-typeahead": "yes",
+                "typeahead-config-object": "personConfiguration"
+              },
+              "dataType": "string",
+              "renderType": "text",
+              "rows": 1
+            }
+          ]
+        },
+        {
+          "type": "section",
+          "renderType": null,
+          "name": "Typeahead Fields to be Set",
+          "title": "Typeahead Fields to be Set",
+          "visible": true,
+          "omitWhenHidden": null,
+          "renderAttributes": {
+
+          },
+          "elements": [
+            {
+              "type": "field",
+              "name": "Requested For",
+              "label": "Requested For",
+              "key": "f2",
               "defaultValue": null,
               "defaultResourceName": null,
               "visible": true,
@@ -75,32 +100,14 @@
 
               },
               "dataType": "string",
-              "renderType": "dropdown",
-              "choicesResourceName": "Broadcast Alerts - All",
-              "choicesRunIf": null,
-              "choices": {
-                "label": "${resources('Broadcast Alerts - All:Message')}",
-                "value": "${resources('Broadcast Alerts - All:Message')}"
-              }
-            }
-          ]
-        },
-        {
-          "type": "section",
-          "renderType": null,
-          "name": "Person Searching",
-          "title": null,
-          "visible": true,
-          "omitWhenHidden": null,
-          "renderAttributes": {
-
-          },
-          "elements": [
+              "renderType": "text",
+              "rows": 1
+            },
             {
               "type": "field",
-              "name": "Name",
-              "label": "Name",
-              "key": "f2",
+              "name": "Requested For Displayed Name",
+              "label": "Requested For Displayed Name",
+              "key": "f3",
               "defaultValue": null,
               "defaultResourceName": null,
               "visible": true,
@@ -123,17 +130,6 @@
               "rows": 1
             }
           ]
-        },
-        {
-          "type": "button",
-          "label": "Submit",
-          "name": "Submit Button",
-          "visible": true,
-          "enabled": true,
-          "renderType": "submit-page",
-          "renderAttributes": {
-
-          }
         }
       ],
       "events": [
@@ -147,10 +143,10 @@
   "securityPolicies": [
 
   ],
-  "slug": "shared-resources",
+  "slug": "typeahead-search-example",
   "status": "Active",
-  "submissionLabelExpression": null,
-  "type": "Console",
-  "updatedAt": "2016-06-15T02:36:21.724Z",
+  "submissionLabelExpression": "${values('Requested For')}",
+  "type": "Service",
+  "updatedAt": "2016-06-20T15:43:20.628Z",
   "updatedBy": "james.davies@kineticdata.com"
 }
