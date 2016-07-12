@@ -14,6 +14,54 @@
       "status": "Active"
     },
     {
+      "model": "Change",
+      "name": "Change",
+      "parameters": [
+        {
+          "mapping": "${values('Change Id')}",
+          "name": "Id"
+        }
+      ],
+      "qualification": "By Id",
+      "status": "Active"
+    },
+    {
+      "model": "Change Work Info",
+      "name": "Change Work Info",
+      "parameters": [
+        {
+          "mapping": "${values('Change Id')}",
+          "name": "Change Id"
+        }
+      ],
+      "qualification": "By Change Id",
+      "status": "Active"
+    },
+    {
+      "model": "Incident",
+      "name": "Incident",
+      "parameters": [
+        {
+          "mapping": "${values('Incident Id')}",
+          "name": "Id"
+        }
+      ],
+      "qualification": "By Id",
+      "status": "Active"
+    },
+    {
+      "model": "Incident Work Info",
+      "name": "Incident Work Info",
+      "parameters": [
+        {
+          "mapping": "${values('Incident Id')}",
+          "name": "Incident Id"
+        }
+      ],
+      "qualification": "By Incident Id",
+      "status": "Active"
+    },
+    {
       "model": "People",
       "name": "People - By Name",
       "parameters": [
@@ -125,6 +173,84 @@
           ]
         },
         {
+          "type": "section",
+          "renderType": null,
+          "name": "Incident",
+          "title": null,
+          "visible": true,
+          "omitWhenHidden": null,
+          "renderAttributes": {
+
+          },
+          "elements": [
+            {
+              "type": "field",
+              "name": "Incident Id",
+              "label": "Incident Id",
+              "key": "f4",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": false,
+              "requiredMessage": null,
+              "omitWhenHidden": null,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+
+              },
+              "dataType": "string",
+              "renderType": "text",
+              "rows": 1
+            }
+          ]
+        },
+        {
+          "type": "section",
+          "renderType": null,
+          "name": "Change",
+          "title": null,
+          "visible": true,
+          "omitWhenHidden": null,
+          "renderAttributes": {
+
+          },
+          "elements": [
+            {
+              "type": "field",
+              "name": "Change Id",
+              "label": "Change Id",
+              "key": "f5",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": false,
+              "requiredMessage": null,
+              "omitWhenHidden": null,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+
+              },
+              "dataType": "string",
+              "renderType": "text",
+              "rows": 1
+            }
+          ]
+        },
+        {
           "type": "button",
           "label": "Submit",
           "name": "Submit Button",
@@ -151,6 +277,6 @@
   "status": "Active",
   "submissionLabelExpression": null,
   "type": "Console",
-  "updatedAt": "2016-06-15T02:36:21.724Z",
+  "updatedAt": "2016-06-29T22:39:40.604Z",
   "updatedBy": "james.davies@kineticdata.com"
 }

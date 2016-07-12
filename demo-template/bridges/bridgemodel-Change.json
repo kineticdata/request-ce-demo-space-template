@@ -1,0 +1,43 @@
+{
+  "activeMappingName": "BMC - Change",
+  "attributes": [
+    {
+      "name": "Id"
+    },
+    {
+      "name": "Impact"
+    },
+    {
+      "name": "Notes"
+    },
+    {
+      "name": "Priority"
+    },
+    {
+      "name": "Status"
+    },
+    {
+      "name": "Status Reason"
+    },
+    {
+      "name": "Summary"
+    },
+    {
+      "name": "Token"
+    }
+  ],
+  "name": "Change",
+  "qualifications": [
+    {
+      "name": "By Id",
+      "parameters": [
+        {
+          "name": "Id",
+          "notes": null
+        }
+      ],
+      "resultType": "Single"
+    }
+  ],
+  "status": "Active"
+}

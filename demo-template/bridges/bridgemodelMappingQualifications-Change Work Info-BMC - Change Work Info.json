@@ -1,0 +1,6 @@
+[
+  {
+    "name": "By Change Id",
+    "query": "'Infrastructure Change ID' = \"${parameters('Change Id')}\" AND 'View Access' = \"Public\""
+  }
+]

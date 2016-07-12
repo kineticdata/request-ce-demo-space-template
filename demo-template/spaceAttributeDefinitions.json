@@ -9,6 +9,22 @@
   },
   {
     "allowsMultiple": false,
+    "name": "Custom Task Source Name"
+  },
+  {
+    "allowsMultiple": false,
     "name": "QApp Slug"
+  },
+  {
+    "allowsMultiple": false,
+    "name": "Task Server Url"
+  },
+  {
+    "allowsMultiple": false,
+    "name": "Task Source Name"
+  },
+  {
+    "allowsMultiple": false,
+    "name": "Web Server Url"
   }
 ]

@@ -1,0 +1,35 @@
+{
+  "activeMappingName": "Datastore - WYSIWIG Editor Example",
+  "attributes": [
+    {
+      "name": "Description HTML"
+    },
+    {
+      "name": "Page"
+    },
+    {
+      "name": "Status"
+    }
+  ],
+  "name": "Datastore - WYSIWIG Editor Example",
+  "qualifications": [
+    {
+      "name": "All",
+      "parameters": [
+
+      ],
+      "resultType": "Multiple"
+    },
+    {
+      "name": "By Page",
+      "parameters": [
+        {
+          "name": "Page",
+          "notes": null
+        }
+      ],
+      "resultType": "Single"
+    }
+  ],
+  "status": "Active"
+}

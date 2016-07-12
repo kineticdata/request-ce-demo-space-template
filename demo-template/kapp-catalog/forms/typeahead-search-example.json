@@ -58,7 +58,13 @@
               ],
               "renderAttributes": {
                 "uses-typeahead": "yes",
-                "typeahead-config-object": "personConfiguration"
+                "typeahead-fa-class": "fa-user",
+                "typeahead-bridge-location": "shared-resources",
+                "typeahead-query-field": "Name",
+                "typeahead-attributes-to-show": "Full Name,Email,Telephone Number",
+                "typeahead-bridged-resource": "People - By Name",
+                "typeahead-fields-to-set": "Requested For=Id,Requested For Displayed Name=Full Name",
+                "typeahead-attribute-to-set": "Full Name"
               },
               "dataType": "string",
               "renderType": "text",
@@ -147,6 +153,6 @@
   "status": "Active",
   "submissionLabelExpression": "${values('Requested For')}",
   "type": "Service",
-  "updatedAt": "2016-06-20T15:43:20.628Z",
+  "updatedAt": "2016-06-21T18:48:16.134Z",
   "updatedBy": "james.davies@kineticdata.com"
 }

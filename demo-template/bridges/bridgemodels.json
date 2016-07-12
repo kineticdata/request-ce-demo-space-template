@@ -1,5 +1,15 @@
 [
   {
+    "activeMappingName": "BMC - Change",
+    "name": "Change",
+    "status": "Active"
+  },
+  {
+    "activeMappingName": "BMC - Change Work Info",
+    "name": "Change Work Info",
+    "status": "Active"
+  },
+  {
     "activeMappingName": "CMDB Asset",
     "name": "CMDB Asset",
     "status": "Active"
@@ -20,6 +30,11 @@
     "status": "Active"
   },
   {
+    "activeMappingName": "Datastore - AWS Cloud Formation Templates",
+    "name": "Datastore - AWS Cloud Formation Templates",
+    "status": "Active"
+  },
+  {
     "activeMappingName": "Datastore - Broadcast Alerts",
     "name": "Datastore - Broadcast Alerts",
     "status": "Active"
@@ -30,8 +45,33 @@
     "status": "Active"
   },
   {
+    "activeMappingName": "Datastore - Organizations",
+    "name": "Datastore - Organizations",
+    "status": "Active"
+  },
+  {
+    "activeMappingName": "Datastore - Projects",
+    "name": "Datastore - Projects",
+    "status": "Active"
+  },
+  {
     "activeMappingName": "Datastore - States",
     "name": "Datastore - States",
+    "status": "Active"
+  },
+  {
+    "activeMappingName": "Datastore - WYSIWIG Editor Example",
+    "name": "Datastore - WYSIWIG Editor Example",
+    "status": "Active"
+  },
+  {
+    "activeMappingName": "BMC - Incident",
+    "name": "Incident",
+    "status": "Active"
+  },
+  {
+    "activeMappingName": "BMC - Incident Work Info",
+    "name": "Incident Work Info",
     "status": "Active"
   },
   {
@@ -42,6 +82,11 @@
   {
     "activeMappingName": "BMC Product Categories",
     "name": "Product Categories",
+    "status": "Active"
+  },
+  {
+    "activeMappingName": "Salesforce Account",
+    "name": "Salesforce Account",
     "status": "Active"
   },
   {

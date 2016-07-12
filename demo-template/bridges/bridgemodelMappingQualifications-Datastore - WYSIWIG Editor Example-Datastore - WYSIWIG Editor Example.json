@@ -1,0 +1,10 @@
+[
+  {
+    "name": "All",
+    "query": "kappSlug=admin&formSlug=wysiwig-editor-example&limit=999"
+  },
+  {
+    "name": "By Page",
+    "query": "kappSlug=admin&formSlug=wysiwig-editor-example&limit=999&values[Page]=${parameters('Page')}"
+  }
+]

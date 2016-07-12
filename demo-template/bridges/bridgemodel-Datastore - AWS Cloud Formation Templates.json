@@ -1,0 +1,41 @@
+{
+  "activeMappingName": "Datastore - AWS Cloud Formation Templates",
+  "attributes": [
+    {
+      "name": "Status"
+    },
+    {
+      "name": "Template Description"
+    },
+    {
+      "name": "Template Name"
+    },
+    {
+      "name": "Template Parameters"
+    },
+    {
+      "name": "Template Url"
+    }
+  ],
+  "name": "Datastore - AWS Cloud Formation Templates",
+  "qualifications": [
+    {
+      "name": "All",
+      "parameters": [
+
+      ],
+      "resultType": "Multiple"
+    },
+    {
+      "name": "By Name",
+      "parameters": [
+        {
+          "name": "Template Name",
+          "notes": null
+        }
+      ],
+      "resultType": "Single"
+    }
+  ],
+  "status": "Active"
+}

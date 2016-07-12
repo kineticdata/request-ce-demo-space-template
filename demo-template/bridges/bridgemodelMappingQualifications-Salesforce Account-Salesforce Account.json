@@ -1,0 +1,10 @@
+[
+  {
+    "name": "By Name",
+    "query": "Name like '${parameters('Name')}%'"
+  },
+  {
+    "name": "By UUID",
+    "query": "Id = '${parameters('UUID')}'"
+  }
+]

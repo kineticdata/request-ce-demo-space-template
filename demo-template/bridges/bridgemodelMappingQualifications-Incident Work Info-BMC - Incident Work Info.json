@@ -1,0 +1,6 @@
+[
+  {
+    "name": "By Incident Id",
+    "query": "'Incident Number' = \"${parameters('Incident Id')}\""
+  }
+]

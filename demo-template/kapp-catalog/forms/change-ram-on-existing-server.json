@@ -4,7 +4,7 @@
     {
       "name": "Charge",
       "values": [
-        "Variable on RAM Selection"
+        "Variable based on RAM Selection"
       ]
     },
     {
@@ -20,15 +20,9 @@
       ]
     },
     {
-      "name": "Uses Custom Tree",
+      "name": "Task Source Name",
       "values": [
-        "Yes"
-      ]
-    },
-    {
-      "name": "Workflow",
-      "values": [
-        "Custom"
+        "Demo Template"
       ]
     }
   ],
@@ -583,6 +577,6 @@
   "status": "Active",
   "submissionLabelExpression": "${form('name')} - ${values('Host Name')}",
   "type": "Service",
-  "updatedAt": "2016-06-20T22:53:46.984Z",
+  "updatedAt": "2016-07-07T20:34:22.074Z",
   "updatedBy": "james.davies@kineticdata.com"
 }

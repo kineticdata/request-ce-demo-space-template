@@ -6,12 +6,6 @@
       "values": [
         "approval.png"
       ]
-    },
-    {
-      "name": "Show Review Request",
-      "values": [
-        "Yes"
-      ]
     }
   ],
   "bridgedResources": [
@@ -23,9 +17,9 @@
   "createdAt": "2016-02-03T23:10:20.246Z",
   "createdBy": "john.sundberg@kineticdata.com",
   "customHeadContent": null,
-  "description": "Approval",
-  "name": "Approval",
-  "notes": "",
+  "description": "Financial Approval for Creating Cloud Formation Templates on AWS",
+  "name": "AWS Cloud Formation Finance Approval",
+  "notes": "a",
   "pages": [
     {
       "advanceCondition": null,
@@ -42,94 +36,93 @@
           },
           "elements": [
             {
-              "type": "section",
-              "renderType": null,
-              "name": "With Review Request",
-              "title": null,
-              "visible": "form('attribute:Show Review Request').toLowerCase() === \"yes\"",
-              "omitWhenHidden": false,
+              "type": "field",
+              "name": "Summary",
+              "label": "Summary",
+              "key": "f16",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": "values('Summary') !== null",
+              "enabled": false,
+              "required": false,
+              "requiredMessage": null,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
               "renderAttributes": {
 
               },
-              "elements": [
-                {
-                  "type": "content",
-                  "renderType": "html",
-                  "name": "Review Container",
-                  "text": "<div id=\"requestDetails\"></div>",
-                  "visible": true,
-                  "renderAttributes": {
-
-                  }
-                }
-              ]
+              "dataType": "string",
+              "renderType": "text",
+              "rows": 2,
+              "omitWhenHidden": false
             },
             {
-              "type": "section",
-              "renderType": null,
-              "name": "Without Review Request",
-              "title": null,
-              "visible": "form('attribute:Show Review Request').toLowerCase() !== \"yes\"",
-              "omitWhenHidden": false,
+              "type": "field",
+              "name": "Details",
+              "label": "Details",
+              "key": "f10",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": "values('Details') !== null",
+              "enabled": false,
+              "required": false,
+              "requiredMessage": null,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
               "renderAttributes": {
 
               },
-              "elements": [
-                {
-                  "type": "content",
-                  "renderType": "html",
-                  "name": "Summary Text Header",
-                  "text": "<h4>Summary</h4>",
-                  "visible": "values('Summary') !== null",
-                  "renderAttributes": {
+              "dataType": "string",
+              "renderType": "text",
+              "rows": 4,
+              "omitWhenHidden": false
+            },
+            {
+              "type": "content",
+              "renderType": "html",
+              "name": "Review Request HTML",
+              "text": "<div id=\"requestDetails\"></div>",
+              "visible": "values('Originating System') === \"Kinetic Core\" && values('Parent Instance ID') !== null",
+              "renderAttributes": {
 
-                  }
-                },
-                {
-                  "type": "content",
-                  "renderType": "text",
-                  "name": "Summary Text",
-                  "text": "${values('Summary')}",
-                  "visible": "values('Summary') !== null",
-                  "renderAttributes": {
-
-                  }
-                },
-                {
-                  "type": "content",
-                  "renderType": "html",
-                  "name": "Details Text Header",
-                  "text": "<h4>Details</h4>",
-                  "visible": "values('Details') !== null",
-                  "renderAttributes": {
-
-                  }
-                },
-                {
-                  "type": "content",
-                  "renderType": "text",
-                  "name": "Details Text",
-                  "text": "${values('Details')}",
-                  "visible": "values('Details') !== null",
-                  "renderAttributes": {
-
-                  }
-                },
-                {
-                  "type": "content",
-                  "renderType": "html",
-                  "name": "Review Request Url",
-                  "text": "<button class=\"btn btn-default\" onclick=\"window.open('${values('Review Url')}')\">View Original Request</button>",
-                  "visible": "values('Review Url') !== null",
-                  "renderAttributes": {
-
-                  }
-                }
-              ]
+              }
             }
           ],
           "renderType": null,
           "omitWhenHidden": null
+        },
+        {
+          "type": "section",
+          "renderType": null,
+          "name": "Cost Estimate",
+          "title": "Cost Estimate",
+          "visible": true,
+          "omitWhenHidden": null,
+          "renderAttributes": {
+
+          },
+          "elements": [
+            {
+              "type": "content",
+              "renderType": "html",
+              "name": "Cost Estimate iFrame",
+              "text": "<div id=\"cost-estimate\">\n  <button id=\"cost-estimate-button\" type=\"button\" class=\"btn btn-info btn-lg\">View AWS Cost Estimate</button>\n</div>\n\n<script>\n  $(function(){\n    \n    var estimateUrl = \"\";\n    if( K(\"field[System Input]\").value() !== null && K(\"field[System Input]\").value() !== \"\") {\n      estimateUrl = JSON.parse(K(\"field[System Input]\").value())[\"Estimate Url\"];\n      $('#cost-estimate-button').click(function(){\n        win = window.open(estimateUrl, '_blank');\n        if(win){\n            //Browser has allowed it to be opened\n            win.focus();\n        }else{\n            //Broswer has blocked it\n            alert('Please allow popups for this site');\n        }\n      });\n    }\n  });\n</script>",
+              "visible": true,
+              "renderAttributes": {
+
+              }
+            }
+          ]
         },
         {
           "type": "section",
@@ -144,14 +137,13 @@
               "type": "field",
               "name": "Decision",
               "label": "Decision",
-              "key": "f17",
+              "key": "f5",
               "defaultValue": null,
               "defaultResourceName": null,
               "visible": true,
               "enabled": true,
               "required": true,
               "requiredMessage": null,
-              "omitWhenHidden": null,
               "pattern": null,
               "constraints": [
 
@@ -163,9 +155,8 @@
 
               },
               "dataType": "string",
-              "renderType": "radio",
+              "renderType": "dropdown",
               "choicesResourceName": null,
-              "choicesRunIf": null,
               "choices": [
                 {
                   "label": "Approved",
@@ -175,7 +166,9 @@
                   "label": "Denied",
                   "value": "Denied"
                 }
-              ]
+              ],
+              "choicesRunIf": null,
+              "omitWhenHidden": null
             },
             {
               "type": "field",
@@ -186,7 +179,7 @@
               "defaultResourceName": null,
               "visible": "values('Decision') != \"Approved\" && values('Decision') != null",
               "enabled": true,
-              "required": "values('Decision') != \"Approved\"",
+              "required": false,
               "requiredMessage": null,
               "pattern": null,
               "constraints": [
@@ -242,6 +235,17 @@
             "class": "box-footer"
           },
           "elements": [
+            {
+              "type": "button",
+              "label": "Save",
+              "name": "Save",
+              "visible": true,
+              "enabled": true,
+              "renderType": "save",
+              "renderAttributes": {
+
+              }
+            },
             {
               "type": "button",
               "label": "Submit",
@@ -342,32 +346,6 @@
               "dataType": "string",
               "renderType": "text",
               "rows": 1,
-              "omitWhenHidden": null
-            },
-            {
-              "type": "field",
-              "name": "Details",
-              "label": "Details",
-              "key": "f10",
-              "defaultValue": "${values('Details')}",
-              "defaultResourceName": null,
-              "visible": true,
-              "enabled": false,
-              "required": false,
-              "requiredMessage": null,
-              "pattern": null,
-              "constraints": [
-
-              ],
-              "events": [
-
-              ],
-              "renderAttributes": {
-
-              },
-              "dataType": "string",
-              "renderType": "text",
-              "rows": 6,
               "omitWhenHidden": null
             },
             {
@@ -505,7 +483,7 @@
               "name": "System Input",
               "label": "System Input",
               "key": "f12",
-              "defaultValue": "",
+              "defaultValue": null,
               "defaultResourceName": null,
               "visible": true,
               "enabled": true,
@@ -525,32 +503,6 @@
               "dataType": "string",
               "renderType": "text",
               "rows": 1
-            },
-            {
-              "type": "field",
-              "name": "Summary",
-              "label": "Summary",
-              "key": "f16",
-              "defaultValue": "",
-              "defaultResourceName": null,
-              "visible": true,
-              "enabled": false,
-              "required": false,
-              "requiredMessage": null,
-              "pattern": null,
-              "constraints": [
-
-              ],
-              "events": [
-
-              ],
-              "renderAttributes": {
-
-              },
-              "dataType": "string",
-              "renderType": "text",
-              "rows": 2,
-              "omitWhenHidden": null
             }
           ],
           "omitWhenHidden": false,
@@ -559,14 +511,14 @@
       ],
       "events": [
         {
-          "name": "Load Review Request",
+          "name": "Load Subform",
           "type": "Load",
           "action": "Custom",
-          "code": "if( K('field[Originating System]').value() == 'Kinetic Core') {\n      var submissionId = K('field[Parent Instance ID]').value();\n      K.load({\n        path: bundle.spaceLocation() + '/submissions/' + submissionId + '?review',\n        container: \"#requestDetails\"\n      })\n  \t}",
-          "runIf": "form('attribute:Show Review Request').toLowerCase() === \"yes\""
+          "code": "if( K('field[Originating System]').value() == 'Kinetic Core') {\n      var submissionId = K('field[Parent Instance ID]').value();\n      K.load({\n        path: bundle.spaceLocation() + '/submissions/' + submissionId + '?debugjs&review',\n        container: \"#requestDetails\"\n      })\n  \t}",
+          "runIf": "false"
         }
       ],
-      "name": "Approval Page",
+      "name": "Page 1",
       "renderType": "submittable",
       "type": "page"
     },
@@ -579,7 +531,7 @@
           "type": "content",
           "renderType": "text",
           "name": "Thanks",
-          "text": "Your response: \"${values('Decision')}\" has been recorded.",
+          "text": "Thanks for your approval, we'll notify the submitter and take it from here!",
           "visible": true,
           "renderAttributes": {
 
@@ -597,10 +549,10 @@
   "securityPolicies": [
 
   ],
-  "slug": "approval",
-  "status": "Active",
+  "slug": "aws-cloud-formation-finance-approval",
+  "status": "New",
   "submissionLabelExpression": "${values('Summary')}",
   "type": "Approval",
-  "updatedAt": "2016-07-07T22:03:29.195Z",
+  "updatedAt": "2016-06-29T19:52:35.417Z",
   "updatedBy": "james.davies@kineticdata.com"
 }

@@ -33,10 +33,14 @@
   },
   {
     "allowsMultiple": false,
+    "name": "Show Review Request"
+  },
+  {
+    "allowsMultiple": false,
     "name": "SLA"
   },
   {
     "allowsMultiple": false,
-    "name": "Uses Custom Tree"
+    "name": "Task Source Name"
   }
 ]

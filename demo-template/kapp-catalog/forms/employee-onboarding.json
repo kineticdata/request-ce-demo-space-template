@@ -20,9 +20,21 @@
       ]
     },
     {
+      "name": "Fulfillment Individual",
+      "values": [
+        "self"
+      ]
+    },
+    {
       "name": "Image",
       "values": [
         "employee-onboarding.gif"
+      ]
+    },
+    {
+      "name": "Task Source Name",
+      "values": [
+        "Demo Template"
       ]
     }
   ],
@@ -957,7 +969,7 @@
                   "name": "Employee Email Address",
                   "label": "Employee Email Address",
                   "key": "f107",
-                  "defaultValue": "${(values('First Name') + '.' + values('Last Name') + '@').toLowerCase()}sample.com",
+                  "defaultValue": "${(values('First Name') + '.' + values('Last Name') + '@').toLowerCase()}${kapp('attribute:Email Domain')}",
                   "defaultResourceName": null,
                   "visible": true,
                   "enabled": true,
@@ -2290,6 +2302,6 @@
   "status": "Active",
   "submissionLabelExpression": "${values('First Name')} ${values('Last Name')}",
   "type": "Service",
-  "updatedAt": "2016-06-20T23:01:05.350Z",
+  "updatedAt": "2016-07-11T17:15:25.670Z",
   "updatedBy": "james.davies@kineticdata.com"
 }

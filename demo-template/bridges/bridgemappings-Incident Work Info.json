@@ -1,0 +1,7 @@
+[
+  {
+    "bridgeName": "Remedy ITSM",
+    "name": "BMC - Incident Work Info",
+    "structure": "HPD:WorkLog"
+  }
+]

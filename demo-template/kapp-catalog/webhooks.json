@@ -4,27 +4,20 @@
     "filter": "submission('type')===\"Approval\"",
     "name": "Approval Submitted",
     "type": "Submission",
-    "url": "https://demo.kineticdata.com/kinetic-task/app/api/v1/run-tree/Training%20Spaces/Approval/Complete"
+    "url": "https://demo.kineticdata.com/kinetic-task/app/api/v1/run-tree/${space('attribute:Task Source Name')}/Approval/Complete"
   },
   {
     "event": "Submitted",
-    "filter": "form('attribute:Uses Custom Tree')",
+    "filter": "form('attribute:Task Source Name') !== null",
     "name": "Submission Submitted Custom",
     "type": "Submission",
-    "url": "https://demo.kineticdata.com/kinetic-task/app/api/v1/run-tree/${kapp('attribute:Custom Task Source Name')}/${kapp('slug')}%20%3E%20${form('slug')}/Complete"
+    "url": "https://demo.kineticdata.com/kinetic-task/app/api/v1/run-tree/${form('attribute:Task Source Name')}/${kapp('slug')}%20%3E%20${form('slug')}/Complete"
   },
   {
     "event": "Submitted",
-    "filter": "submission('type')===\"Service\" && !form('attribute:Uses Custom Tree')",
+    "filter": "submission('type')===\"Service\" && form('attribute:Task Source Name') === null",
     "name": "Submission Submitted Generic",
     "type": "Submission",
-    "url": "https://demo.kineticdata.com/kinetic-task/app/api/v1/run-tree/Training%20Spaces/Submission/Complete"
-  },
-  {
-    "event": "Submitted",
-    "filter": "submission('type')===\"Work Order\"",
-    "name": "Work Order Submitted",
-    "type": "Submission",
-    "url": "https://demo.kineticdata.com/kinetic-task/app/api/v1/run-tree/Training%20Spaces/Work%20Order/Complete"
+    "url": "https://demo.kineticdata.com/kinetic-task/app/api/v1/run-tree/${space('attribute:Task Source Name')}/Submission/Complete"
   }
 ]

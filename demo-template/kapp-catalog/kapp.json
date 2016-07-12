@@ -2,15 +2,15 @@
   "afterLogoutPath": "",
   "attributes": [
     {
-      "name": "Company Name",
+      "name": "Change Request Handler",
       "values": [
-        "Acme"
+        "bmc_itsm7_change_create_v3"
       ]
     },
     {
-      "name": "Custom Task Source Name",
+      "name": "Email Domain",
       "values": [
-        "Demo Template"
+        "kineticdata.com"
       ]
     },
     {
@@ -20,27 +20,15 @@
       ]
     },
     {
+      "name": "Incident Handler",
+      "values": [
+        "bmc_itsm7_incident_create_v3"
+      ]
+    },
+    {
       "name": "Shared Bridged Resource Form Slug",
       "values": [
         "shared-resources"
-      ]
-    },
-    {
-      "name": "Task Server Url",
-      "values": [
-        "https://demo.kineticdata.com/kinetic-task"
-      ]
-    },
-    {
-      "name": "Task Source Name",
-      "values": [
-        "Training Spaces"
-      ]
-    },
-    {
-      "name": "Web Server Url",
-      "values": [
-        "https://demo.kineticdata.com/kinetic"
       ]
     }
   ],
@@ -48,7 +36,7 @@
   "createdAt": "2016-04-28T22:07:55.423Z",
   "createdBy": "james.davies@kineticdata.com",
   "defaultFormConfirmationPage": null,
-  "defaultFormDisplayPage": null,
+  "defaultFormDisplayPage": "form.jsp",
   "defaultSubmissionLabelExpression": "${form('name')}",
   "displayType": "Display Page",
   "displayValue": "kapp.jsp",
@@ -178,6 +166,6 @@
     }
   ],
   "slug": "catalog",
-  "updatedAt": "2016-06-20T22:50:49.389Z",
+  "updatedAt": "2016-07-12T13:32:32.267Z",
   "updatedBy": "james.davies@kineticdata.com"
 }

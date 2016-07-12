@@ -20,6 +20,12 @@
       ]
     },
     {
+      "name": "Fulfillment Individual",
+      "values": [
+        "Self"
+      ]
+    },
+    {
       "name": "Image",
       "values": [
         "401k-request.png"
@@ -174,6 +180,6 @@
   "status": "Active",
   "submissionLabelExpression": "${values('Increase or Decrease')} - ${values('Amount')}",
   "type": "Service",
-  "updatedAt": "2016-06-20T23:00:08.305Z",
+  "updatedAt": "2016-07-07T22:33:20.067Z",
   "updatedBy": "james.davies@kineticdata.com"
 }

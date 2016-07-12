@@ -1,0 +1,42 @@
+{
+  "activeMappingName": "Salesforce Account",
+  "attributes": [
+    {
+      "name": "Id"
+    },
+    {
+      "name": "Name"
+    }
+  ],
+  "name": "Salesforce Account",
+  "qualifications": [
+    {
+      "name": "All",
+      "parameters": [
+
+      ],
+      "resultType": "Multiple"
+    },
+    {
+      "name": "By Name",
+      "parameters": [
+        {
+          "name": "Name",
+          "notes": null
+        }
+      ],
+      "resultType": "Multiple"
+    },
+    {
+      "name": "By UUID",
+      "parameters": [
+        {
+          "name": "UUID",
+          "notes": null
+        }
+      ],
+      "resultType": "Single"
+    }
+  ],
+  "status": "Active"
+}

@@ -1,0 +1,41 @@
+{
+  "activeMappingName": "Datastore - Projects",
+  "attributes": [
+    {
+      "name": "Project Code"
+    },
+    {
+      "name": "Project Description"
+    },
+    {
+      "name": "Project Manager"
+    },
+    {
+      "name": "Project Name"
+    },
+    {
+      "name": "Status"
+    }
+  ],
+  "name": "Datastore - Projects",
+  "qualifications": [
+    {
+      "name": "All",
+      "parameters": [
+
+      ],
+      "resultType": "Multiple"
+    },
+    {
+      "name": "By Project Name",
+      "parameters": [
+        {
+          "name": "Project Name",
+          "notes": null
+        }
+      ],
+      "resultType": "Single"
+    }
+  ],
+  "status": "Active"
+}

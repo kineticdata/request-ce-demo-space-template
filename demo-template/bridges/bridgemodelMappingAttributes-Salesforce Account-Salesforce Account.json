@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Id",
+    "structureField": "${fields('Id')}"
+  },
+  {
+    "name": "Name",
+    "structureField": "${fields('Name')}"
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Project Code",
+    "structureField": "${fields('values[Project Code]')}"
+  },
+  {
+    "name": "Project Name",
+    "structureField": "${fields('values[Project Name]')}"
+  },
+  {
+    "name": "Project Manager",
+    "structureField": "${fields('values[Project Manager]')}"
+  },
+  {
+    "name": "Project Description",
+    "structureField": "${fields('values[Project Description]')}"
+  },
+  {
+    "name": "Status",
+    "structureField": "${fields('values[Status]')}"
+  }
+]

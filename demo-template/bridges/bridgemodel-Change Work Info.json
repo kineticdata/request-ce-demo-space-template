@@ -1,0 +1,37 @@
+{
+  "activeMappingName": "BMC - Change Work Info",
+  "attributes": [
+    {
+      "name": "Id"
+    },
+    {
+      "name": "Notes"
+    },
+    {
+      "name": "Submit Date"
+    },
+    {
+      "name": "Submitter"
+    },
+    {
+      "name": "Summary"
+    },
+    {
+      "name": "Type"
+    }
+  ],
+  "name": "Change Work Info",
+  "qualifications": [
+    {
+      "name": "By Change Id",
+      "parameters": [
+        {
+          "name": "Change Id",
+          "notes": null
+        }
+      ],
+      "resultType": "Multiple"
+    }
+  ],
+  "status": "Active"
+}

@@ -7,12 +7,17 @@
 
   ],
   "categorizations": [
-
+    {
+      "category": {
+        "name": "Example Services",
+        "slug": "example-services"
+      }
+    }
   ],
   "createdAt": "2016-06-16T20:09:21.893Z",
   "createdBy": "james.davies@kineticdata.com",
   "customHeadContent": null,
-  "description": "",
+  "description": "Uses kd-subforms to load a subform",
   "name": "Subform Example",
   "notes": null,
   "pages": [
@@ -40,8 +45,7 @@
               "visible": true,
               "renderAttributes": {
                 "uses-subform": "yes",
-                "subform-slug": "change-ram-on-existing-server",
-                "subform-modal": "yes"
+                "subform-slug": "change-ram-on-existing-server"
               }
             }
           ]
@@ -84,8 +88,8 @@
   ],
   "slug": "subform-example",
   "status": "Active",
-  "submissionLabelExpression": null,
+  "submissionLabelExpression": "${form('name')} ",
   "type": "Service",
-  "updatedAt": "2016-06-20T16:29:35.996Z",
+  "updatedAt": "2016-06-29T19:19:13.933Z",
   "updatedBy": "james.davies@kineticdata.com"
 }

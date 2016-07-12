@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Page",
+    "structureField": "${fields('values[Page]')}"
+  },
+  {
+    "name": "Description HTML",
+    "structureField": "${fields('values[Description HTML]')}"
+  },
+  {
+    "name": "Status",
+    "structureField": "${fields('values[Status]')}"
+  }
+]

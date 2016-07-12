@@ -1,6 +1,10 @@
 [
   {
     "allowsMultiple": false,
+    "name": "Change Request Handler"
+  },
+  {
+    "allowsMultiple": false,
     "name": "Company Logo"
   },
   {
@@ -13,7 +17,15 @@
   },
   {
     "allowsMultiple": false,
+    "name": "Email Domain"
+  },
+  {
+    "allowsMultiple": false,
     "name": "Icon"
+  },
+  {
+    "allowsMultiple": false,
+    "name": "Incident Handler"
   },
   {
     "allowsMultiple": false,

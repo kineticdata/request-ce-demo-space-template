@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Id",
+    "structureField": "${fields('Work Log ID')}"
+  },
+  {
+    "name": "Notes",
+    "structureField": "${fields('Detailed Description')}"
+  },
+  {
+    "name": "Submit Date",
+    "structureField": "${fields('Work Log Submit Date')}"
+  },
+  {
+    "name": "Submitter",
+    "structureField": "${fields('Work Log Submitter')}"
+  },
+  {
+    "name": "Summary",
+    "structureField": "${fields('Description')}"
+  },
+  {
+    "name": "Type",
+    "structureField": "${fields('Work Log Type')}"
+  }
+]

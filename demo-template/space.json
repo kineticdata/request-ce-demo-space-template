@@ -1,1 +1,54 @@
-{"attributes":[{"name":"Admin Kapp Slug","values":["admin"]},{"name":"Company Name","values":["Acme"]},{"name":"QApp Slug","values":["ticket"]}],"name":"Demo Template","slug":"demo-template"}
+{
+  "afterLogoutPath": null,
+  "attributes": [
+    {
+      "name": "Admin Kapp Slug",
+      "values": [
+        "admin"
+      ]
+    },
+    {
+      "name": "Company Name",
+      "values": [
+        "Acme"
+      ]
+    },
+    {
+      "name": "QApp Slug",
+      "values": [
+        "ticket"
+      ]
+    },
+    {
+      "name": "Task Server Url",
+      "values": [
+        "https://demo.kineticdata.com/kinetic-task"
+      ]
+    },
+    {
+      "name": "Task Source Name",
+      "values": [
+        "Training Spaces"
+      ]
+    },
+    {
+      "name": "Web Server Url",
+      "values": [
+        "https://demo.kineticdata.com/kinetic"
+      ]
+    }
+  ],
+  "bundlePath": null,
+  "createdAt": "2016-06-14T22:16:58.989Z",
+  "createdBy": "admin",
+  "displayType": "Redirect",
+  "displayValue": "catalog",
+  "loginPage": null,
+  "name": "Demo Template",
+  "resetPasswordPage": null,
+  "sessionInactiveLimitInSeconds": null,
+  "slug": "demo-template",
+  "updatedAt": "2016-07-11T17:05:24.704Z",
+  "updatedBy": "james.davies@kineticdata.com",
+  "filestore": null
+}

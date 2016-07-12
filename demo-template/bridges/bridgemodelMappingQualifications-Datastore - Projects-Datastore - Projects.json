@@ -1,0 +1,10 @@
+[
+  {
+    "name": "All",
+    "query": "kappSlug=admin&formSlug=projects&limit=999"
+  },
+  {
+    "name": "By Project Name",
+    "query": "kappSlug=admin&formSlug=projects&limit=999&values[Project Name]=${parameters('Project Name')}"
+  }
+]

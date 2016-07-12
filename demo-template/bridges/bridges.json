@@ -12,7 +12,7 @@
   {
     "name": "LDAP",
     "status": "Active",
-    "url": "http://www.kdkeg.com:8080/kinetic-bridgehub/app/api/v1/bridges/demo-ldap/"
+    "url": "https://demo.kineticdata.com/kinetic-bridgehub/app/api/v1/bridges/demo-ldap/"
   },
   {
     "name": "Remedy ITSM",
@@ -23,5 +23,10 @@
     "name": "Request CE",
     "status": "Active",
     "url": "https://demo.kineticdata.com/kinetic-bridgehub/app/api/v1/bridges/ce-demo-template/"
+  },
+  {
+    "name": "Salesforce",
+    "status": "Active",
+    "url": "https://demo.kineticdata.com/kinetic-bridgehub/app/api/v1/bridges/kd-salesforce-prod/"
   }
 ]
