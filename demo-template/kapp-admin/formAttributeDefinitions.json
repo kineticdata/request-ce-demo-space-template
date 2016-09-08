@@ -1,10 +1,22 @@
 [
   {
     "allowsMultiple": false,
+    "description": null,
     "name": "Community Link"
   },
   {
+    "allowsMultiple": false,
+    "description": null,
+    "name": "Console Slug"
+  },
+  {
+    "allowsMultiple": false,
+    "description": null,
+    "name": "Datastore Configuration"
+  },
+  {
     "allowsMultiple": true,
+    "description": null,
     "name": "Kapp Slug"
   }
 ]

@@ -1,30 +1,37 @@
 [
   {
     "allowsMultiple": false,
+    "description": null,
     "name": "Admin Kapp Slug"
   },
   {
     "allowsMultiple": false,
+    "description": null,
     "name": "Company Name"
   },
   {
     "allowsMultiple": false,
+    "description": null,
     "name": "Custom Task Source Name"
   },
   {
     "allowsMultiple": false,
+    "description": null,
     "name": "QApp Slug"
   },
   {
     "allowsMultiple": false,
+    "description": null,
     "name": "Task Server Url"
   },
   {
     "allowsMultiple": false,
+    "description": null,
     "name": "Task Source Name"
   },
   {
     "allowsMultiple": false,
+    "description": null,
     "name": "Web Server Url"
   }
 ]

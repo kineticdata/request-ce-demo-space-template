@@ -1,10 +1,12 @@
 [
   {
     "allowsMultiple": false,
+    "description": null,
     "name": "Parent"
   },
   {
     "allowsMultiple": false,
+    "description": null,
     "name": "Sort Order"
   }
 ]

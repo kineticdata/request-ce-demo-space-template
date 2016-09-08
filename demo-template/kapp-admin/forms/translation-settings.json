@@ -9,80 +9,80 @@
   "categorizations": [
 
   ],
-  "createdAt": "2016-05-26T15:39:45.047Z",
-  "createdBy": "sharms2010",
+  "createdAt": "2016-09-08T14:38:01.811Z",
+  "createdBy": "james.davies@kineticdata.com",
   "customHeadContent": null,
-  "description": "",
-  "name": "Assets",
+  "description": "Stores settings used by the translation console.",
+  "name": "Translation Settings",
   "notes": null,
   "pages": [
     {
-      "advanceCondition": null,
+      "advanceCondition": "false",
       "displayCondition": null,
       "displayPage": null,
       "elements": [
         {
           "type": "field",
-          "name": "Assigned Individual",
-          "label": "Assigned Individual",
+          "name": "Kapp Id",
+          "label": "Kapp Id",
+          "key": "f1",
+          "defaultValue": null,
+          "defaultResourceName": null,
+          "visible": true,
+          "enabled": true,
+          "required": true,
+          "requiredMessage": null,
+          "omitWhenHidden": null,
+          "pattern": null,
+          "constraints": [
+
+          ],
+          "events": [
+
+          ],
+          "renderAttributes": {
+
+          },
+          "dataType": "string",
+          "renderType": "text",
+          "rows": 1
+        },
+        {
+          "type": "field",
+          "name": "Name",
+          "label": "Name",
+          "key": "f2",
+          "defaultValue": null,
+          "defaultResourceName": null,
+          "visible": true,
+          "enabled": true,
+          "required": true,
+          "requiredMessage": null,
+          "omitWhenHidden": null,
+          "pattern": null,
+          "constraints": [
+
+          ],
+          "events": [
+
+          ],
+          "renderAttributes": {
+
+          },
+          "dataType": "string",
+          "renderType": "text",
+          "rows": 1
+        },
+        {
+          "type": "field",
+          "name": "Value",
+          "label": "Value",
           "key": "f3",
           "defaultValue": null,
           "defaultResourceName": null,
           "visible": true,
           "enabled": true,
-          "required": false,
-          "requiredMessage": null,
-          "omitWhenHidden": null,
-          "pattern": null,
-          "constraints": [
-
-          ],
-          "events": [
-
-          ],
-          "renderAttributes": {
-
-          },
-          "dataType": "string",
-          "renderType": "text",
-          "rows": 1
-        },
-        {
-          "type": "field",
-          "name": "User",
-          "label": "User",
-          "key": "f1",
-          "defaultValue": "${identity('username')}",
-          "defaultResourceName": null,
-          "visible": true,
-          "enabled": true,
-          "required": false,
-          "requiredMessage": null,
-          "omitWhenHidden": null,
-          "pattern": null,
-          "constraints": [
-
-          ],
-          "events": [
-
-          ],
-          "renderAttributes": {
-
-          },
-          "dataType": "string",
-          "renderType": "text",
-          "rows": 1
-        },
-        {
-          "type": "field",
-          "name": "Status",
-          "label": "Status",
-          "key": "f2",
-          "defaultValue": "Active",
-          "defaultResourceName": null,
-          "visible": true,
-          "enabled": true,
-          "required": false,
+          "required": true,
           "requiredMessage": null,
           "omitWhenHidden": null,
           "pattern": null,
@@ -101,8 +101,8 @@
         },
         {
           "type": "button",
-          "label": "Submit",
-          "name": "Submit Button",
+          "label": "Save",
+          "name": "Save",
           "visible": true,
           "enabled": true,
           "renderType": "submit-page",
@@ -114,18 +114,33 @@
       "events": [
 
       ],
-      "name": "Page",
+      "name": "Translation Setting",
       "renderType": "submittable",
       "type": "page"
     }
   ],
   "securityPolicies": [
-
+    {
+      "endpoint": "Display",
+      "name": "Admins"
+    },
+    {
+      "endpoint": "Modification",
+      "name": "Admins"
+    },
+    {
+      "endpoint": "Submission Access",
+      "name": "Admins"
+    },
+    {
+      "endpoint": "Submission Modification",
+      "name": "Admins"
+    }
   ],
-  "slug": "assets",
+  "slug": "translation-settings",
   "status": "Active",
-  "submissionLabelExpression": null,
-  "type": "Console",
-  "updatedAt": "2016-09-08T14:04:45.274Z",
-  "updatedBy": "demo.taskman@kineticdata.com"
+  "submissionLabelExpression": "${values('Name')} - ${values('Value')}",
+  "type": "Content",
+  "updatedAt": "2016-09-08T14:38:01.811Z",
+  "updatedBy": "james.davies@kineticdata.com"
 }

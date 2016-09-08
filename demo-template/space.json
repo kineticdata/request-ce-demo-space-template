@@ -47,8 +47,9 @@
   "name": "Demo Template",
   "resetPasswordPage": null,
   "sessionInactiveLimitInSeconds": null,
+  "sharedBundleBase": null,
   "slug": "demo-template",
-  "updatedAt": "2016-07-11T17:05:24.704Z",
+  "updatedAt": "2016-09-08T14:41:19.157Z",
   "updatedBy": "james.davies@kineticdata.com",
   "filestore": null
 }

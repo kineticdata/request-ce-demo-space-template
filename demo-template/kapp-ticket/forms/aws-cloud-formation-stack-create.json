@@ -12,6 +12,9 @@
     {
       "model": "Datastore - AWS Cloud Formation Templates",
       "name": "AWS Cloud Formation Templates",
+      "order": [
+
+      ],
       "parameters": [
 
       ],
@@ -21,6 +24,9 @@
     {
       "model": "Datastore - AWS Cloud Formation Templates",
       "name": "AWS Cloud Formation Templates by Name",
+      "order": [
+
+      ],
       "parameters": [
         {
           "mapping": "${values('Template to Use')}",
@@ -830,6 +836,6 @@
   "status": "New",
   "submissionLabelExpression": "${values('Work Order Displayed Name')}",
   "type": "Ticket",
-  "updatedAt": "2016-06-29T22:02:34.154Z",
-  "updatedBy": "james.davies@kineticdata.com"
+  "updatedAt": "2016-09-08T14:05:11.542Z",
+  "updatedBy": "demo.taskman@kineticdata.com"
 }

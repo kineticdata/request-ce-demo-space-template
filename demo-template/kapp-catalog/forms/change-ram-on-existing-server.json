@@ -30,6 +30,9 @@
     {
       "model": "CMDB Asset Role Relationships",
       "name": "Approver",
+      "order": [
+
+      ],
       "parameters": [
         {
           "mapping": "${values('Reconciliation Identity')}",
@@ -42,6 +45,9 @@
     {
       "model": "CMDB Asset",
       "name": "BMC Computer System",
+      "order": [
+
+      ],
       "parameters": [
         {
           "mapping": "${values('Class')}",
@@ -62,6 +68,9 @@
     {
       "model": "CMDB ComputerSystem",
       "name": "Computer System Details",
+      "order": [
+
+      ],
       "parameters": [
         {
           "mapping": "${values('Reconciliation Identity')}",
@@ -577,6 +586,6 @@
   "status": "Active",
   "submissionLabelExpression": "${form('name')} - ${values('Host Name')}",
   "type": "Service",
-  "updatedAt": "2016-07-07T20:34:22.074Z",
-  "updatedBy": "james.davies@kineticdata.com"
+  "updatedAt": "2016-09-08T14:05:35.236Z",
+  "updatedBy": "demo.taskman@kineticdata.com"
 }

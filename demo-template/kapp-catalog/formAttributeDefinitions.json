@@ -1,46 +1,57 @@
 [
   {
     "allowsMultiple": false,
+    "description": null,
     "name": "Approval Form Slug"
   },
   {
     "allowsMultiple": false,
+    "description": null,
     "name": "Approval Group"
   },
   {
     "allowsMultiple": false,
+    "description": null,
     "name": "Approval Individual"
   },
   {
     "allowsMultiple": false,
+    "description": null,
     "name": "Charge"
   },
   {
     "allowsMultiple": false,
+    "description": null,
     "name": "Fulfillment Form Slug"
   },
   {
     "allowsMultiple": false,
+    "description": null,
     "name": "Fulfillment Group"
   },
   {
     "allowsMultiple": false,
+    "description": null,
     "name": "Fulfillment Individual"
   },
   {
     "allowsMultiple": false,
+    "description": null,
     "name": "Image"
   },
   {
     "allowsMultiple": false,
+    "description": null,
     "name": "Show Review Request"
   },
   {
     "allowsMultiple": false,
+    "description": null,
     "name": "SLA"
   },
   {
     "allowsMultiple": false,
+    "description": null,
     "name": "Task Source Name"
   }
 ]

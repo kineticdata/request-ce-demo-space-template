@@ -186,6 +186,6 @@
   "status": "Active",
   "submissionLabelExpression": "${values('Page')}",
   "type": "Datastore",
-  "updatedAt": "2016-06-29T18:52:08.933Z",
-  "updatedBy": "james.davies@kineticdata.com"
+  "updatedAt": "2016-09-08T14:04:44.667Z",
+  "updatedBy": "demo.taskman@kineticdata.com"
 }

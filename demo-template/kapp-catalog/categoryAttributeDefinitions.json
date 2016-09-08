@@ -1,18 +1,22 @@
 [
   {
     "allowsMultiple": false,
+    "description": null,
     "name": "Parent"
   },
   {
     "allowsMultiple": false,
+    "description": null,
     "name": "Sort Order"
   },
   {
     "allowsMultiple": false,
+    "description": null,
     "name": "fa-logo"
   },
   {
     "allowsMultiple": false,
+    "description": null,
     "name": "Hidden"
   }
 ]

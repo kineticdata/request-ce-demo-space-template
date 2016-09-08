@@ -1,46 +1,57 @@
 [
   {
     "allowsMultiple": false,
+    "description": null,
     "name": "Change Request Handler"
   },
   {
     "allowsMultiple": false,
+    "description": null,
     "name": "Company Logo"
   },
   {
     "allowsMultiple": false,
+    "description": null,
     "name": "Company Name"
   },
   {
     "allowsMultiple": false,
+    "description": null,
     "name": "Custom Task Source Name"
   },
   {
     "allowsMultiple": false,
+    "description": null,
     "name": "Email Domain"
   },
   {
     "allowsMultiple": false,
+    "description": null,
     "name": "Icon"
   },
   {
     "allowsMultiple": false,
+    "description": null,
     "name": "Incident Handler"
   },
   {
     "allowsMultiple": false,
+    "description": null,
     "name": "Shared Bridged Resource Form Slug"
   },
   {
     "allowsMultiple": false,
+    "description": null,
     "name": "Task Server Url"
   },
   {
     "allowsMultiple": false,
+    "description": null,
     "name": "Task Source Name"
   },
   {
     "allowsMultiple": false,
+    "description": null,
     "name": "Web Server Url"
   }
 ]

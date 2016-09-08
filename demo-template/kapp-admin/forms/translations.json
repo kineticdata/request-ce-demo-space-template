@@ -4,7 +4,7 @@
     {
       "name": "Kapp Slug",
       "values": [
-        "ticket"
+        "admin"
       ]
     }
   ],
@@ -14,24 +14,24 @@
   "categorizations": [
 
   ],
-  "createdAt": "2016-04-14T16:26:28.722Z",
-  "createdBy": "marcin.zarycki@kineticdata.com",
+  "createdAt": "2016-09-08T14:38:01.980Z",
+  "createdBy": "james.davies@kineticdata.com",
   "customHeadContent": null,
-  "description": "Allows for creating and management of groups and their members.",
-  "name": "Group Management",
+  "description": "Allows for management of translations.",
+  "name": "Translations",
   "notes": null,
   "pages": [
     {
       "advanceCondition": null,
       "displayCondition": null,
-      "displayPage": "pages/groups/console.jsp",
+      "displayPage": "pages/translations/console.jsp",
       "elements": [
 
       ],
       "events": [
 
       ],
-      "name": "Group Management",
+      "name": "Translations",
       "renderType": "submittable",
       "type": "page"
     }
@@ -39,10 +39,10 @@
   "securityPolicies": [
 
   ],
-  "slug": "group-management",
-  "status": "New",
+  "slug": "translations",
+  "status": "Active",
   "submissionLabelExpression": null,
   "type": "Console",
-  "updatedAt": "2016-09-08T14:04:44.292Z",
-  "updatedBy": "demo.taskman@kineticdata.com"
+  "updatedAt": "2016-09-08T14:38:01.980Z",
+  "updatedBy": "james.davies@kineticdata.com"
 }

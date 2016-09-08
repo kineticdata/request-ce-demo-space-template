@@ -10,6 +10,11 @@
     "url": "https://demo.kineticdata.com/kinetic-bridgehub/app/api/v1/bridges/counter/"
   },
   {
+    "name": "Kinetic Core",
+    "status": "Active",
+    "url": "https://demo.kineticdata.com/kinetic-bridgehub/app/api/v1/bridges/ce-n1k/"
+  },
+  {
     "name": "LDAP",
     "status": "Active",
     "url": "https://demo.kineticdata.com/kinetic-bridgehub/app/api/v1/bridges/demo-ldap/"
@@ -18,11 +23,6 @@
     "name": "Remedy ITSM",
     "status": "Active",
     "url": "https://demo.kineticdata.com/kinetic-bridgehub/app/api/v1/bridges/demobmc8/"
-  },
-  {
-    "name": "Request CE",
-    "status": "Active",
-    "url": "https://demo.kineticdata.com/kinetic-bridgehub/app/api/v1/bridges/ce-demo-template/"
   },
   {
     "name": "Salesforce",

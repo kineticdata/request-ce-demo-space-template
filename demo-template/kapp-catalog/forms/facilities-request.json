@@ -904,19 +904,12 @@
     }
   ],
   "securityPolicies": [
-    {
-      "endpoint": "Display",
-      "name": "VPN Group"
-    },
-    {
-      "endpoint": "Submission Access",
-      "name": "VPN Group"
-    }
+
   ],
   "slug": "facilities-request",
   "status": "Active",
   "submissionLabelExpression": "${values('Type of Request')}",
   "type": "Service",
-  "updatedAt": "2016-06-20T23:01:22.717Z",
+  "updatedAt": "2016-09-08T14:45:09.185Z",
   "updatedBy": "james.davies@kineticdata.com"
 }

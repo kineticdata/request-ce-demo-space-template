@@ -1,42 +1,52 @@
 [
   {
     "allowsMultiple": false,
+    "description": null,
     "name": "Helper Kapp Slug"
   },
   {
     "allowsMultiple": false,
+    "description": null,
     "name": "Icon"
   },
   {
     "allowsMultiple": false,
+    "description": null,
     "name": "Queue Default Group"
   },
   {
     "allowsMultiple": false,
+    "description": null,
     "name": "Queue Details Value"
   },
   {
     "allowsMultiple": true,
+    "description": null,
     "name": "Queue Filters"
   },
   {
     "allowsMultiple": false,
+    "description": null,
     "name": "Queue Form Type"
   },
   {
     "allowsMultiple": false,
+    "description": null,
     "name": "Queue Group Base"
   },
   {
     "allowsMultiple": false,
+    "description": null,
     "name": "Queue Name"
   },
   {
     "allowsMultiple": false,
+    "description": null,
     "name": "Queue Setup Visible"
   },
   {
     "allowsMultiple": false,
+    "description": null,
     "name": "Queue Summary Value"
   }
 ]

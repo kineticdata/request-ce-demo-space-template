@@ -7,6 +7,9 @@
     {
       "model": "Datastore - Cities With Population",
       "name": "Cities List",
+      "order": [
+
+      ],
       "parameters": [
         {
           "mapping": "${values('State')}",
@@ -19,6 +22,9 @@
     {
       "model": "Datastore - Cities With Population",
       "name": "City Population",
+      "order": [
+
+      ],
       "parameters": [
         {
           "mapping": "${values('Cities')}",
@@ -35,6 +41,9 @@
     {
       "model": "Datastore - States",
       "name": "States List",
+      "order": [
+
+      ],
       "parameters": [
 
       ],
@@ -198,6 +207,6 @@
   "status": "Active",
   "submissionLabelExpression": "Multi Test - ${values('Tier 1')} ${values('Tier 2')} ${values('Tier 3')}",
   "type": "Service",
-  "updatedAt": "2016-06-14T22:17:48.871Z",
+  "updatedAt": "2016-09-08T14:05:03.781Z",
   "updatedBy": "demo.taskman@kineticdata.com"
 }
