@@ -26,6 +26,12 @@
       ]
     },
     {
+      "name": "Kapp Configuration Status",
+      "values": [
+        "true"
+      ]
+    },
+    {
       "name": "Shared Bridged Resource Form Slug",
       "values": [
         "shared-resources"
@@ -42,8 +48,32 @@
   "displayValue": "kapp.jsp",
   "loginPage": "login.jsp",
   "name": "Catalog",
-  "resetPasswordPage": null,
+  "resetPasswordPage": "resetPassword.jsp",
   "securityPolicies": [
+    {
+      "endpoint": "Modification",
+      "name": "Admins"
+    },
+    {
+      "endpoint": "Form Creation",
+      "name": "Admins"
+    },
+    {
+      "endpoint": "Default Form Modification",
+      "name": "Admins"
+    },
+    {
+      "endpoint": "Default Form Display",
+      "name": "Authenticated Users"
+    },
+    {
+      "endpoint": "Default Submission Access",
+      "name": "Submitter"
+    },
+    {
+      "endpoint": "Default Submission Modification",
+      "name": "Submitter"
+    },
     {
       "endpoint": "Modification",
       "name": "Admins"
@@ -190,6 +220,6 @@
     }
   ],
   "slug": "catalog",
-  "updatedAt": "2016-09-08T14:45:18.209Z",
+  "updatedAt": "2016-09-28T21:10:06.982Z",
   "updatedBy": "james.davies@kineticdata.com"
 }

@@ -338,6 +338,6 @@
   "status": "Active",
   "submissionLabelExpression": "${values('Type')} - ${values('Manufacturer')}",
   "type": "Datastore",
-  "updatedAt": "2016-09-08T14:04:44.870Z",
+  "updatedAt": "2016-09-28T20:27:19.949Z",
   "updatedBy": "demo.taskman@kineticdata.com"
 }

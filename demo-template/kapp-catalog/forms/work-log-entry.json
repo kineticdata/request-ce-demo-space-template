@@ -4,7 +4,7 @@
     {
       "name": "Task Source Name",
       "values": [
-        "Demo Template"
+        "CE - Demo Template"
       ]
     }
   ],
@@ -157,6 +157,6 @@
   "status": "Active",
   "submissionLabelExpression": "${values('Parent Fulfillment Type')} - ${values('Parent Fulfillment Id')}",
   "type": "Subservice",
-  "updatedAt": "2016-09-08T14:05:35.793Z",
+  "updatedAt": "2016-09-28T20:28:09.067Z",
   "updatedBy": "demo.taskman@kineticdata.com"
 }

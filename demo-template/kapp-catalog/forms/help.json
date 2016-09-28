@@ -91,6 +91,6 @@
   "status": "Active",
   "submissionLabelExpression": "Help - ${values('Ask a question')}",
   "type": "Service",
-  "updatedAt": "2016-09-08T14:05:01.374Z",
+  "updatedAt": "2016-09-28T20:27:36.757Z",
   "updatedBy": "demo.taskman@kineticdata.com"
 }

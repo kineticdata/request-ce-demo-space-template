@@ -12,7 +12,7 @@
   {
     "name": "Kinetic Core",
     "status": "Active",
-    "url": "https://demo.kineticdata.com/kinetic-bridgehub/app/api/v1/bridges/ce-n1k/"
+    "url": "https://demo.kineticdata.com/kinetic-bridgehub/app/api/v1/bridges/ce-demo-template/"
   },
   {
     "name": "LDAP",

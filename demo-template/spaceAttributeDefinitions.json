@@ -7,12 +7,17 @@
   {
     "allowsMultiple": false,
     "description": null,
+    "name": "Company Logo"
+  },
+  {
+    "allowsMultiple": false,
+    "description": null,
     "name": "Company Name"
   },
   {
     "allowsMultiple": false,
     "description": null,
-    "name": "Custom Task Source Name"
+    "name": "Login Background Image"
   },
   {
     "allowsMultiple": false,
@@ -28,6 +33,11 @@
     "allowsMultiple": false,
     "description": null,
     "name": "Task Source Name"
+  },
+  {
+    "allowsMultiple": false,
+    "description": null,
+    "name": "Theme Skin"
   },
   {
     "allowsMultiple": false,

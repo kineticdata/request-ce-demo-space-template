@@ -36,6 +36,11 @@
   },
   {
     "allowsMultiple": false,
+    "description": "Defines whether the Kapp is configured. Value is automatically managed by the Setup Wizard. DO NOT MODIFY.",
+    "name": "Kapp Configuration Status"
+  },
+  {
+    "allowsMultiple": false,
     "description": null,
     "name": "Shared Bridged Resource Form Slug"
   },

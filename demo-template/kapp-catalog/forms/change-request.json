@@ -651,6 +651,6 @@
   "status": "Active",
   "submissionLabelExpression": "${values('Title')} - Urgency: ${values('Urgency')} - Impact: ${values('Impact')}",
   "type": "Service",
-  "updatedAt": "2016-09-08T14:05:03.377Z",
+  "updatedAt": "2016-09-28T20:27:38.570Z",
   "updatedBy": "demo.taskman@kineticdata.com"
 }

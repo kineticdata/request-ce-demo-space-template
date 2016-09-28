@@ -207,6 +207,6 @@
   "status": "Active",
   "submissionLabelExpression": "Multi Test - ${values('Tier 1')} ${values('Tier 2')} ${values('Tier 3')}",
   "type": "Service",
-  "updatedAt": "2016-09-08T14:05:03.781Z",
+  "updatedAt": "2016-09-28T20:27:38.951Z",
   "updatedBy": "demo.taskman@kineticdata.com"
 }

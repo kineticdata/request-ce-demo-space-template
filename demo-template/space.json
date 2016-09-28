@@ -8,9 +8,21 @@
       ]
     },
     {
+      "name": "Company Logo",
+      "values": [
+        "http://keg.kineticdata.com/images/KD_logo_159box@2x.png"
+      ]
+    },
+    {
       "name": "Company Name",
       "values": [
-        "Acme"
+        "Demo Template"
+      ]
+    },
+    {
+      "name": "Login Background Image",
+      "values": [
+        "http://www.onehundredeighty.co.uk/wp-content/uploads/2013/06/shutterstock_106001615.jpg"
       ]
     },
     {
@@ -32,24 +44,30 @@
       ]
     },
     {
+      "name": "Theme Skin",
+      "values": [
+        "skin-purple-light"
+      ]
+    },
+    {
       "name": "Web Server Url",
       "values": [
         "https://demo.kineticdata.com/kinetic"
       ]
     }
   ],
-  "bundlePath": null,
+  "bundlePath": "adminlte",
   "createdAt": "2016-06-14T22:16:58.989Z",
   "createdBy": "admin",
   "displayType": "Redirect",
   "displayValue": "catalog",
   "loginPage": null,
   "name": "Demo Template",
-  "resetPasswordPage": null,
+  "resetPasswordPage": "resetPassword.jsp",
   "sessionInactiveLimitInSeconds": null,
   "sharedBundleBase": null,
   "slug": "demo-template",
-  "updatedAt": "2016-09-08T14:41:19.157Z",
+  "updatedAt": "2016-09-28T21:10:28.041Z",
   "updatedBy": "james.davies@kineticdata.com",
   "filestore": null
 }

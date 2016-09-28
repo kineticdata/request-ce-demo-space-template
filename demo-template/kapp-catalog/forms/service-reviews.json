@@ -152,6 +152,6 @@
   "status": "Active",
   "submissionLabelExpression": "${values('Form Slug')} - ${values('Rating')}",
   "type": "Console",
-  "updatedAt": "2016-09-08T14:05:04.185Z",
+  "updatedAt": "2016-09-28T20:27:39.322Z",
   "updatedBy": "demo.taskman@kineticdata.com"
 }
