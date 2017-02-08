@@ -1,0 +1,697 @@
+{
+  "anonymous": false,
+  "attributes": [
+    {
+      "name": "Fulfillment Form Slug",
+      "values": [
+        "workorder"
+      ]
+    },
+    {
+      "name": "Fulfillment Group",
+      "values": [
+        "Fulfillment::Generic"
+      ]
+    },
+    {
+      "name": "Image",
+      "values": [
+        "change-request.png"
+      ]
+    }
+  ],
+  "bridgedResources": [
+
+  ],
+  "categorizations": [
+    {
+      "category": {
+        "slug": "hardware-services"
+      }
+    },
+    {
+      "category": {
+        "slug": "software-services"
+      }
+    }
+  ],
+  "customHeadContent": null,
+  "description": "Use this form to submit a request for approval to make an infrastructure change, such as an installation, upgrade or change to hardware, software, networks or systems.  This request should not be used for break/fix issues.",
+  "fields": [
+    {
+      "name": "Title"
+    },
+    {
+      "name": "Reason for Change"
+    },
+    {
+      "name": "Additional Notes"
+    },
+    {
+      "name": "Date Time Planned"
+    },
+    {
+      "name": "Category"
+    },
+    {
+      "name": "Urgency"
+    },
+    {
+      "name": "Impact"
+    },
+    {
+      "name": "Risk"
+    },
+    {
+      "name": "Could this change result in an Outage"
+    },
+    {
+      "name": "Assets Involved"
+    },
+    {
+      "name": "Services Impacted"
+    },
+    {
+      "name": "Desired Start"
+    },
+    {
+      "name": "Desired End"
+    },
+    {
+      "name": "Number of Users Impacted"
+    },
+    {
+      "name": "Change Documents"
+    }
+  ],
+  "name": "Change Request",
+  "notes": "",
+  "pages": [
+    {
+      "advanceCondition": null,
+      "displayCondition": null,
+      "displayPage": null,
+      "elements": [
+        {
+          "type": "section",
+          "name": "Change Information",
+          "title": "Change Information",
+          "visible": true,
+          "renderAttributes": {
+
+          },
+          "elements": [
+            {
+              "type": "field",
+              "name": "Title",
+              "label": "Title",
+              "key": "f45",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": true,
+              "requiredMessage": "Please enter a Title...",
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+                "class": "col-sm-12"
+              },
+              "dataType": "string",
+              "renderType": "text",
+              "rows": 1,
+              "omitWhenHidden": null
+            },
+            {
+              "type": "field",
+              "name": "Reason for Change",
+              "label": "Reason/Justification for Change",
+              "key": "f50",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": true,
+              "requiredMessage": "Please enter a Reason for Change...",
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+                "class": "col-sm-6"
+              },
+              "dataType": "string",
+              "renderType": "text",
+              "rows": 3,
+              "omitWhenHidden": null
+            },
+            {
+              "type": "field",
+              "name": "Additional Notes",
+              "label": "Additional Notes (if any)",
+              "key": "f49",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": false,
+              "requiredMessage": null,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+                "class": "col-sm-6"
+              },
+              "dataType": "string",
+              "renderType": "text",
+              "rows": 3,
+              "omitWhenHidden": null
+            },
+            {
+              "type": "field",
+              "name": "Date Time Planned",
+              "label": "Date/Time Planned",
+              "key": "f51",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": true,
+              "requiredMessage": "Please select a Date/Time Planned...",
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+                "class": "col-sm-6"
+              },
+              "dataType": "string",
+              "renderType": "datetime",
+              "omitWhenHidden": null
+            },
+            {
+              "type": "field",
+              "name": "Category",
+              "label": "Category",
+              "key": "f44",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": true,
+              "requiredMessage": "Please select a Category...",
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+                "class": "col-sm-6"
+              },
+              "dataType": "string",
+              "renderType": "dropdown",
+              "choicesResourceName": null,
+              "choices": [
+                {
+                  "label": "Application",
+                  "value": "Application"
+                },
+                {
+                  "label": "Documentation",
+                  "value": "Documentation"
+                },
+                {
+                  "label": "Environmental",
+                  "value": "Environmental"
+                },
+                {
+                  "label": "Hardware",
+                  "value": "Hardware"
+                },
+                {
+                  "label": "Network",
+                  "value": "Network"
+                },
+                {
+                  "label": "Software",
+                  "value": "Software"
+                },
+                {
+                  "label": "Web Content",
+                  "value": "Web Content"
+                }
+              ],
+              "choicesRunIf": null,
+              "omitWhenHidden": null
+            },
+            {
+              "type": "field",
+              "name": "Urgency",
+              "label": "Urgency",
+              "key": "f42",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": true,
+              "requiredMessage": "Please select a Risk...",
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+                {
+                  "name": "Calculate Risk",
+                  "type": "Change",
+                  "action": "Custom",
+                  "code": "calculateRisk();"
+                }
+              ],
+              "renderAttributes": {
+                "class": "col-sm-4"
+              },
+              "dataType": "string",
+              "renderType": "dropdown",
+              "choicesResourceName": null,
+              "choices": [
+                {
+                  "label": "High",
+                  "value": "1-Critical"
+                },
+                {
+                  "label": "Medium",
+                  "value": "2-High"
+                },
+                {
+                  "label": "Low",
+                  "value": "3-Medium"
+                },
+                {
+                  "label": "No Urgency",
+                  "value": "4-Low"
+                }
+              ],
+              "choicesRunIf": null,
+              "omitWhenHidden": null
+            },
+            {
+              "type": "field",
+              "name": "Impact",
+              "label": "Impact",
+              "key": "f33",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": true,
+              "requiredMessage": "Please select an Urgency...",
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+                {
+                  "name": "Calculate Risk",
+                  "type": "Change",
+                  "action": "Custom",
+                  "code": "calculateRisk();"
+                }
+              ],
+              "renderAttributes": {
+                "class": "col-sm-4"
+              },
+              "dataType": "string",
+              "renderType": "dropdown",
+              "choicesResourceName": null,
+              "choices": [
+                {
+                  "label": "Emergency",
+                  "value": "1-Extensive/Widespread"
+                },
+                {
+                  "label": "High",
+                  "value": "2-Significant/Large"
+                },
+                {
+                  "label": "Medium",
+                  "value": "3-Moderate/Limited"
+                },
+                {
+                  "label": "Low",
+                  "value": "4-Minor/Localized"
+                }
+              ],
+              "choicesRunIf": null,
+              "omitWhenHidden": null
+            },
+            {
+              "type": "field",
+              "name": "Risk",
+              "label": "Risk",
+              "key": "f60",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": false,
+              "required": false,
+              "requiredMessage": null,
+              "omitWhenHidden": null,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+                "class": "col-sm-4"
+              },
+              "dataType": "string",
+              "renderType": "text",
+              "rows": 1
+            },
+            {
+              "type": "field",
+              "name": "Could this change result in an Outage",
+              "label": "Could this change result in an Outage?",
+              "key": "f59",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": true,
+              "requiredMessage": "Please select the Will this change result in an outage?...",
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+                "class": "col-sm-12"
+              },
+              "dataType": "string",
+              "renderType": "radio",
+              "choicesResourceName": null,
+              "choices": [
+                {
+                  "label": "Yes",
+                  "value": "Yes"
+                },
+                {
+                  "label": "No",
+                  "value": "No"
+                }
+              ],
+              "choicesRunIf": null,
+              "omitWhenHidden": null
+            }
+          ],
+          "renderType": null,
+          "omitWhenHidden": null
+        },
+        {
+          "type": "section",
+          "name": "Outage Information",
+          "title": "Outage Information",
+          "visible": "values('Could this change result in an Outage') === \"Yes\"",
+          "renderAttributes": {
+
+          },
+          "elements": [
+            {
+              "type": "content",
+              "renderType": "html",
+              "name": "Outage Text",
+              "text": "<h5>Please ensure that the desired maintenance window includes enough time to complete the request, with some additional time allotted to address unexpected problems. Whenever possible work should be completed within already scheduled off hours maintenance windows. If this is not possible, an explanation should be provided in the Additional Notes field above.</h5>\n<br>",
+              "visible": true,
+              "renderAttributes": {
+                "class": "col-sm-12"
+              }
+            },
+            {
+              "type": "field",
+              "name": "Assets Involved",
+              "label": "Assets Involved",
+              "key": "f2",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": "values('Could this change result in an Outage') === \"Yes\"",
+              "requiredMessage": "You must describe the Assets Involved...",
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+                "class": "col-sm-6"
+              },
+              "dataType": "string",
+              "renderType": "text",
+              "rows": 3,
+              "omitWhenHidden": null
+            },
+            {
+              "type": "field",
+              "name": "Services Impacted",
+              "label": "Services Impacted",
+              "key": "f9",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": "values('Could this change result in an Outage') === \"Yes\"",
+              "requiredMessage": "You must describe the Services Impacted...",
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+                "class": "col-sm-6"
+              },
+              "dataType": "string",
+              "renderType": "text",
+              "rows": 3,
+              "omitWhenHidden": null
+            },
+            {
+              "type": "field",
+              "name": "Desired Start",
+              "label": "Desired Start",
+              "key": "f56",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": "values('Could this change result in an Outage') === \"Yes\"",
+              "requiredMessage": "Please select an Outage Window Start...",
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+                "class": "col-sm-4"
+              },
+              "dataType": "string",
+              "renderType": "datetime",
+              "omitWhenHidden": null
+            },
+            {
+              "type": "field",
+              "name": "Desired End",
+              "label": "Desired End",
+              "key": "f57",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": "values('Could this change result in an Outage') === \"Yes\"",
+              "requiredMessage": "Please select an Outage Window End...",
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+                "class": "col-sm-4"
+              },
+              "dataType": "string",
+              "renderType": "datetime",
+              "omitWhenHidden": null
+            },
+            {
+              "type": "field",
+              "name": "Number of Users Impacted",
+              "label": "Number of Users Impacted",
+              "key": "f58",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": "values('Could this change result in an Outage') === \"Yes\"",
+              "requiredMessage": "Please select an Estimate of Users Impacted...",
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+                "class": "col-sm-4"
+              },
+              "dataType": "string",
+              "renderType": "text",
+              "rows": 1,
+              "omitWhenHidden": null
+            }
+          ],
+          "renderType": null,
+          "omitWhenHidden": true
+        },
+        {
+          "type": "section",
+          "name": "Documentation",
+          "title": "Documentation",
+          "visible": true,
+          "renderAttributes": {
+
+          },
+          "elements": [
+            {
+              "type": "content",
+              "renderType": "html",
+              "name": "Documentation Text",
+              "text": "<h5>Please complete and attach the appropriate supporting documentation for this Change Request.  Templates for supporting documentation can be found on the company Intranet: <a>https://intranet.acme.com/it/change/templates/</a>.  Requests submitted without the proper and complete supporting documentation will be rejected by the Change Review Board.</h5>\n<br><br>",
+              "visible": true,
+              "renderAttributes": {
+                "class": "col-sm-12"
+              }
+            },
+            {
+              "type": "field",
+              "name": "Change Documents",
+              "label": "Change Documents",
+              "key": "f46",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": false,
+              "requiredMessage": null,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+                "class": "col-sm-6"
+              },
+              "dataType": "file",
+              "renderType": "attachment",
+              "allowMultiple": true,
+              "omitWhenHidden": null
+            },
+            {
+              "type": "content",
+              "renderType": "html",
+              "name": "Change Text",
+              "text": "<h5>\nThe following documents should be included, as applicable:<br><br>\n- Implementation Plan<br><br>\n- Test Plan<br><br>\n- Backout Plan<br><br>\n- Communication Plan<br><br>\n- Test Cases\n- QA Test Results<br><br>\n- End User Documentation<br><br>\n- System Documentation<br><br>\n</h5>",
+              "visible": true,
+              "renderAttributes": {
+                "class": "col-sm-6"
+              }
+            }
+          ],
+          "renderType": null,
+          "omitWhenHidden": null
+        },
+        {
+          "type": "section",
+          "name": "Buttons",
+          "title": null,
+          "visible": true,
+          "renderAttributes": {
+            "class": "box-footer"
+          },
+          "elements": [
+            {
+              "type": "button",
+              "label": "Save",
+              "name": "Save",
+              "visible": true,
+              "enabled": true,
+              "renderType": "save",
+              "renderAttributes": {
+
+              }
+            },
+            {
+              "type": "button",
+              "label": "Submit",
+              "name": "Submit Button",
+              "visible": true,
+              "enabled": true,
+              "renderType": "submit-page",
+              "renderAttributes": {
+
+              }
+            }
+          ],
+          "renderType": null,
+          "omitWhenHidden": null
+        }
+      ],
+      "events": [
+        {
+          "name": "Set Numeric Spinners",
+          "type": "Load",
+          "action": "Custom",
+          "code": "$('input[name=\"Number of Users Impacted\"]').attr({\n  value: \"0\",\n  min: \"0\",\n  max: \"1000000\"\n});\n$('input[name=\"Number of Users Impacted\"]').bootstrapNumber({\n\tupClass: 'info',\n\tdownClass: 'info'\n});"
+        }
+      ],
+      "name": "Details Page",
+      "renderType": "submittable",
+      "type": "page"
+    }
+  ],
+  "securityPolicies": [
+
+  ],
+  "slug": "change-request",
+  "status": "Active",
+  "submissionLabelExpression": "${values('Title')} - Urgency: ${values('Urgency')} - Impact: ${values('Impact')}",
+  "type": "Service"
+}

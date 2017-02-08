@@ -1,0 +1,80 @@
+{
+  "activeMappingName": "Datastore - States",
+  "attributes": [
+    {
+      "name": "Abbreviation"
+    },
+    {
+      "name": "Name"
+    },
+    {
+      "name": "Status"
+    }
+  ],
+  "mappings": [
+    {
+      "attributes": [
+        {
+          "name": "Name",
+          "structureField": "${fields('values[Name]')}"
+        },
+        {
+          "name": "Abbreviation",
+          "structureField": "${fields('values[Abbreviation]')}"
+        },
+        {
+          "name": "Status",
+          "structureField": "${fields('values[Status]')}"
+        }
+      ],
+      "bridgeName": "CE Demo Data",
+      "name": "Datastore - States",
+      "qualifications": [
+        {
+          "name": "All",
+          "query": "kappSlug=admin&formSlug=states&limit=999&direction=ASC"
+        },
+        {
+          "name": "By Abbreviation",
+          "query": "kappSlug=admin&formSlug=states&limit=999&direction=ASC&values[Abbreviation]=${parameters('Abbreviation')}"
+        },
+        {
+          "name": "By Name",
+          "query": "kappSlug=admin&formSlug=states&limit=999&direction=ASC&values[Name]=${parameters('Name')}"
+        }
+      ],
+      "structure": "Submissions"
+    }
+  ],
+  "name": "Datastore - States",
+  "qualifications": [
+    {
+      "name": "All",
+      "parameters": [
+
+      ],
+      "resultType": "Multiple"
+    },
+    {
+      "name": "By Abbreviation",
+      "parameters": [
+        {
+          "name": "Abbreviation",
+          "notes": null
+        }
+      ],
+      "resultType": "Single"
+    },
+    {
+      "name": "By Name",
+      "parameters": [
+        {
+          "name": "Name",
+          "notes": "Name of State"
+        }
+      ],
+      "resultType": "Single"
+    }
+  ],
+  "status": "Active"
+}

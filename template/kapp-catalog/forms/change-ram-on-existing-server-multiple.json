@@ -1,0 +1,309 @@
+{
+  "anonymous": false,
+  "attributes": [
+    {
+      "name": "Image",
+      "values": [
+        "ram.jpg"
+      ]
+    }
+  ],
+  "bridgedResources": [
+    {
+      "model": "CMDB Asset",
+      "name": "BMC Computer System",
+      "order": [
+
+      ],
+      "parameters": [
+        {
+          "mapping": "${values('Class')}",
+          "name": "ClassId"
+        },
+        {
+          "mapping": "${values('DataSetId')}",
+          "name": "DatasetId"
+        },
+        {
+          "mapping": "${values('Host Name')}",
+          "name": "Name"
+        }
+      ],
+      "qualification": "By ClassId and Name",
+      "status": "Active"
+    }
+  ],
+  "categorizations": [
+
+  ],
+  "customHeadContent": "<div class=\"modal fade\" id=\"subform-modal\" aria-labelledby=\"subform-modal-title\">\n  <div class=\"modal-dialog modal-lg\">\n    <div class=\"modal-content\">\n      <div class=\"modal-body\">\n        <i class=\"fa fa-cog fa-spin\"></i>\n      </div>\n    </div>\n  </div>\n</div>\n\n<style>\n/** Twitter Typeahead **/\n.twitter-typeahead, .typeahead, .empty-message  {\n    width: 100%;\n    float:left;\n}\n.tt-menu {\n    background: white;\n    width: 100%;\n}\n.tt-suggestion {\n    overflow: hidden;\n    display: table;\n    width: 100%;\n    padding: 10px 10px;\n    border-bottom: 1px solid #e9ecf2;\n}\n/** Movie Card (Movie Suggestions) **/\n.movie-card {\n    position: relative;\n    padding: 8px;\n}\n.movie-card-poster {\n    position: absolute;\n    top: 8px;\n    left: 8px;\n    width: 52px;\n    height: 52px;\n    border: 2px solid #ccd6dd;\n    border-radius: 5px;\n}\n.movie-card:hover .movie-card-poster {\n    border-color: #f5f8fa;\n}\n.movie-card-details {\n    min-height: 60px;\n    padding-left: 60px;\n}\n.movie-card-name,\n.movie-card-year {\n    display: inline-block;\n}\n.movie-card-name {\n    font-weight: 700;\n}\n.movie-card-year {\n    color: #8899a6;\n}\n.movie-card:hover .movie-card-year {\n    color: #fff;\n}\n.movie-card-plot {\n    margin-top: 5px;\n    font-size: 14px;\n    line-height: 18px;\n}\n.movie-card:hover,\n.movie-card.is-active {\n    color: #fff;\n    background: #0088CC;\n    cursor: pointer;\n}\n.empty-message {\n    position: relative;\n    padding: 10px;\n    font-size: 16px;\n    line-height: 30px;\n    text-align: center;\n}\n</style>",
+  "description": "",
+  "fields": [
+    {
+      "name": "Search by Host Name"
+    },
+    {
+      "name": "Host Name"
+    },
+    {
+      "name": "Id"
+    },
+    {
+      "name": "Class"
+    },
+    {
+      "name": "DataSetId"
+    }
+  ],
+  "name": "Change RAM on Existing Server (Multiple)",
+  "notes": null,
+  "pages": [
+    {
+      "advanceCondition": null,
+      "displayCondition": null,
+      "displayPage": null,
+      "elements": [
+        {
+          "type": "section",
+          "renderType": null,
+          "name": "Search by Host Name",
+          "title": "Search by Host Name",
+          "visible": true,
+          "omitWhenHidden": null,
+          "renderAttributes": {
+
+          },
+          "elements": [
+            {
+              "type": "field",
+              "name": "Search by Host Name",
+              "label": "",
+              "key": "f2",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": false,
+              "requiredMessage": null,
+              "omitWhenHidden": null,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+                "host-name-search": "none"
+              },
+              "dataType": "string",
+              "renderType": "text",
+              "rows": 1
+            },
+            {
+              "type": "field",
+              "name": "Host Name",
+              "label": "Host Name",
+              "key": "f3",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": false,
+              "enabled": true,
+              "required": false,
+              "requiredMessage": null,
+              "omitWhenHidden": true,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+
+              },
+              "dataType": "string",
+              "renderType": "text",
+              "rows": 1
+            }
+          ]
+        },
+        {
+          "type": "section",
+          "renderType": null,
+          "name": "Subform Table",
+          "title": "Requested Changes",
+          "visible": true,
+          "omitWhenHidden": null,
+          "renderAttributes": {
+
+          },
+          "elements": [
+            {
+              "type": "content",
+              "renderType": "html",
+              "name": "Table",
+              "text": "<table class=\"display table table-striped table-hover dt-responsive\" cellspacing=\"0\" width=\"100%\"></table>",
+              "visible": true,
+              "renderAttributes": {
+                "subform-slug": "change-ram-on-existing-server",
+                "subform-fields": "Host Name,Select New Size",
+                "subform-table": "true"
+              }
+            }
+          ]
+        },
+        {
+          "type": "section",
+          "renderType": null,
+          "name": "System - Hidden",
+          "title": null,
+          "visible": false,
+          "omitWhenHidden": false,
+          "renderAttributes": {
+
+          },
+          "elements": [
+            {
+              "type": "field",
+              "name": "Id",
+              "label": "Id",
+              "key": "f1",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": false,
+              "requiredMessage": null,
+              "omitWhenHidden": null,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+
+              },
+              "dataType": "string",
+              "renderType": "text",
+              "rows": 1
+            },
+            {
+              "type": "field",
+              "name": "Class",
+              "label": "Class",
+              "key": "f4",
+              "defaultValue": "BMC_COMPUTERSYSTEM",
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": false,
+              "requiredMessage": null,
+              "omitWhenHidden": null,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+
+              },
+              "dataType": "string",
+              "renderType": "text",
+              "rows": 1
+            },
+            {
+              "type": "field",
+              "name": "DataSetId",
+              "label": "DataSetId",
+              "key": "f5",
+              "defaultValue": "BMC:Asset",
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": false,
+              "requiredMessage": null,
+              "omitWhenHidden": null,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+
+              },
+              "dataType": "string",
+              "renderType": "text",
+              "rows": 1
+            }
+          ]
+        },
+        {
+          "type": "section",
+          "renderType": null,
+          "name": "Buttons",
+          "title": null,
+          "visible": true,
+          "omitWhenHidden": null,
+          "renderAttributes": {
+
+          },
+          "elements": [
+            {
+              "type": "button",
+              "label": "Save",
+              "name": "Save",
+              "visible": true,
+              "enabled": true,
+              "renderType": "save",
+              "renderAttributes": {
+
+              }
+            },
+            {
+              "type": "button",
+              "label": "Submit",
+              "name": "Submit Button",
+              "visible": true,
+              "enabled": true,
+              "renderType": "submit-page",
+              "renderAttributes": {
+
+              }
+            }
+          ]
+        }
+      ],
+      "events": [
+        {
+          "name": "Set Parent Id",
+          "type": "Load",
+          "action": "Custom",
+          "code": "K('field[Id]').value(K('submission').id);"
+        },
+        {
+          "name": "Initialize Subform",
+          "type": "Load",
+          "action": "Custom",
+          "code": "\n    //------------------------------------------------------------\n    // SUBFORM STUFF\n    //------------------------------------------------------------\n\n\n    // Search for Subforms that should be displayed\n    $('[subform-table]').each(function(){\n      buildSubFormTable($(this))\n    });\n\n    function buildSubFormTable(table){\n      // Iniitialize variables needed to display table\n      var tableElement = table.find('table');\n      var columns = table.attr('subform-fields').split(',');\n      var data;\n      var columnsObject = $.map(columns,function(column){\n        return { title: column, data: column }\n      })\n      // Add Child Id and Buttons to Table Columns\n      columnsObject.push(\n        { title: 'Child Id',\n          data: 'Child Id',\n          sortable: false,\n          visible: false\n        },\n        { data: null,\n          sortable: false,\n          width: \"80px\",\n          defaultContent: \"<button class='btn-sm btn-primary' value='Edit'><i class='fa fa-pencil-square-o'></i></button> <button class='btn-sm btn-primary' value='Delete'><i class='fa fa-trash'></i></button>\"\n        });\n      var subformSlug = table.attr('subform-slug');\n      var parentId = K('submission').id();\n      var subformUrl = bundle.apiLocation() + '/' + bundle.spaceLocation() + '/' + bundle.kappLocation() + '/' + subformSlug;\n      var subformSubmissionsUrl = bundle.apiLocation() + '/kapps/' + bundle.kappSlug() + '/forms/' + subformSlug + '/submissions' + \n          '?include=details,values&timeline=createdAt&coreState=Draft&direction=DESC&q=values[Requested For]=\"' + K('identity').username + '\"';\n\n\n      var oTable = $(tableElement).DataTable({\n        dom: 'T',\n        columns: columnsObject,\n        language: {\n            zeroRecords: \"Search to add a server\"\n        },\n        ajax: {\n          url: subformSubmissionsUrl,\n          dataSrc: function ( data ) {\n            var subformSubmissions = [];\n            $.each(data.submissions, function(index, value){\n              subformSubmission = value.values\n              subformSubmission['Child Id'] = value.id;\n              subformSubmissions.push(value.values)\n            });\n            return subformSubmissions;\n          }\n        }\n      });\n\n      //Attach listeners here for when a row is clicked:\n      $(tableElement).on(\"click\",\"tr td button\",function() {\n        var row = $(this).closest('tr'),\n            index = oTable.row(row).index(),\n            rowData = oTable.row(index).data();\n        \n        if ($(this).val() == \"Edit\") {\n          $('#subform-modal .modal-body').empty().html(\"<i class='fa fa-cog fa-spin'></i>\");\n          loadEventForm(rowData[\"Child Id\"], row, oTable, rowData[\"Host Name\"], null, subformSlug);\n        }\n        \n        if ($(this).val() == \"Delete\") {\n          var myConfirmation = confirm('Are you sure you want to delete this event type?')\n          if (myConfirmation) {\n            $.ajax({\n              method: 'DELETE',\n              url: bundle.apiLocation() + '/submissions/' + rowData['Child Id'],\n              dataType: \"json\",\n              data:   null,\n              contentType: \"application/json\",\n              \n              // If form creation was successful run this code\n              success: function(response, textStatus, jqXHR){\n                oTable.row(row).remove().draw();\n              },\n              // If there was an error, show the error\n              error: function(jqXHR, textStatus, errorThrown){\n                //$('#newObject .modal-body #message').html('There was an error creating the Object ' + data.errorThrown);\n                console.log('There was an error removing the object: ' + errorThrown);\n              }\n            });\n          }\n        }\n      })\n    }\n    function loadEventForm(id, row, oTable, hostName, recId, subformSlug) {\n      //Ensure modal is empty\n      $('#subform-modal .modal-body').html(\"<i class='fa fa-cog fa-spin'></i>\");\n      \n      //Determing if we are opening an existing or new application configuration\n      var path = bundle.kappLocation() + '/' + subformSlug;\n      if (id) {\n        path = bundle.spaceLocation() + '/submissions/' + id;\n      }\n      \n      //Display the modal\n      $('#subform-modal').modal('show');\n      \n      //Retrive and display the subform (in our case, in the modal)\n      K.load({\n        path:path,\n        container: '#subform-modal .modal-body',\n        loaded: function(form) {\n          if (recId !== null) {\n            form.select('field[Reconciliation Identity]').value(recId);\n            $(form.select('field[Reconciliation Identity]').element()).change();\n          }\n\n          form.select('field[Requested For]').value(K('identity').username);\n          form.select('field[Is Embedded]').value('true');\n          form.select('field[Host Name]').value(hostName);\n          \n          $(form.select('section[Search by Host Name]').element()).css('display','none'); \n          $(form.select('button[Submit Button]').element()).css('display','none');         \n        },\n        created: function(submission) {\n          rowData = buildRowData(submission);\n\n          oTable.row.add(rowData).draw(true);\n          $('#subform-modal .modal-body').empty().html(\"<i class='fa fa-cog fa-spin'></i>\");\n          $('#subform-modal').modal('hide');\n        },\n        updated: function(submission) {\n          if(submission['submission']['values'] != undefined) {\n            rowData = buildRowData(submission);\n            oTable.row(row).data(rowData).draw(true);\n          }\n          $('#subform-modal').modal('hide');\n        }\n      });\n      \n      function buildRowData(submission){\n        // Build Columns Array\n        var columns = []\n        $.each(oTable.columns()[0],function(i) {\n          columns.push($( oTable.columns(i).header() ).html());\n        });\n\n        // Build RowData Object\n        var rowData = {}\n        $.each(columns,function(i,v){\n          if(v !== \"\"){\n            rowData[v] = submission['submission']['values'][v];\n          }\n        })\n        // Add Child Id\n        rowData['Child Id'] = submission['submission']['id'];\n        // Return Row Data\n        return rowData;\n      }\n    }\n\n    //------------------------------------------------------------\n    // TYPEAHEAD SEARCH\n    //------------------------------------------------------------\n\n\n    var allowSelfSearch = true;\n    var systems = new Bloodhound({\n        datumTokenizer: Bloodhound.tokenizers.obj.whitespace('value'),\n        queryTokenizer: Bloodhound.tokenizers.whitespace,\n        remote: {\n            //url: bundle.kappLocation()+\"/\"+\"shared-resources\"+\"/bridgedResources/\"+\"People - By Name?values[Name]=%QUERY\",\n            url: bundle.kappLocation()+\"/\"+ K('form').slug() +\"/bridgedResources/\"+\"BMC Computer System?values[Host Name]=%QUERY&values[Class]=BMC_COMPUTERSYSTEM&values[DataSetId]=BMC:Asset\",\n            wildcard: '%QUERY',\n            filter: function(data){\n                var dataArrayObjects = _.map(data.records.records, function(record){\n                   return _.object(data.records.fields, record);\n                });\n                if (allowSelfSearch === true){\n                    return dataArrayObjects;\n                }\n                else {\n                    return $.grep(dataArrayObjects, function(data){\n                        return data.Id !== K('identity').username;\n                    });\n                }\n            }\n        }\n    });\n\n    $(K('form').element()).find('input[host-name-search]').each(function(){\n        var input = $(this);\n        $(this).wrap($('<div class=\"input-group\"/>'));\n        $(this).closest('.input-group').prepend($('<span class=\"input-group-addon\" id=\"basic-addon1\"><i class=\"fa fa-server\" aria-hidden=\"true\"></i></span>'));\n        $(this).attr('placeholder','Search By Host Name. Enter at least 3 characters...')\n        var fieldsToSet = $(this).attr('host-name-search').split(',');\n        var fieldsToSetObject = {}\n        if(fieldsToSet.length >= 1 && fieldsToSet[0] !== 'none'){\n          $.each(fieldsToSet, function(i, v){\n              var fname = v.split('=')[0]\n              var fbridgedValue = v.split('=')[1]\n              fieldsToSetObject[fname] = fbridgedValue;\n          })\n        }\n\n        $(this).attr('data-provide', 'typeahead').addClass('typeahead');\n        $(this).typeahead({\n            hint: true,\n            highlight: true,\n            minLength: 2\n        },\n        {\n            name: 'computer-systems',\n            display: 'CI Name',\n            source: systems,\n            templates: {\n                empty: [\n                    '<div class=\"empty-message text-center\">',\n                    'No Systems found.<br>',\n                    '</div>',\n                        ].join('\\n'),\n                suggestion: function(data) {\n                    return ['<div class=\"movie-card\">',\n                          '<i class=\"fa fa-server fa-3x pull-left\" aria-hidden=\"true\"></i>',\n                          '<div class=\"movie-card-details\">',\n                          '<div class=\"movie-card-name\">' + data['CI Name'] + '</div>',\n                          '<div class=\"movie-card-plot\">' + data['Manufacturer'] + ': ' + data['Product'] + '</div>',\n                          '</div>',\n                          '</div>'].join('\\n');\n                }\n            }\n        });\n\n        $(input).bind('typeahead:select', function(ev, suggestion) {\n            // Loop over fields to set and set values\n            $.each( fieldsToSetObject, function( key, value ) {\n                K('field[' + key + ']').value(suggestion[value]);\n                // Fire change event on field that was set\n                $(K('field[' + key + ']').element()).change();\n            });\n\n            oTable = $('[subform-table] table').DataTable();\n            loadEventForm(null, null, oTable, suggestion['CI Name'], suggestion['ReconciliationId'], 'change-ram-on-existing-server')\n\n        });\n        $(input).bind('typeahead:change', function(ev) {\n            //K('field[' + fieldToSet + ']').value('');\n        });\n        $(input).keydown(function(event){\n            if(event.keyCode == 13) {\n              event.preventDefault();\n              return false;\n            }\n        });\n    });\n"
+        }
+      ],
+      "name": "Page 1",
+      "renderType": "submittable",
+      "type": "page"
+    }
+  ],
+  "securityPolicies": [
+
+  ],
+  "slug": "change-ram-on-existing-server-multiple",
+  "status": "New",
+  "submissionLabelExpression": null,
+  "type": null
+}

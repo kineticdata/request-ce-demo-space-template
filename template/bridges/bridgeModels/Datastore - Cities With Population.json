@@ -1,0 +1,80 @@
+{
+  "activeMappingName": "Datastore - Cities With Population",
+  "attributes": [
+    {
+      "name": "City"
+    },
+    {
+      "name": "Population"
+    },
+    {
+      "name": "State"
+    },
+    {
+      "name": "Status"
+    }
+  ],
+  "mappings": [
+    {
+      "attributes": [
+        {
+          "name": "City",
+          "structureField": "${fields('values[City]')}"
+        },
+        {
+          "name": "State",
+          "structureField": "${fields('values[State]')}"
+        },
+        {
+          "name": "Population",
+          "structureField": "${fields('values[Population]')}"
+        },
+        {
+          "name": "Status",
+          "structureField": "${fields('values[Status]')}"
+        }
+      ],
+      "bridgeName": "CE Demo Data",
+      "name": "Datastore - Cities With Population",
+      "qualifications": [
+        {
+          "name": "By City and State",
+          "query": "kappSlug=admin&formSlug=cities-with-population&limit=999&direction=ASC&values[City]=${parameters('City')}&values[State]=${parameters('State')}"
+        },
+        {
+          "name": "By State",
+          "query": "kappSlug=admin&formSlug=cities-with-population&limit=999&direction=ASC&values[State]=${parameters('State')}"
+        }
+      ],
+      "structure": "Submissions"
+    }
+  ],
+  "name": "Datastore - Cities With Population",
+  "qualifications": [
+    {
+      "name": "By City and State",
+      "parameters": [
+        {
+          "name": "City",
+          "notes": null
+        },
+        {
+          "name": "State",
+          "notes": null
+        }
+      ],
+      "resultType": "Single"
+    },
+    {
+      "name": "By State",
+      "parameters": [
+        {
+          "name": "State",
+          "notes": null
+        }
+      ],
+      "resultType": "Multiple"
+    }
+  ],
+  "status": "Active"
+}

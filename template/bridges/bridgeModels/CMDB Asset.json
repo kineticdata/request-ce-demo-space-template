@@ -1,0 +1,351 @@
+{
+  "activeMappingName": "CMDB Asset",
+  "attributes": [
+    {
+      "name": "Category"
+    },
+    {
+      "name": "CI Name"
+    },
+    {
+      "name": "ClassId"
+    },
+    {
+      "name": "DatasetId"
+    },
+    {
+      "name": "InstanceId"
+    },
+    {
+      "name": "Item"
+    },
+    {
+      "name": "Manufacturer"
+    },
+    {
+      "name": "Model"
+    },
+    {
+      "name": "Product"
+    },
+    {
+      "name": "ReconciliationId"
+    },
+    {
+      "name": "Region"
+    },
+    {
+      "name": "Serial Number"
+    },
+    {
+      "name": "Site"
+    },
+    {
+      "name": "Site Group"
+    },
+    {
+      "name": "Type"
+    }
+  ],
+  "mappings": [
+    {
+      "attributes": [
+        {
+          "name": "Category",
+          "structureField": "${fields('Category')}"
+        },
+        {
+          "name": "CI Name",
+          "structureField": "${fields('Name')}"
+        },
+        {
+          "name": "ClassId",
+          "structureField": "${fields('ClassId')}"
+        },
+        {
+          "name": "DatasetId",
+          "structureField": "${fields('DatasetId')}"
+        },
+        {
+          "name": "InstanceId",
+          "structureField": "${fields('InstanceId')}"
+        },
+        {
+          "name": "Item",
+          "structureField": "${fields('Item')}"
+        },
+        {
+          "name": "Manufacturer",
+          "structureField": "${fields('ManufacturerName')}"
+        },
+        {
+          "name": "Product",
+          "structureField": "${fields('Model')}"
+        },
+        {
+          "name": "Model",
+          "structureField": "${fields('VersionNumber')}"
+        },
+        {
+          "name": "ReconciliationId",
+          "structureField": "${fields('ReconciliationIdentity')}"
+        },
+        {
+          "name": "Region",
+          "structureField": "${fields('Region')}"
+        },
+        {
+          "name": "Serial Number",
+          "structureField": "${fields('SerialNumber')}"
+        },
+        {
+          "name": "Site",
+          "structureField": "${fields('Site')}"
+        },
+        {
+          "name": "Site Group",
+          "structureField": "${fields('SiteGroup')}"
+        },
+        {
+          "name": "Type",
+          "structureField": "${fields('Type')}"
+        }
+      ],
+      "bridgeName": "Remedy ITSM",
+      "name": "CMDB Asset",
+      "qualifications": [
+        {
+          "name": "By Asset Tag",
+          "query": "'DatasetId'=\"BMC.ASSET\" AND 'ClassId'=\"${parameters('ClassId')}\" AND 'Company'=\"${parameters('Company')}\" AND 'TagNumber' = \"${parameters('AssetTag')}\""
+        },
+        {
+          "name": "By CI Id",
+          "query": "'DatasetId'=\"BMC.ASSET\" AND 'ClassId'=\"${parameters('ClassId')}\" AND 'Company'=\"${parameters('Company')}\" AND 'AssetID' = \"${parameters('CI ID')}\""
+        },
+        {
+          "name": "By CI Name",
+          "query": "'DatasetId'=\"BMC.ASSET\" AND 'Name'=\"${parameters('CI Name')}\""
+        },
+        {
+          "name": "By Class and Company",
+          "query": "'DatasetId'=\"BMC.ASSET\" AND 'ClassId' = \"${parameters('ClassId')}\" AND 'Company' = \"${parameters('Company')}\""
+        },
+        {
+          "name": "By CI Id-Multiple",
+          "query": "'DatasetId'=\"BMC.ASSET\" AND 'ClassId'=\"${parameters('ClassId')}\" AND 'Company'=\"${parameters('Company')}\" AND 'AssetID' = \"${parameters('CI ID')}\""
+        },
+        {
+          "name": "By ClassId and Name",
+          "query": "'DatasetId'=\"BMC.ASSET\" AND 'ClassId'=\"${parameters('ClassId')}\" and 'Name' LIKE \"${parameters('Name')}%\""
+        },
+        {
+          "name": "By ClassId Company Category and Type",
+          "query": "'DatasetId'=\"BMC.ASSET\" AND 'ClassId'=\"${parameters('ClassId')}\" AND 'Company' = \"${parameters('Company')}\" AND 'Category' = \"${parameters('Category')}\" AND 'Type' = \"${parameters('Type')}\" AND 'AssetLifecycleStatus' = \"In Inventory\""
+        },
+        {
+          "name": "By Company Site and Prod Cats",
+          "query": "'DatasetId'=\"BMC.ASSET\" AND 'Company'=\"${parameters('Company')}\" and 'Category'=\"${parameters('Prod Cat 1')}\" and 'Type'=\"${parameters('Prod Cat 2')}\" and 'Item'=\"${parameters('Prod Cat 3')}\" and 'Site'=\"${parameters('Site')}\""
+        },
+        {
+          "name": "By Reconciliation Id",
+          "query": "'DatasetId'=\"BMC.ASSET\" AND 'ReconciliationIdentity'=\"${parameters('ReconciliationId')}\""
+        },
+        {
+          "name": "By Serial Number",
+          "query": "'DatasetId'=\"BMC.ASSET\" AND 'ClassId'=\"${parameters('ClassId')}\" AND 'Company'=\"${parameters('Company')}\" AND 'SerialNumber'=\"${parameters('SerialNumber')}\""
+        },
+        {
+          "name": "By ClassId",
+          "query": "'DatasetId'=\"BMC.ASSET\" AND 'ClassId'=\"${parameters('ClassId')}\""
+        }
+      ],
+      "structure": "BMC.CORE:BMC_BaseElement"
+    }
+  ],
+  "name": "CMDB Asset",
+  "qualifications": [
+    {
+      "name": "By Asset Tag",
+      "parameters": [
+        {
+          "name": "AssetTag",
+          "notes": null
+        },
+        {
+          "name": "ClassId",
+          "notes": null
+        },
+        {
+          "name": "Company",
+          "notes": null
+        }
+      ],
+      "resultType": "Single"
+    },
+    {
+      "name": "By CI Id",
+      "parameters": [
+        {
+          "name": "CI ID",
+          "notes": null
+        },
+        {
+          "name": "ClassId",
+          "notes": null
+        },
+        {
+          "name": "Company",
+          "notes": null
+        }
+      ],
+      "resultType": "Single"
+    },
+    {
+      "name": "By CI Id-Multiple",
+      "parameters": [
+        {
+          "name": "CI ID",
+          "notes": null
+        },
+        {
+          "name": "ClassId",
+          "notes": null
+        },
+        {
+          "name": "Company",
+          "notes": null
+        }
+      ],
+      "resultType": "Multiple"
+    },
+    {
+      "name": "By CI Name",
+      "parameters": [
+        {
+          "name": "CI Name",
+          "notes": null
+        }
+      ],
+      "resultType": "Single"
+    },
+    {
+      "name": "By Class and Company",
+      "parameters": [
+        {
+          "name": "ClassId",
+          "notes": null
+        },
+        {
+          "name": "Company",
+          "notes": null
+        }
+      ],
+      "resultType": "Multiple"
+    },
+    {
+      "name": "By ClassId",
+      "parameters": [
+        {
+          "name": "ClassId",
+          "notes": null
+        }
+      ],
+      "resultType": "Multiple"
+    },
+    {
+      "name": "By ClassId and Name",
+      "parameters": [
+        {
+          "name": "ClassId",
+          "notes": null
+        },
+        {
+          "name": "DatasetId",
+          "notes": null
+        },
+        {
+          "name": "Name",
+          "notes": null
+        }
+      ],
+      "resultType": "Multiple"
+    },
+    {
+      "name": "By ClassId Company Category and Type",
+      "parameters": [
+        {
+          "name": "Category",
+          "notes": null
+        },
+        {
+          "name": "ClassId",
+          "notes": null
+        },
+        {
+          "name": "Company",
+          "notes": null
+        },
+        {
+          "name": "Type",
+          "notes": null
+        }
+      ],
+      "resultType": "Multiple"
+    },
+    {
+      "name": "By Company Site and Prod Cats",
+      "parameters": [
+        {
+          "name": "Company",
+          "notes": null
+        },
+        {
+          "name": "Prod Cat 1",
+          "notes": null
+        },
+        {
+          "name": "Prod Cat 2",
+          "notes": null
+        },
+        {
+          "name": "Prod Cat 3",
+          "notes": null
+        },
+        {
+          "name": "Site",
+          "notes": null
+        }
+      ],
+      "resultType": "Multiple"
+    },
+    {
+      "name": "By Reconciliation Id",
+      "parameters": [
+        {
+          "name": "ReconciliationId",
+          "notes": null
+        }
+      ],
+      "resultType": "Single"
+    },
+    {
+      "name": "By Serial Number",
+      "parameters": [
+        {
+          "name": "ClassId",
+          "notes": null
+        },
+        {
+          "name": "Company",
+          "notes": null
+        },
+        {
+          "name": "SerialNumber",
+          "notes": null
+        }
+      ],
+      "resultType": "Single"
+    }
+  ],
+  "status": "Active"
+}

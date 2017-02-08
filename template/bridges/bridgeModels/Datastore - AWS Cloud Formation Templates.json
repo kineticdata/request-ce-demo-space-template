@@ -1,0 +1,80 @@
+{
+  "activeMappingName": "Datastore - AWS Cloud Formation Templates",
+  "attributes": [
+    {
+      "name": "Status"
+    },
+    {
+      "name": "Template Description"
+    },
+    {
+      "name": "Template Name"
+    },
+    {
+      "name": "Template Parameters"
+    },
+    {
+      "name": "Template Url"
+    }
+  ],
+  "mappings": [
+    {
+      "attributes": [
+        {
+          "name": "Template Name",
+          "structureField": "${fields('values[Template Name]')}"
+        },
+        {
+          "name": "Template Description",
+          "structureField": "${fields('values[Template Description]')}"
+        },
+        {
+          "name": "Template Parameters",
+          "structureField": "${fields('values[Template Parameters]')}"
+        },
+        {
+          "name": "Template Url",
+          "structureField": "${fields('values[Template Url]')}"
+        },
+        {
+          "name": "Status",
+          "structureField": "${fields('values[Status]')}"
+        }
+      ],
+      "bridgeName": "Kinetic Core",
+      "name": "Datastore - AWS Cloud Formation Templates",
+      "qualifications": [
+        {
+          "name": "All",
+          "query": "kappSlug=admin&formSlug=aws-cloud-formation-templates&limit=999"
+        },
+        {
+          "name": "By Name",
+          "query": "kappSlug=admin&formSlug=aws-cloud-formation-templates&limit=999&values[Template Name]=${parameters('Template Name')}"
+        }
+      ],
+      "structure": "Submissions"
+    }
+  ],
+  "name": "Datastore - AWS Cloud Formation Templates",
+  "qualifications": [
+    {
+      "name": "All",
+      "parameters": [
+
+      ],
+      "resultType": "Multiple"
+    },
+    {
+      "name": "By Name",
+      "parameters": [
+        {
+          "name": "Template Name",
+          "notes": null
+        }
+      ],
+      "resultType": "Single"
+    }
+  ],
+  "status": "Active"
+}

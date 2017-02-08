@@ -1,6 +1,0 @@
-[
-  {
-    "name": "Count",
-    "structureField": "KSR-${fields('count')}"
-  }
-]

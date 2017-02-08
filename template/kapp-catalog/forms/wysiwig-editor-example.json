@@ -1,0 +1,139 @@
+{
+  "anonymous": false,
+  "attributes": [
+
+  ],
+  "bridgedResources": [
+    {
+      "model": "Datastore - WYSIWIG Editor Example",
+      "name": "Datastore HTML",
+      "order": [
+
+      ],
+      "parameters": [
+
+      ],
+      "qualification": "All",
+      "status": "Active"
+    },
+    {
+      "model": "Datastore - WYSIWIG Editor Example",
+      "name": "Datastore HTML by Page",
+      "order": [
+
+      ],
+      "parameters": [
+        {
+          "mapping": "${values('Page')}",
+          "name": "Page"
+        }
+      ],
+      "qualification": "By Page",
+      "status": "Active"
+    }
+  ],
+  "categorizations": [
+    {
+      "category": {
+        "slug": "example-services"
+      }
+    }
+  ],
+  "customHeadContent": "",
+  "description": "Example of how a WYSIWIG Editor can be used to manage content in Kinetic Request CE",
+  "fields": [
+    {
+      "name": "Page"
+    }
+  ],
+  "name": "WYSIWIG Editor Example",
+  "notes": null,
+  "pages": [
+    {
+      "advanceCondition": "false",
+      "displayCondition": null,
+      "displayPage": "",
+      "elements": [
+        {
+          "type": "field",
+          "name": "Page",
+          "label": "Page",
+          "key": "f2",
+          "defaultValue": null,
+          "defaultResourceName": null,
+          "visible": true,
+          "enabled": true,
+          "required": true,
+          "requiredMessage": null,
+          "omitWhenHidden": null,
+          "pattern": null,
+          "constraints": [
+
+          ],
+          "events": [
+            {
+              "name": "Set HTML Area",
+              "type": "Change",
+              "action": "Custom",
+              "code": "K('bridgedResource[Datastore HTML by Page]').load({\n    attributes: ['Description HTML'],\n    values: {'Page' : K('field[Page]').value()},\n    success: function(bridgedData) {\n      $('[data-element-name=\"HTML Content\"]').html(bridgedData['Description HTML']);\n    }\n});",
+              "mappings": [
+                {
+                  "field": "Description HTML",
+                  "value": "${resources('Datastore HTML by Page:Description HTML')}"
+                }
+              ],
+              "bridgedResourceName": "Datastore HTML by Page"
+            }
+          ],
+          "renderAttributes": {
+
+          },
+          "dataType": "string",
+          "renderType": "dropdown",
+          "choicesResourceName": "Datastore HTML",
+          "choicesRunIf": null,
+          "choices": {
+            "label": "${resources('Datastore HTML:Page')}",
+            "value": "${resources('Datastore HTML:Page')}"
+          }
+        },
+        {
+          "type": "section",
+          "renderType": null,
+          "name": "HTML Content Section",
+          "title": "HTML Content",
+          "visible": true,
+          "omitWhenHidden": null,
+          "renderAttributes": {
+
+          },
+          "elements": [
+            {
+              "type": "content",
+              "renderType": "html",
+              "name": "HTML Content",
+              "text": "",
+              "visible": true,
+              "renderAttributes": {
+
+              }
+            }
+          ]
+        }
+      ],
+      "events": [
+
+      ],
+      "name": "Datastore",
+      "renderType": "submittable",
+      "type": "page"
+    }
+  ],
+  "securityPolicies": [
+
+  ],
+  "slug": "wysiwig-editor-example",
+  "status": "Active",
+  "submissionLabelExpression": null,
+  "type": "Service"
+}

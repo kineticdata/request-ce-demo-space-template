@@ -1,0 +1,38 @@
+{
+  "activeMappingName": "Count",
+  "attributes": [
+    {
+      "name": "Count"
+    }
+  ],
+  "mappings": [
+    {
+      "attributes": [
+        {
+          "name": "Count",
+          "structureField": "KSR-${fields('count')}"
+        }
+      ],
+      "bridgeName": "Counter",
+      "name": "Count",
+      "qualifications": [
+        {
+          "name": "All",
+          "query": null
+        }
+      ],
+      "structure": "Count"
+    }
+  ],
+  "name": "Counter",
+  "qualifications": [
+    {
+      "name": "All",
+      "parameters": [
+
+      ],
+      "resultType": "Single"
+    }
+  ],
+  "status": "Active"
+}

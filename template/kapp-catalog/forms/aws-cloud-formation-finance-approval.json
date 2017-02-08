@@ -1,0 +1,598 @@
+{
+  "anonymous": false,
+  "attributes": [
+    {
+      "name": "Image",
+      "values": [
+        "approval.png"
+      ]
+    }
+  ],
+  "bridgedResources": [
+
+  ],
+  "categorizations": [
+
+  ],
+  "customHeadContent": null,
+  "description": "Financial Approval for Creating Cloud Formation Templates on AWS",
+  "fields": [
+    {
+      "name": "Summary"
+    },
+    {
+      "name": "Details"
+    },
+    {
+      "name": "Decision"
+    },
+    {
+      "name": "Denial Reason"
+    },
+    {
+      "name": "Comments"
+    },
+    {
+      "name": "Assigned Individual Displayed Name"
+    },
+    {
+      "name": "Assigned Individual"
+    },
+    {
+      "name": "Assigned Group"
+    },
+    {
+      "name": "Deferral Token"
+    },
+    {
+      "name": "Originating System"
+    },
+    {
+      "name": "Review Url"
+    },
+    {
+      "name": "Parent Instance ID"
+    },
+    {
+      "name": "Status"
+    },
+    {
+      "name": "System Input"
+    }
+  ],
+  "name": "AWS Cloud Formation Finance Approval",
+  "notes": "a",
+  "pages": [
+    {
+      "advanceCondition": null,
+      "displayCondition": null,
+      "displayPage": "",
+      "elements": [
+        {
+          "type": "section",
+          "name": "Request Details",
+          "title": "Request Details",
+          "visible": true,
+          "renderAttributes": {
+
+          },
+          "elements": [
+            {
+              "type": "field",
+              "name": "Summary",
+              "label": "Summary",
+              "key": "f16",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": "values('Summary') !== null",
+              "enabled": false,
+              "required": false,
+              "requiredMessage": null,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+
+              },
+              "dataType": "string",
+              "renderType": "text",
+              "rows": 2,
+              "omitWhenHidden": false
+            },
+            {
+              "type": "field",
+              "name": "Details",
+              "label": "Details",
+              "key": "f10",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": "values('Details') !== null",
+              "enabled": false,
+              "required": false,
+              "requiredMessage": null,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+
+              },
+              "dataType": "string",
+              "renderType": "text",
+              "rows": 4,
+              "omitWhenHidden": false
+            },
+            {
+              "type": "content",
+              "renderType": "html",
+              "name": "Review Request HTML",
+              "text": "<div id=\"requestDetails\"></div>",
+              "visible": "values('Originating System') === \"Kinetic Core\" && values('Parent Instance ID') !== null",
+              "renderAttributes": {
+
+              }
+            }
+          ],
+          "renderType": null,
+          "omitWhenHidden": null
+        },
+        {
+          "type": "section",
+          "renderType": null,
+          "name": "Cost Estimate",
+          "title": "Cost Estimate",
+          "visible": true,
+          "omitWhenHidden": null,
+          "renderAttributes": {
+
+          },
+          "elements": [
+            {
+              "type": "content",
+              "renderType": "html",
+              "name": "Cost Estimate iFrame",
+              "text": "<div id=\"cost-estimate\">\n  <button id=\"cost-estimate-button\" type=\"button\" class=\"btn btn-info btn-lg\">View AWS Cost Estimate</button>\n</div>\n\n<script>\n  $(function(){\n    \n    var estimateUrl = \"\";\n    if( K(\"field[System Input]\").value() !== null && K(\"field[System Input]\").value() !== \"\") {\n      estimateUrl = JSON.parse(K(\"field[System Input]\").value())[\"Estimate Url\"];\n      $('#cost-estimate-button').click(function(){\n        win = window.open(estimateUrl, '_blank');\n        if(win){\n            //Browser has allowed it to be opened\n            win.focus();\n        }else{\n            //Broswer has blocked it\n            alert('Please allow popups for this site');\n        }\n      });\n    }\n  });\n</script>",
+              "visible": true,
+              "renderAttributes": {
+
+              }
+            }
+          ]
+        },
+        {
+          "type": "section",
+          "name": "Approval Section",
+          "title": "Approver Section",
+          "visible": true,
+          "renderAttributes": {
+
+          },
+          "elements": [
+            {
+              "type": "field",
+              "name": "Decision",
+              "label": "Decision",
+              "key": "f5",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": true,
+              "requiredMessage": null,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+
+              },
+              "dataType": "string",
+              "renderType": "dropdown",
+              "choicesResourceName": null,
+              "choices": [
+                {
+                  "label": "Approved",
+                  "value": "Approved"
+                },
+                {
+                  "label": "Denied",
+                  "value": "Denied"
+                }
+              ],
+              "choicesRunIf": null,
+              "omitWhenHidden": null
+            },
+            {
+              "type": "field",
+              "name": "Denial Reason",
+              "label": "Denial Reason",
+              "key": "f6",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": "values('Decision') != \"Approved\" && values('Decision') != null",
+              "enabled": true,
+              "required": false,
+              "requiredMessage": null,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+
+              },
+              "dataType": "string",
+              "renderType": "text",
+              "rows": 4,
+              "omitWhenHidden": true
+            },
+            {
+              "type": "field",
+              "name": "Comments",
+              "label": "Comments",
+              "key": "f11",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": false,
+              "requiredMessage": null,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+
+              },
+              "dataType": "string",
+              "renderType": "text",
+              "rows": 4,
+              "omitWhenHidden": null
+            }
+          ],
+          "renderType": null,
+          "omitWhenHidden": null
+        },
+        {
+          "type": "section",
+          "name": "Buttons",
+          "title": null,
+          "visible": true,
+          "renderAttributes": {
+            "class": "box-footer"
+          },
+          "elements": [
+            {
+              "type": "button",
+              "label": "Save",
+              "name": "Save",
+              "visible": true,
+              "enabled": true,
+              "renderType": "save",
+              "renderAttributes": {
+
+              }
+            },
+            {
+              "type": "button",
+              "label": "Submit",
+              "name": "Submit Button",
+              "visible": true,
+              "enabled": true,
+              "renderType": "submit-page",
+              "renderAttributes": {
+
+              }
+            }
+          ],
+          "renderType": null,
+          "omitWhenHidden": null
+        },
+        {
+          "type": "section",
+          "name": "Hidden Fields",
+          "title": null,
+          "visible": false,
+          "renderAttributes": {
+
+          },
+          "elements": [
+            {
+              "type": "field",
+              "name": "Assigned Individual Displayed Name",
+              "label": "Approver Name",
+              "key": "f7",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": "false",
+              "enabled": false,
+              "required": false,
+              "requiredMessage": null,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+
+              },
+              "dataType": "string",
+              "renderType": "text",
+              "rows": 1,
+              "omitWhenHidden": false
+            },
+            {
+              "type": "field",
+              "name": "Assigned Individual",
+              "label": "Assigned Individual",
+              "key": "f9",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": false,
+              "requiredMessage": null,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+
+              },
+              "dataType": "string",
+              "renderType": "text",
+              "rows": 1,
+              "omitWhenHidden": null
+            },
+            {
+              "type": "field",
+              "name": "Assigned Group",
+              "label": "Assigned Group",
+              "key": "f13",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": false,
+              "requiredMessage": null,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+
+              },
+              "dataType": "string",
+              "renderType": "text",
+              "rows": 1,
+              "omitWhenHidden": null
+            },
+            {
+              "type": "field",
+              "name": "Deferral Token",
+              "label": "Deferral Token",
+              "key": "f1",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": false,
+              "requiredMessage": null,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+
+              },
+              "dataType": "string",
+              "renderType": "text",
+              "rows": 1,
+              "omitWhenHidden": null
+            },
+            {
+              "type": "field",
+              "name": "Originating System",
+              "label": "Originating System",
+              "key": "f14",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": false,
+              "requiredMessage": null,
+              "omitWhenHidden": null,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+
+              },
+              "dataType": "string",
+              "renderType": "text",
+              "rows": 1
+            },
+            {
+              "type": "field",
+              "name": "Review Url",
+              "label": "Review Url",
+              "key": "f15",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": false,
+              "requiredMessage": null,
+              "omitWhenHidden": null,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+
+              },
+              "dataType": "string",
+              "renderType": "text",
+              "rows": 1
+            },
+            {
+              "type": "field",
+              "name": "Parent Instance ID",
+              "label": "Parent Instance ID",
+              "key": "f8",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": false,
+              "enabled": true,
+              "required": false,
+              "requiredMessage": null,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+
+              },
+              "dataType": "string",
+              "renderType": "text",
+              "rows": 1,
+              "omitWhenHidden": false
+            },
+            {
+              "type": "field",
+              "name": "Status",
+              "label": "Status",
+              "key": "f4",
+              "defaultValue": "${values('Decision')}",
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": false,
+              "requiredMessage": null,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+
+              },
+              "dataType": "string",
+              "renderType": "text",
+              "rows": 1,
+              "omitWhenHidden": null
+            },
+            {
+              "type": "field",
+              "name": "System Input",
+              "label": "System Input",
+              "key": "f12",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": false,
+              "requiredMessage": null,
+              "omitWhenHidden": null,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+
+              },
+              "dataType": "string",
+              "renderType": "text",
+              "rows": 1
+            }
+          ],
+          "omitWhenHidden": false,
+          "renderType": null
+        }
+      ],
+      "events": [
+        {
+          "name": "Load Subform",
+          "type": "Load",
+          "action": "Custom",
+          "code": "if( K('field[Originating System]').value() == 'Kinetic Core') {\n      var submissionId = K('field[Parent Instance ID]').value();\n      K.load({\n        path: bundle.spaceLocation() + '/submissions/' + submissionId + '?debugjs&review',\n        container: \"#requestDetails\"\n      })\n  \t}",
+          "runIf": "false"
+        }
+      ],
+      "name": "Page 1",
+      "renderType": "submittable",
+      "type": "page"
+    },
+    {
+      "advanceCondition": null,
+      "displayCondition": "",
+      "displayPage": "",
+      "elements": [
+        {
+          "type": "content",
+          "renderType": "text",
+          "name": "Thanks",
+          "text": "Thanks for your approval, we'll notify the submitter and take it from here!",
+          "visible": true,
+          "renderAttributes": {
+
+          }
+        }
+      ],
+      "events": [
+
+      ],
+      "name": "Confirmation Page",
+      "renderType": "confirmation",
+      "type": "page"
+    }
+  ],
+  "securityPolicies": [
+
+  ],
+  "slug": "aws-cloud-formation-finance-approval",
+  "status": "New",
+  "submissionLabelExpression": "${values('Summary')}",
+  "type": "Approval"
+}

@@ -1,0 +1,47 @@
+{
+  "anonymous": false,
+  "attributes": [
+    {
+      "name": "Kapp Slug",
+      "values": [
+        "admin"
+      ]
+    }
+  ],
+  "bridgedResources": [
+
+  ],
+  "categorizations": [
+
+  ],
+  "customHeadContent": null,
+  "description": "Allows for management of translations.",
+  "fields": [
+
+  ],
+  "name": "Translations",
+  "notes": null,
+  "pages": [
+    {
+      "advanceCondition": null,
+      "displayCondition": null,
+      "displayPage": "pages/translations/console.jsp",
+      "elements": [
+
+      ],
+      "events": [
+
+      ],
+      "name": "Translations",
+      "renderType": "submittable",
+      "type": "page"
+    }
+  ],
+  "securityPolicies": [
+
+  ],
+  "slug": "translations",
+  "status": "Active",
+  "submissionLabelExpression": null,
+  "type": "Console"
+}

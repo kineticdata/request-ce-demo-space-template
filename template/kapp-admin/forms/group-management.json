@@ -1,0 +1,47 @@
+{
+  "anonymous": false,
+  "attributes": [
+    {
+      "name": "Kapp Slug",
+      "values": [
+        "ticket"
+      ]
+    }
+  ],
+  "bridgedResources": [
+
+  ],
+  "categorizations": [
+
+  ],
+  "customHeadContent": null,
+  "description": "Allows for creating and management of groups and their members.",
+  "fields": [
+
+  ],
+  "name": "Group Management",
+  "notes": null,
+  "pages": [
+    {
+      "advanceCondition": null,
+      "displayCondition": null,
+      "displayPage": "pages/groups/console.jsp",
+      "elements": [
+
+      ],
+      "events": [
+
+      ],
+      "name": "Group Management",
+      "renderType": "submittable",
+      "type": "page"
+    }
+  ],
+  "securityPolicies": [
+
+  ],
+  "slug": "group-management",
+  "status": "New",
+  "submissionLabelExpression": null,
+  "type": "Console"
+}

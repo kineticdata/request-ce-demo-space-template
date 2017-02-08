@@ -1,0 +1,104 @@
+{
+  "activeMappingName": "LDAP - People",
+  "attributes": [
+    {
+      "name": "Cell Phone"
+    },
+    {
+      "name": "Email"
+    },
+    {
+      "name": "First Name"
+    },
+    {
+      "name": "Full Name"
+    },
+    {
+      "name": "Id"
+    },
+    {
+      "name": "Last Name"
+    },
+    {
+      "name": "Telephone Number"
+    }
+  ],
+  "mappings": [
+    {
+      "attributes": [
+        {
+          "name": "Cell Phone",
+          "structureField": "${fields('mobile')}"
+        },
+        {
+          "name": "Email",
+          "structureField": "${fields('mail')}"
+        },
+        {
+          "name": "First Name",
+          "structureField": "${fields('givenName')}"
+        },
+        {
+          "name": "Full Name",
+          "structureField": "${fields('cn')}"
+        },
+        {
+          "name": "Id",
+          "structureField": "${fields('uid')}"
+        },
+        {
+          "name": "Last Name",
+          "structureField": "${fields('sn')}"
+        },
+        {
+          "name": "Telephone Number",
+          "structureField": "${fields('telephoneNumber')}"
+        }
+      ],
+      "bridgeName": "LDAP",
+      "name": "LDAP - People",
+      "qualifications": [
+        {
+          "name": "By Id",
+          "query": "(uid=${parameters('Id')})"
+        },
+        {
+          "name": "By Name",
+          "query": "(sn=${parameters('Name')}*)"
+        }
+      ],
+      "structure": "person"
+    }
+  ],
+  "name": "People",
+  "qualifications": [
+    {
+      "name": "All",
+      "parameters": [
+
+      ],
+      "resultType": "Multiple"
+    },
+    {
+      "name": "By Id",
+      "parameters": [
+        {
+          "name": "Id",
+          "notes": null
+        }
+      ],
+      "resultType": "Single"
+    },
+    {
+      "name": "By Name",
+      "parameters": [
+        {
+          "name": "Name",
+          "notes": null
+        }
+      ],
+      "resultType": "Multiple"
+    }
+  ],
+  "status": "Active"
+}

@@ -1,0 +1,950 @@
+{
+  "anonymous": false,
+  "attributes": [
+    {
+      "name": "Fulfillment Form Slug",
+      "values": [
+        "workorder"
+      ]
+    },
+    {
+      "name": "Fulfillment Group",
+      "values": [
+        "Fulfillment::Generic"
+      ]
+    },
+    {
+      "name": "Image",
+      "values": [
+        "facilities.png"
+      ]
+    },
+    {
+      "name": "SLA",
+      "values": [
+        "48 Hours"
+      ]
+    }
+  ],
+  "bridgedResources": [
+
+  ],
+  "categorizations": [
+    {
+      "category": {
+        "slug": "facilities-services"
+      }
+    },
+    {
+      "category": {
+        "slug": "promoted-requests"
+      }
+    }
+  ],
+  "customHeadContent": null,
+  "description": "This request is used for submitting a request to the facilities team. Example requests include cleaning the bathroom, and moving your cubicle. Some requests require an Approval from your manager.",
+  "fields": [
+    {
+      "name": "Type of Request"
+    },
+    {
+      "name": "Security Alarm Type"
+    },
+    {
+      "name": "Appliance Type"
+    },
+    {
+      "name": "Cable Television Provider"
+    },
+    {
+      "name": "Elevator Escalator Number"
+    },
+    {
+      "name": "Equipment Tag Number"
+    },
+    {
+      "name": "Type of Pest or Rodent"
+    },
+    {
+      "name": "Location where work is to be performed"
+    },
+    {
+      "name": "Description of work to be performed"
+    },
+    {
+      "name": "Additional Information or Comments"
+    },
+    {
+      "name": "Earliest Date of Access"
+    },
+    {
+      "name": "Latest Date of Access"
+    },
+    {
+      "name": "Status"
+    }
+  ],
+  "name": "Facilities Request",
+  "notes": "",
+  "pages": [
+    {
+      "advanceCondition": null,
+      "displayCondition": null,
+      "displayPage": null,
+      "elements": [
+        {
+          "type": "section",
+          "renderType": null,
+          "name": "Request Type",
+          "title": "Request Type",
+          "visible": true,
+          "omitWhenHidden": null,
+          "renderAttributes": {
+
+          },
+          "elements": [
+            {
+              "type": "field",
+              "name": "Type of Request",
+              "label": "Type of Request",
+              "key": "f5",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": true,
+              "requiredMessage": "Please select a Type of Request...",
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+
+              },
+              "dataType": "string",
+              "renderType": "dropdown",
+              "choicesResourceName": null,
+              "choices": [
+                {
+                  "label": "APPLIANCES",
+                  "value": "APPLIANCES"
+                },
+                {
+                  "label": "SECURITY ALARM SYSTEMS",
+                  "value": "SECURITY ALARM SYSTEMS"
+                },
+                {
+                  "label": "BUILDING MAINTENANCE AND REPAIRS",
+                  "value": "BUILDING MAINTENANCE AND REPAIRS"
+                },
+                {
+                  "label": "GROUNDSKEEPING",
+                  "value": "GROUNDSKEEPING"
+                },
+                {
+                  "label": "CABLE TELEVISION",
+                  "value": "CABLE TELEVISION"
+                },
+                {
+                  "label": "RENOVATIONS AND SPACE CHANGES",
+                  "value": "RENOVATIONS AND SPACE CHANGES"
+                },
+                {
+                  "label": "CLEANING AND CUSTODIAL",
+                  "value": "CLEANING AND CUSTODIAL"
+                },
+                {
+                  "label": "ELECTRICAL WALLS AND CEILINGS",
+                  "value": "ELECTRICAL WALLS AND CEILINGS"
+                },
+                {
+                  "label": "ELEVATOR AND ESCALATOR",
+                  "value": "ELEVATOR AND ESCALATOR"
+                },
+                {
+                  "label": "SPECIAL EVENTS",
+                  "value": "SPECIAL EVENTS"
+                },
+                {
+                  "label": "FIRE SAFETY EQUIPMENT",
+                  "value": "FIRE SAFETY EQUIPMENT"
+                },
+                {
+                  "label": "FURNITURE",
+                  "value": "FURNITURE"
+                },
+                {
+                  "label": "DISPOSAL AND WASTE",
+                  "value": "DISPOSAL AND WASTE"
+                },
+                {
+                  "label": "HEATING AND COOLING",
+                  "value": "HEATING AND COOLING"
+                },
+                {
+                  "label": "HOUSING",
+                  "value": "HOUSING"
+                },
+                {
+                  "label": "LIGHTS",
+                  "value": "LIGHTS"
+                },
+                {
+                  "label": "KEYS, LOCKS AND ACCESS",
+                  "value": "KEYS, LOCKS AND ACCESS"
+                },
+                {
+                  "label": "LOST AND FOUND",
+                  "value": "LOST AND FOUND"
+                },
+                {
+                  "label": "PARKING",
+                  "value": "PARKING"
+                },
+                {
+                  "label": "PAINTING",
+                  "value": "PAINTING"
+                },
+                {
+                  "label": "PEST CONTROL AND EXTERMINATION",
+                  "value": "PEST CONTROL AND EXTERMINATION"
+                },
+                {
+                  "label": "PLUMBING",
+                  "value": "PLUMBING"
+                },
+                {
+                  "label": "PUBLIC SAFETY (NON-EMERGENCY)",
+                  "value": "PUBLIC SAFETY (NON-EMERGENCY)"
+                },
+                {
+                  "label": "RECYCLING",
+                  "value": "RECYCLING"
+                },
+                {
+                  "label": "SIGNAGE",
+                  "value": "SIGNAGE"
+                },
+                {
+                  "label": "UTILITIES",
+                  "value": "UTILITIES"
+                },
+                {
+                  "label": "VENDING",
+                  "value": "VENDING"
+                },
+                {
+                  "label": "WINDOWS",
+                  "value": "WINDOWS"
+                }
+              ],
+              "choicesRunIf": null,
+              "omitWhenHidden": null
+            },
+            {
+              "type": "content",
+              "renderType": "html",
+              "name": "Public Safety Warning",
+              "text": "<div id=\"computerAvailability\">\n  <div class=\"alert alert-danger\" role=\"alert\">\n    If this is an emergency dial 911. Do not use this form.\n  </div>\n</div>",
+              "visible": "values('Type of Request') == \"PUBLIC SAFETY (NON-EMERGENCY)\"",
+              "renderAttributes": {
+
+              }
+            },
+            {
+              "type": "content",
+              "renderType": "html",
+              "name": "Utilities Message",
+              "text": "<div id=\"computerAvailability\">\n  <div class=\"alert alert-info\" role=\"alert\">\n    This is for utility provider issues, not campus systems.\n  </div>\n</div>",
+              "visible": "values('Type of Request') == \"UTILITIES\"",
+              "renderAttributes": {
+
+              }
+            },
+            {
+              "type": "content",
+              "renderType": "html",
+              "name": "Security Alarm Warning",
+              "text": "<div id=\"computerAvailability\">\n  <div class=\"alert alert-danger\" role=\"alert\">\n    If an alarm is going off for an unknown reason dial 911.\n  </div>\n</div>",
+              "visible": "values('Type of Request') == \"SECURITY ALARM SYSTEMS\"",
+              "renderAttributes": {
+
+              }
+            },
+            {
+              "type": "content",
+              "renderType": "html",
+              "name": "Parking Warning",
+              "text": "<div id=\"computerAvailability\">\n  <div class=\"alert alert-info\" role=\"alert\">\n    Report improperly parked vehicles by dialing 311.\n  </div>\n</div>",
+              "visible": "values('Type of Request') == \"PARKING\"",
+              "renderAttributes": {
+
+              }
+            },
+            {
+              "type": "content",
+              "renderType": "html",
+              "name": "Heating Cooling Message",
+              "text": "<div id=\"computerAvailability\">\n  <div class=\"alert alert-info\" role=\"alert\">\n    Log utility issues under \"UTILITIES\"\n  </div>\n</div>",
+              "visible": "values('Type of Request') == \"HEATING AND COOLING\"",
+              "renderAttributes": {
+
+              }
+            },
+            {
+              "type": "content",
+              "renderType": "html",
+              "name": "Cable Television Message",
+              "text": "<div id=\"computerAvailability\">\n  <div class=\"alert alert-warning\" role=\"alert\">\n    Log account and billing issues under \"UTILITIES\"\n  </div>\n</div>",
+              "visible": "values('Type of Request') == \"CABLE TELEVISION\"",
+              "renderAttributes": {
+
+              }
+            },
+            {
+              "type": "field",
+              "name": "Security Alarm Type",
+              "label": "Security Alarm Type",
+              "key": "f9",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": "values('Type of Request') == \"SECURITY ALARM SYSTEMS\"",
+              "enabled": true,
+              "required": "values('Type of Request') == \"SECURITY ALARM SYSTEMS\"",
+              "requiredMessage": null,
+              "omitWhenHidden": true,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+
+              },
+              "dataType": "string",
+              "renderType": "dropdown",
+              "choicesResourceName": null,
+              "choicesRunIf": null,
+              "choices": [
+                {
+                  "label": "Central Alarm",
+                  "value": "Central Alarm"
+                },
+                {
+                  "label": "Door Alarm",
+                  "value": "Door Alarm"
+                },
+                {
+                  "label": "Vehicle Alarm",
+                  "value": "Vehicle Alarm"
+                },
+                {
+                  "label": "Other",
+                  "value": "Other"
+                }
+              ]
+            },
+            {
+              "type": "field",
+              "name": "Appliance Type",
+              "label": "Appliance Type",
+              "key": "f11",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": "values('Type of Request') == \"APPLIANCES\"",
+              "enabled": true,
+              "required": "values('Type of Request') == \"APPLIANCES\"",
+              "requiredMessage": null,
+              "omitWhenHidden": true,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+
+              },
+              "dataType": "string",
+              "renderType": "dropdown",
+              "choicesResourceName": null,
+              "choicesRunIf": null,
+              "choices": [
+                {
+                  "label": "BEVERAGE COOLER",
+                  "value": "BEVERAGE COOLER"
+                },
+                {
+                  "label": "CLOTHES DRYER",
+                  "value": "CLOTHES DRYER"
+                },
+                {
+                  "label": "CLOTHES WASHER",
+                  "value": "CLOTHES WASHER"
+                },
+                {
+                  "label": "COOKTOP",
+                  "value": "COOKTOP"
+                },
+                {
+                  "label": "DEHUMIDIFIER",
+                  "value": "DEHUMIDIFIER"
+                },
+                {
+                  "label": "DISHWASHER",
+                  "value": "DISHWASHER"
+                },
+                {
+                  "label": "FLOOR CLEANER",
+                  "value": "FLOOR CLEANER"
+                },
+                {
+                  "label": "FREEZER",
+                  "value": "FREEZER"
+                },
+                {
+                  "label": "GARBAGE DISPOSAL",
+                  "value": "GARBAGE DISPOSAL"
+                },
+                {
+                  "label": "ICE MAKER",
+                  "value": "ICE MAKER"
+                },
+                {
+                  "label": "MICROWAVE",
+                  "value": "MICROWAVE"
+                },
+                {
+                  "label": "PORTABLE AIR",
+                  "value": "PORTABLE AIR"
+                },
+                {
+                  "label": "PORTABLE HEATER",
+                  "value": "PORTABLE HEATER"
+                },
+                {
+                  "label": "RANGE",
+                  "value": "RANGE"
+                },
+                {
+                  "label": "RANGE HOOD",
+                  "value": "RANGE HOOD"
+                },
+                {
+                  "label": "REFRIGERATOR",
+                  "value": "REFRIGERATOR"
+                },
+                {
+                  "label": "SMALL APPLIANCE",
+                  "value": "SMALL APPLIANCE"
+                },
+                {
+                  "label": "TRASH COMPACTOR",
+                  "value": "TRASH COMPACTOR"
+                },
+                {
+                  "label": "VACUUM",
+                  "value": "VACUUM"
+                },
+                {
+                  "label": "WALL OVEN",
+                  "value": "WALL OVEN"
+                },
+                {
+                  "label": "WATER COOLER",
+                  "value": "WATER COOLER"
+                }
+              ]
+            },
+            {
+              "type": "field",
+              "name": "Cable Television Provider",
+              "label": "Cable Television Provider",
+              "key": "f10",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": "values('Type of Request') == \"CABLE TELEVISION\"",
+              "enabled": true,
+              "required": "values('Type of Request') == \"CABLE TELEVISION\"",
+              "requiredMessage": null,
+              "omitWhenHidden": true,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+
+              },
+              "dataType": "string",
+              "renderType": "dropdown",
+              "choicesResourceName": null,
+              "choicesRunIf": null,
+              "choices": [
+                {
+                  "label": "Charter",
+                  "value": "Charter"
+                },
+                {
+                  "label": "Comcast",
+                  "value": "Comcast"
+                },
+                {
+                  "label": "Cox Cable",
+                  "value": "Cox Cable"
+                },
+                {
+                  "label": "Direct TV",
+                  "value": "Direct TV"
+                },
+                {
+                  "label": "Other",
+                  "value": "Other"
+                },
+                {
+                  "label": "Time Warner",
+                  "value": "Time Warner"
+                },
+                {
+                  "label": "Verizon FIOS",
+                  "value": "Verizon FIOS"
+                }
+              ]
+            },
+            {
+              "type": "field",
+              "name": "Elevator Escalator Number",
+              "label": "Elevator/Escalator Number",
+              "key": "f12",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": "values('Type of Request') == \"ELEVATOR AND ESCALATOR\"",
+              "enabled": true,
+              "required": "values('Type of Request') == \"ELEVATOR AND ESCALATOR\"",
+              "requiredMessage": null,
+              "omitWhenHidden": true,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+
+              },
+              "dataType": "string",
+              "renderType": "text",
+              "rows": 1
+            },
+            {
+              "type": "field",
+              "name": "Equipment Tag Number",
+              "label": "Equipment Tag Number",
+              "key": "f13",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": "values('Type of Request') == \"FIRE SAFETY EQUIPMENT\"",
+              "enabled": true,
+              "required": false,
+              "requiredMessage": null,
+              "omitWhenHidden": true,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+
+              },
+              "dataType": "string",
+              "renderType": "text",
+              "rows": 1
+            },
+            {
+              "type": "field",
+              "name": "Type of Pest or Rodent",
+              "label": "Type of Pest/Rodent",
+              "key": "f14",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": "values('Type of Request') == \"PEST CONTROL AND EXTERMINATION\"",
+              "enabled": true,
+              "required": "values('Type of Request') == \"PEST CONTROL AND EXTERMINATION\"",
+              "requiredMessage": null,
+              "omitWhenHidden": true,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+
+              },
+              "dataType": "string",
+              "renderType": "dropdown",
+              "choicesResourceName": null,
+              "choicesRunIf": null,
+              "choices": [
+                {
+                  "label": "ANT",
+                  "value": "ANT"
+                },
+                {
+                  "label": "BAT",
+                  "value": "BAT"
+                },
+                {
+                  "label": "BED BUGS",
+                  "value": "BED BUGS"
+                },
+                {
+                  "label": "BEE",
+                  "value": "BEE"
+                },
+                {
+                  "label": "BIRDS",
+                  "value": "BIRDS"
+                },
+                {
+                  "label": "CENTIPEDE",
+                  "value": "CENTIPEDE"
+                },
+                {
+                  "label": "COYOTE",
+                  "value": "COYOTE"
+                },
+                {
+                  "label": "GOPHER",
+                  "value": "GOPHER"
+                },
+                {
+                  "label": "HORNET",
+                  "value": "HORNET"
+                },
+                {
+                  "label": "MICE",
+                  "value": "MICE"
+                },
+                {
+                  "label": "OPOSSUM",
+                  "value": "OPOSSUM"
+                },
+                {
+                  "label": "OTHER",
+                  "value": "OTHER"
+                },
+                {
+                  "label": "OWL",
+                  "value": "OWL"
+                },
+                {
+                  "label": "RACCOON",
+                  "value": "RACCOON"
+                },
+                {
+                  "label": "RAT",
+                  "value": "RAT"
+                },
+                {
+                  "label": "ROACH",
+                  "value": "ROACH"
+                },
+                {
+                  "label": "SILVER FISH",
+                  "value": "SILVER FISH"
+                },
+                {
+                  "label": "SPIDER",
+                  "value": "SPIDER"
+                },
+                {
+                  "label": "STRAY CAT",
+                  "value": "STRAY CAT"
+                },
+                {
+                  "label": "STRAY DOG",
+                  "value": "STRAY DOG"
+                },
+                {
+                  "label": "TERMITES",
+                  "value": "TERMITES"
+                },
+                {
+                  "label": "UNKNOWN",
+                  "value": "UNKNOWN"
+                },
+                {
+                  "label": "WASP",
+                  "value": "WASP"
+                }
+              ]
+            },
+            {
+              "type": "field",
+              "name": "Location where work is to be performed",
+              "label": "Location where work is to be performed",
+              "key": "f1",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": true,
+              "requiredMessage": "Please enter a Location where the work is to be performed...",
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+
+              },
+              "dataType": "string",
+              "renderType": "text",
+              "rows": 2,
+              "omitWhenHidden": null
+            },
+            {
+              "type": "field",
+              "name": "Description of work to be performed",
+              "label": "Description of work to be performed",
+              "key": "f3",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": true,
+              "requiredMessage": "Please enter a Description....",
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+
+              },
+              "dataType": "string",
+              "renderType": "text",
+              "rows": 7,
+              "omitWhenHidden": null
+            },
+            {
+              "type": "field",
+              "name": "Additional Information or Comments",
+              "label": "Additional Information or Comments",
+              "key": "f4",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": false,
+              "requiredMessage": null,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+
+              },
+              "dataType": "string",
+              "renderType": "text",
+              "rows": 7,
+              "omitWhenHidden": null
+            },
+            {
+              "type": "content",
+              "renderType": "html",
+              "name": "Restriction Text",
+              "text": "<h5>If availability or access to the facility is or will be restricted for the work to be completed for this request, please indicate the Earliest and Latest Dates of Access. Departments do their best to accommodate work within these restrictions.</h5>",
+              "visible": true,
+              "renderAttributes": {
+
+              }
+            },
+            {
+              "type": "field",
+              "name": "Earliest Date of Access",
+              "label": "Earliest Date of Access (if restricted)",
+              "key": "f6",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": false,
+              "requiredMessage": null,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+                "class": "col-sm-6"
+              },
+              "dataType": "string",
+              "renderType": "date",
+              "omitWhenHidden": null
+            },
+            {
+              "type": "field",
+              "name": "Latest Date of Access",
+              "label": "Latest Date of Access (if restricted)",
+              "key": "f7",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": false,
+              "requiredMessage": null,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+                "class": "col-sm-6"
+              },
+              "dataType": "string",
+              "renderType": "date",
+              "omitWhenHidden": null
+            }
+          ]
+        },
+        {
+          "type": "section",
+          "name": "Buttons",
+          "title": null,
+          "visible": true,
+          "renderAttributes": {
+            "class": "box-footer"
+          },
+          "elements": [
+            {
+              "type": "button",
+              "label": "Submit",
+              "name": "Submit Button",
+              "visible": true,
+              "enabled": true,
+              "renderType": "submit-page",
+              "renderAttributes": {
+                "class": "pull-right"
+              }
+            }
+          ],
+          "renderType": null,
+          "omitWhenHidden": null
+        }
+      ],
+      "events": [
+
+      ],
+      "name": "Stock Check",
+      "renderType": "submittable",
+      "type": "page"
+    },
+    {
+      "advanceCondition": null,
+      "displayCondition": null,
+      "displayPage": null,
+      "elements": [
+        {
+          "type": "section",
+          "name": "Confirmation Section",
+          "title": null,
+          "visible": true,
+          "renderAttributes": {
+
+          },
+          "elements": [
+            {
+              "type": "content",
+              "renderType": "html",
+              "name": "Confirmation Text",
+              "text": "<H3>\nThanks for your request. We'll get to work on it right away. \n<br></br><br></br>\nYou will be notified with a status update throughout the process.\n<H3>\n\n",
+              "visible": true,
+              "renderAttributes": {
+
+              }
+            }
+          ],
+          "renderType": null,
+          "omitWhenHidden": null
+        },
+        {
+          "type": "section",
+          "name": "Hidden - System",
+          "title": null,
+          "visible": false,
+          "renderAttributes": {
+
+          },
+          "elements": [
+            {
+              "type": "field",
+              "name": "Status",
+              "label": "Status",
+              "key": "f8",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": false,
+              "requiredMessage": null,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+
+              },
+              "dataType": "string",
+              "renderType": "text",
+              "rows": 1,
+              "omitWhenHidden": null
+            }
+          ],
+          "omitWhenHidden": true,
+          "renderType": null
+        }
+      ],
+      "events": [
+
+      ],
+      "name": "Confirmation Page",
+      "renderType": "confirmation",
+      "type": "page"
+    }
+  ],
+  "securityPolicies": [
+
+  ],
+  "slug": "facilities-request",
+  "status": "Active",
+  "submissionLabelExpression": "${values('Type of Request')}",
+  "type": "Service"
+}

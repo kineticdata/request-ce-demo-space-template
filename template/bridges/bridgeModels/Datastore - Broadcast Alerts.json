@@ -1,0 +1,59 @@
+{
+  "activeMappingName": "Datastore - Broadcast Alerts",
+  "attributes": [
+    {
+      "name": "createdAt"
+    },
+    {
+      "name": "Message"
+    },
+    {
+      "name": "Status"
+    },
+    {
+      "name": "Subject"
+    }
+  ],
+  "mappings": [
+    {
+      "attributes": [
+        {
+          "name": "Status",
+          "structureField": "${fields('values[Status]')}"
+        },
+        {
+          "name": "Subject",
+          "structureField": "${fields('values[Subject]')}"
+        },
+        {
+          "name": "Message",
+          "structureField": "${fields('values[Message]')}"
+        },
+        {
+          "name": "createdAt",
+          "structureField": "${fields('createdAt')}"
+        }
+      ],
+      "bridgeName": "Kinetic Core",
+      "name": "Datastore - Broadcast Alerts",
+      "qualifications": [
+        {
+          "name": "All",
+          "query": "kappSlug=admin&formSlug=broadcast-alerts&limit=999&direction=ASC"
+        }
+      ],
+      "structure": "Submissions"
+    }
+  ],
+  "name": "Datastore - Broadcast Alerts",
+  "qualifications": [
+    {
+      "name": "All",
+      "parameters": [
+
+      ],
+      "resultType": "Multiple"
+    }
+  ],
+  "status": "Active"
+}

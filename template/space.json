@@ -1,0 +1,69 @@
+{
+  "afterLogoutPath": null,
+  "attributes": [
+    {
+      "name": "Admin Kapp Slug",
+      "values": [
+        "admin"
+      ]
+    },
+    {
+      "name": "Company Logo",
+      "values": [
+        "http://lionessmagazine.com/wp-content/uploads/2015/11/space-template-seal.png"
+      ]
+    },
+    {
+      "name": "Company Name",
+      "values": [
+        "Space Template"
+      ]
+    },
+    {
+      "name": "Login Background Image",
+      "values": [
+        "https://tarsierfx.files.wordpress.com/2014/04/ict_background1.jpg"
+      ]
+    },
+    {
+      "name": "QApp Slug",
+      "values": [
+        "ticket"
+      ]
+    },
+    {
+      "name": "Task Server Url",
+      "values": [
+        "https://demo.kineticdata.com/kinetic-task"
+      ]
+    },
+    {
+      "name": "Task Source Name",
+      "values": [
+        "Training Spaces"
+      ]
+    },
+    {
+      "name": "Theme Skin",
+      "values": [
+        "skin-yellow-light"
+      ]
+    },
+    {
+      "name": "Web Server Url",
+      "values": [
+        "https://demo.kineticdata.com/kinetic"
+      ]
+    }
+  ],
+  "bundlePath": "adminlte",
+  "displayType": "Redirect",
+  "displayValue": "catalog",
+  "loginPage": null,
+  "name": "Space Template",
+  "requireAuthentication": false,
+  "resetPasswordPage": "resetPassword.jsp",
+  "sessionInactiveLimitInSeconds": null,
+  "sharedBundleBase": null,
+  "slug": "space-template"
+}

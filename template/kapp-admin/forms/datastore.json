@@ -1,0 +1,47 @@
+{
+  "anonymous": false,
+  "attributes": [
+    {
+      "name": "Kapp Slug",
+      "values": [
+        "catalog"
+      ]
+    }
+  ],
+  "bridgedResources": [
+
+  ],
+  "categorizations": [
+
+  ],
+  "customHeadContent": null,
+  "description": "Allows users to store supporting data used within their application.",
+  "fields": [
+
+  ],
+  "name": "Datastore",
+  "notes": null,
+  "pages": [
+    {
+      "advanceCondition": null,
+      "displayCondition": null,
+      "displayPage": "pages/datastore/console.jsp",
+      "elements": [
+
+      ],
+      "events": [
+
+      ],
+      "name": "Datastore",
+      "renderType": "submittable",
+      "type": "page"
+    }
+  ],
+  "securityPolicies": [
+
+  ],
+  "slug": "datastore",
+  "status": "New",
+  "submissionLabelExpression": null,
+  "type": "Console"
+}

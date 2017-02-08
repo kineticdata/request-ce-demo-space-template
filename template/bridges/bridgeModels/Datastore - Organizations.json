@@ -1,0 +1,66 @@
+{
+  "activeMappingName": "Datastore - Organizations",
+  "attributes": [
+    {
+      "name": "Center"
+    },
+    {
+      "name": "D Code"
+    },
+    {
+      "name": "Full Name"
+    },
+    {
+      "name": "Organization"
+    },
+    {
+      "name": "Status"
+    }
+  ],
+  "mappings": [
+    {
+      "attributes": [
+        {
+          "name": "Full Name",
+          "structureField": "${fields('values[Full Name]')}"
+        },
+        {
+          "name": "Center",
+          "structureField": "${fields('values[Center]')}"
+        },
+        {
+          "name": "Organization",
+          "structureField": "${fields('values[Organization]')}"
+        },
+        {
+          "name": "D Code",
+          "structureField": "${fields('values[D Code]')}"
+        },
+        {
+          "name": "Status",
+          "structureField": "${fields('values[Status]')}"
+        }
+      ],
+      "bridgeName": "Kinetic Core",
+      "name": "Datastore - Organizations",
+      "qualifications": [
+        {
+          "name": "All",
+          "query": "kappSlug=admin&formSlug=organizations&limit=999"
+        }
+      ],
+      "structure": "Submissions"
+    }
+  ],
+  "name": "Datastore - Organizations",
+  "qualifications": [
+    {
+      "name": "All",
+      "parameters": [
+
+      ],
+      "resultType": "Multiple"
+    }
+  ],
+  "status": "Active"
+}

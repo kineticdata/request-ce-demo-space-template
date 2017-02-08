@@ -1,0 +1,66 @@
+{
+  "activeMappingName": "Datastore - WYSIWIG Editor Example",
+  "attributes": [
+    {
+      "name": "Description HTML"
+    },
+    {
+      "name": "Page"
+    },
+    {
+      "name": "Status"
+    }
+  ],
+  "mappings": [
+    {
+      "attributes": [
+        {
+          "name": "Page",
+          "structureField": "${fields('values[Page]')}"
+        },
+        {
+          "name": "Description HTML",
+          "structureField": "${fields('values[Description HTML]')}"
+        },
+        {
+          "name": "Status",
+          "structureField": "${fields('values[Status]')}"
+        }
+      ],
+      "bridgeName": "Kinetic Core",
+      "name": "Datastore - WYSIWIG Editor Example",
+      "qualifications": [
+        {
+          "name": "All",
+          "query": "kappSlug=admin&formSlug=wysiwig-editor-example&limit=999"
+        },
+        {
+          "name": "By Page",
+          "query": "kappSlug=admin&formSlug=wysiwig-editor-example&limit=999&values[Page]=${parameters('Page')}"
+        }
+      ],
+      "structure": "Submissions"
+    }
+  ],
+  "name": "Datastore - WYSIWIG Editor Example",
+  "qualifications": [
+    {
+      "name": "All",
+      "parameters": [
+
+      ],
+      "resultType": "Multiple"
+    },
+    {
+      "name": "By Page",
+      "parameters": [
+        {
+          "name": "Page",
+          "notes": null
+        }
+      ],
+      "resultType": "Single"
+    }
+  ],
+  "status": "Active"
+}

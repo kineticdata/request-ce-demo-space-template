@@ -1,0 +1,83 @@
+{
+  "activeMappingName": "BMC - Incident",
+  "attributes": [
+    {
+      "name": "Id"
+    },
+    {
+      "name": "Notes"
+    },
+    {
+      "name": "Priority"
+    },
+    {
+      "name": "Status"
+    },
+    {
+      "name": "Status Reason"
+    },
+    {
+      "name": "Summary"
+    },
+    {
+      "name": "Token"
+    }
+  ],
+  "mappings": [
+    {
+      "attributes": [
+        {
+          "name": "Id",
+          "structureField": "${fields('Incident Number')}"
+        },
+        {
+          "name": "Notes",
+          "structureField": "${fields('Detailed Decription')}"
+        },
+        {
+          "name": "Priority",
+          "structureField": "${fields('Priority')}"
+        },
+        {
+          "name": "Status",
+          "structureField": "${fields('Status')}"
+        },
+        {
+          "name": "Status Reason",
+          "structureField": "${fields('Status_Reason')}"
+        },
+        {
+          "name": "Summary",
+          "structureField": "${fields('Description')}"
+        },
+        {
+          "name": "Token",
+          "structureField": "${fields('SRMSAOIGuid')}"
+        }
+      ],
+      "bridgeName": "Remedy ITSM",
+      "name": "BMC - Incident",
+      "qualifications": [
+        {
+          "name": "By Id",
+          "query": "'Incident Number' = \"${parameters('Id')}\""
+        }
+      ],
+      "structure": "HPD:Help Desk"
+    }
+  ],
+  "name": "Incident",
+  "qualifications": [
+    {
+      "name": "By Id",
+      "parameters": [
+        {
+          "name": "Id",
+          "notes": null
+        }
+      ],
+      "resultType": "Single"
+    }
+  ],
+  "status": "Active"
+}

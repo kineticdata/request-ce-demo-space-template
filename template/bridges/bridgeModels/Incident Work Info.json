@@ -1,0 +1,76 @@
+{
+  "activeMappingName": "BMC - Incident Work Info",
+  "attributes": [
+    {
+      "name": "Id"
+    },
+    {
+      "name": "Notes"
+    },
+    {
+      "name": "Submit Date"
+    },
+    {
+      "name": "Submitter"
+    },
+    {
+      "name": "Summary"
+    },
+    {
+      "name": "Type"
+    }
+  ],
+  "mappings": [
+    {
+      "attributes": [
+        {
+          "name": "Id",
+          "structureField": "${fields('Work Log ID')}"
+        },
+        {
+          "name": "Notes",
+          "structureField": "${fields('Detailed Description')}"
+        },
+        {
+          "name": "Submit Date",
+          "structureField": "${fields('Work Log Submit Date')}"
+        },
+        {
+          "name": "Submitter",
+          "structureField": "${fields('Work Log Submitter')}"
+        },
+        {
+          "name": "Summary",
+          "structureField": "${fields('Description')}"
+        },
+        {
+          "name": "Type",
+          "structureField": "${fields('Work Log Type')}"
+        }
+      ],
+      "bridgeName": "Remedy ITSM",
+      "name": "BMC - Incident Work Info",
+      "qualifications": [
+        {
+          "name": "By Incident Id",
+          "query": "'Incident Number' = \"${parameters('Incident Id')}\""
+        }
+      ],
+      "structure": "HPD:WorkLog"
+    }
+  ],
+  "name": "Incident Work Info",
+  "qualifications": [
+    {
+      "name": "By Incident Id",
+      "parameters": [
+        {
+          "name": "Incident Id",
+          "notes": null
+        }
+      ],
+      "resultType": "Multiple"
+    }
+  ],
+  "status": "Active"
+}

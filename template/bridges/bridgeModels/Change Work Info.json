@@ -1,0 +1,76 @@
+{
+  "activeMappingName": "BMC - Change Work Info",
+  "attributes": [
+    {
+      "name": "Id"
+    },
+    {
+      "name": "Notes"
+    },
+    {
+      "name": "Submit Date"
+    },
+    {
+      "name": "Submitter"
+    },
+    {
+      "name": "Summary"
+    },
+    {
+      "name": "Type"
+    }
+  ],
+  "mappings": [
+    {
+      "attributes": [
+        {
+          "name": "Id",
+          "structureField": "${fields('Work Log ID')}"
+        },
+        {
+          "name": "Notes",
+          "structureField": "${fields('Detailed Description')}"
+        },
+        {
+          "name": "Submit Date",
+          "structureField": "${fields('Work Log Submit Date')}"
+        },
+        {
+          "name": "Submitter",
+          "structureField": "${fields('Work Log Submitter')}"
+        },
+        {
+          "name": "Summary",
+          "structureField": "${fields('Description')}"
+        },
+        {
+          "name": "Type",
+          "structureField": "${fields('Work Log Type')}"
+        }
+      ],
+      "bridgeName": "Remedy ITSM",
+      "name": "BMC - Change Work Info",
+      "qualifications": [
+        {
+          "name": "By Change Id",
+          "query": "'Infrastructure Change ID' = \"${parameters('Change Id')}\" AND 'View Access' = \"Public\""
+        }
+      ],
+      "structure": "CHG:WorkLog"
+    }
+  ],
+  "name": "Change Work Info",
+  "qualifications": [
+    {
+      "name": "By Change Id",
+      "parameters": [
+        {
+          "name": "Change Id",
+          "notes": null
+        }
+      ],
+      "resultType": "Multiple"
+    }
+  ],
+  "status": "Active"
+}

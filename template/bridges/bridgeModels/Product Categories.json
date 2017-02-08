@@ -1,0 +1,84 @@
+{
+  "activeMappingName": "BMC Product Categories",
+  "attributes": [
+    {
+      "name": "Tier 1"
+    },
+    {
+      "name": "Tier 2"
+    },
+    {
+      "name": "Tier 3"
+    }
+  ],
+  "mappings": [
+    {
+      "attributes": [
+        {
+          "name": "Tier 1",
+          "structureField": "${fields('Product Categorization Tier 1')}"
+        },
+        {
+          "name": "Tier 2",
+          "structureField": "${fields('Product Categorization Tier 2')}"
+        },
+        {
+          "name": "Tier 3",
+          "structureField": "${fields('Product Categorization Tier 3')}"
+        }
+      ],
+      "bridgeName": "Remedy ITSM",
+      "name": "BMC Product Categories",
+      "qualifications": [
+        {
+          "name": "Tier 1",
+          "query": "'Company' = \"- Global -\" AND 'Status-PDA' = \"Enabled\""
+        },
+        {
+          "name": "Tier 2 By Tier 1",
+          "query": "'Company' = \"- Global -\" AND 'Status-PDA' = \"Enabled\" AND 'Product Categorization Tier 1' = \"${parameters('Tier 1')}\""
+        },
+        {
+          "name": "Tier 3 By Tier 2 and Tier 1",
+          "query": "'Company' = \"- Global -\" AND 'Status-PDA' = \"Enabled\" AND 'Product Categorization Tier 1' = \"${parameters('Tier 1')}\" AND 'Product Categorization Tier 2' = \"${parameters('Tier 2')}\""
+        }
+      ],
+      "structure": "PCT:ProductCompanyAssocLookup"
+    }
+  ],
+  "name": "Product Categories",
+  "qualifications": [
+    {
+      "name": "Tier 1",
+      "parameters": [
+
+      ],
+      "resultType": "Multiple"
+    },
+    {
+      "name": "Tier 2 By Tier 1",
+      "parameters": [
+        {
+          "name": "Tier 1",
+          "notes": null
+        }
+      ],
+      "resultType": "Multiple"
+    },
+    {
+      "name": "Tier 3 By Tier 2 and Tier 1",
+      "parameters": [
+        {
+          "name": "Tier 1",
+          "notes": null
+        },
+        {
+          "name": "Tier 2",
+          "notes": null
+        }
+      ],
+      "resultType": "Multiple"
+    }
+  ],
+  "status": "Active"
+}

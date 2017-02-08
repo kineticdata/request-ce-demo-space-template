@@ -1,0 +1,9 @@
+# Properties for the Kinetic Request CE 
+## Server Address
+server: "http://test.company.com/kinetic"
+## System Admin User
+adminUser: "admin"
+## System Admin Password
+adminPassword: ""
+## log level (info | debug)
+log_level: "info"

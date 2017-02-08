@@ -1,0 +1,260 @@
+[
+  {
+    "attributes": [
+      {
+        "name": "Sort Order",
+        "values": [
+          "6"
+        ]
+      }
+    ],
+    "categorizations": [
+      {
+        "form": {
+          "slug": "typeahead-search-example"
+        }
+      },
+      {
+        "form": {
+          "slug": "subform-example"
+        }
+      },
+      {
+        "form": {
+          "slug": "wysiwig-editor-example"
+        }
+      },
+      {
+        "form": {
+          "slug": "portal-registration"
+        }
+      },
+      {
+        "form": {
+          "slug": "multi-tiered-bridge-example"
+        }
+      }
+    ],
+    "name": "Example Services",
+    "slug": "example-services"
+  },
+  {
+    "attributes": [
+      {
+        "name": "Sort Order",
+        "values": [
+          "3"
+        ]
+      }
+    ],
+    "categorizations": [
+      {
+        "form": {
+          "slug": "facilities-request"
+        }
+      },
+      {
+        "form": {
+          "slug": "stock-check-request"
+        }
+      }
+    ],
+    "name": "Facilities Services",
+    "slug": "facilities-services"
+  },
+  {
+    "attributes": [
+      {
+        "name": "Sort Order",
+        "values": [
+          "4"
+        ]
+      }
+    ],
+    "categorizations": [
+
+    ],
+    "name": "Finance Services",
+    "slug": "finance-services"
+  },
+  {
+    "attributes": [
+      {
+        "name": "fa-logo",
+        "values": [
+          "fa-desktop"
+        ]
+      },
+      {
+        "name": "Parent",
+        "values": [
+          "it-services"
+        ]
+      },
+      {
+        "name": "Sort Order",
+        "values": [
+          "0"
+        ]
+      }
+    ],
+    "categorizations": [
+      {
+        "form": {
+          "slug": "support-request"
+        }
+      },
+      {
+        "form": {
+          "slug": "application-hosting"
+        }
+      },
+      {
+        "form": {
+          "slug": "ipad-request"
+        }
+      },
+      {
+        "form": {
+          "slug": "change-ram-on-existing-server"
+        }
+      },
+      {
+        "form": {
+          "slug": "change-request"
+        }
+      }
+    ],
+    "name": "Hardware Services",
+    "slug": "hardware-services"
+  },
+  {
+    "attributes": [
+      {
+        "name": "Sort Order",
+        "values": [
+          "2"
+        ]
+      }
+    ],
+    "categorizations": [
+      {
+        "form": {
+          "slug": "401k-increase-request"
+        }
+      },
+      {
+        "form": {
+          "slug": "employee-onboarding"
+        }
+      }
+    ],
+    "name": "HR Services",
+    "slug": "hr-services"
+  },
+  {
+    "attributes": [
+      {
+        "name": "Sort Order",
+        "values": [
+          "1"
+        ]
+      }
+    ],
+    "categorizations": [
+      {
+        "form": {
+          "slug": "support-request"
+        }
+      },
+      {
+        "form": {
+          "slug": "application-hosting"
+        }
+      },
+      {
+        "form": {
+          "slug": "change-ram-on-existing-server"
+        }
+      }
+    ],
+    "name": "IT Services",
+    "slug": "it-services"
+  },
+  {
+    "attributes": [
+      {
+        "name": "Hidden",
+        "values": [
+          "true"
+        ]
+      },
+      {
+        "name": "Sort Order",
+        "values": [
+          "5"
+        ]
+      }
+    ],
+    "categorizations": [
+      {
+        "form": {
+          "slug": "facilities-request"
+        }
+      },
+      {
+        "form": {
+          "slug": "ipad-request"
+        }
+      },
+      {
+        "form": {
+          "slug": "change-ram-on-existing-server"
+        }
+      },
+      {
+        "form": {
+          "slug": "employee-onboarding"
+        }
+      }
+    ],
+    "name": "Promoted Requests",
+    "slug": "promoted-requests"
+  },
+  {
+    "attributes": [
+      {
+        "name": "fa-logo",
+        "values": [
+          "fa-floppy-o"
+        ]
+      },
+      {
+        "name": "Parent",
+        "values": [
+          "it-services"
+        ]
+      },
+      {
+        "name": "Sort Order",
+        "values": [
+          "1"
+        ]
+      }
+    ],
+    "categorizations": [
+      {
+        "form": {
+          "slug": "support-request"
+        }
+      },
+      {
+        "form": {
+          "slug": "change-request"
+        }
+      }
+    ],
+    "name": "Software Services",
+    "slug": "software-services"
+  }
+]

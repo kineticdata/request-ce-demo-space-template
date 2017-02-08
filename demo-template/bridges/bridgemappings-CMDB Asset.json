@@ -1,7 +1,0 @@
-[
-  {
-    "bridgeName": "Remedy ITSM",
-    "name": "CMDB Asset",
-    "structure": "BMC.CORE:BMC_BaseElement"
-  }
-]

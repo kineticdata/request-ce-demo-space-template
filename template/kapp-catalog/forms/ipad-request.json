@@ -1,0 +1,260 @@
+{
+  "anonymous": false,
+  "attributes": [
+    {
+      "name": "Approval Form Slug",
+      "values": [
+        "approval"
+      ]
+    },
+    {
+      "name": "Fulfillment Form Slug",
+      "values": [
+        "workorder"
+      ]
+    },
+    {
+      "name": "Fulfillment Group",
+      "values": [
+        "Fulfillment::IT"
+      ]
+    },
+    {
+      "name": "Fulfillment Individual",
+      "values": [
+        "self"
+      ]
+    },
+    {
+      "name": "Image",
+      "values": [
+        "stock-check.png"
+      ]
+    },
+    {
+      "name": "SLA",
+      "values": [
+        "2 Days"
+      ]
+    }
+  ],
+  "bridgedResources": [
+
+  ],
+  "categorizations": [
+    {
+      "category": {
+        "slug": "hardware-services"
+      }
+    },
+    {
+      "category": {
+        "slug": "promoted-requests"
+      }
+    }
+  ],
+  "customHeadContent": null,
+  "description": "iPad Request",
+  "fields": [
+    {
+      "name": "Color"
+    },
+    {
+      "name": "Size"
+    },
+    {
+      "name": "Inscribed"
+    },
+    {
+      "name": "Inscription Text"
+    }
+  ],
+  "name": "iPad Request",
+  "notes": "a",
+  "pages": [
+    {
+      "advanceCondition": null,
+      "displayCondition": null,
+      "displayPage": null,
+      "elements": [
+        {
+          "type": "field",
+          "name": "Color",
+          "label": "Color",
+          "key": "f6",
+          "defaultValue": null,
+          "defaultResourceName": null,
+          "visible": true,
+          "enabled": true,
+          "required": true,
+          "requiredMessage": null,
+          "omitWhenHidden": null,
+          "pattern": null,
+          "constraints": [
+
+          ],
+          "events": [
+
+          ],
+          "renderAttributes": {
+
+          },
+          "dataType": "string",
+          "renderType": "dropdown",
+          "choicesResourceName": null,
+          "choicesRunIf": null,
+          "choices": [
+            {
+              "label": "Red",
+              "value": "Red"
+            },
+            {
+              "label": "Blue",
+              "value": "Blue"
+            },
+            {
+              "label": "Green",
+              "value": "Green"
+            },
+            {
+              "label": "Orange",
+              "value": "Orange"
+            }
+          ]
+        },
+        {
+          "type": "field",
+          "name": "Size",
+          "label": "Size",
+          "key": "f1",
+          "defaultValue": null,
+          "defaultResourceName": null,
+          "visible": true,
+          "enabled": true,
+          "required": true,
+          "requiredMessage": null,
+          "omitWhenHidden": null,
+          "pattern": null,
+          "constraints": [
+
+          ],
+          "events": [
+
+          ],
+          "renderAttributes": {
+
+          },
+          "dataType": "string",
+          "renderType": "dropdown",
+          "choicesResourceName": null,
+          "choicesRunIf": null,
+          "choices": [
+            {
+              "label": "8GB",
+              "value": "8GB"
+            },
+            {
+              "label": "16GB",
+              "value": "16GB"
+            },
+            {
+              "label": "32GB",
+              "value": "32GB"
+            },
+            {
+              "label": "64GB",
+              "value": "64GB"
+            }
+          ]
+        },
+        {
+          "type": "field",
+          "name": "Inscribed",
+          "label": "Inscribed",
+          "key": "f3",
+          "defaultValue": null,
+          "defaultResourceName": null,
+          "visible": true,
+          "enabled": true,
+          "required": false,
+          "requiredMessage": null,
+          "omitWhenHidden": null,
+          "pattern": null,
+          "constraints": [
+
+          ],
+          "events": [
+
+          ],
+          "renderAttributes": {
+
+          },
+          "dataType": "string",
+          "renderType": "radio",
+          "choicesResourceName": null,
+          "choicesRunIf": null,
+          "choices": [
+            {
+              "label": "Yes",
+              "value": "Yes"
+            },
+            {
+              "label": "No",
+              "value": "No"
+            }
+          ]
+        },
+        {
+          "type": "field",
+          "name": "Inscription Text",
+          "label": "Inscription Text",
+          "key": "f4",
+          "defaultValue": null,
+          "defaultResourceName": null,
+          "visible": "values('Inscribed')===\"Yes\"",
+          "enabled": true,
+          "required": "values('Inscribed')===\"Yes\"",
+          "requiredMessage": null,
+          "omitWhenHidden": true,
+          "pattern": null,
+          "constraints": [
+
+          ],
+          "events": [
+
+          ],
+          "renderAttributes": {
+
+          },
+          "dataType": "string",
+          "renderType": "text",
+          "rows": 2
+        },
+        {
+          "type": "button",
+          "label": "Submit",
+          "name": "Submit Button",
+          "visible": true,
+          "enabled": true,
+          "renderType": "submit-page",
+          "renderAttributes": {
+
+          }
+        }
+      ],
+      "events": [
+
+      ],
+      "name": "Page 1",
+      "renderType": "submittable",
+      "type": "page"
+    }
+  ],
+  "securityPolicies": [
+
+  ],
+  "slug": "ipad-request",
+  "status": "Active",
+  "submissionLabelExpression": "ipad ${values('Color')} / ${values('Size')}",
+  "type": "Service"
+}

@@ -1,0 +1,501 @@
+{
+  "anonymous": false,
+  "attributes": [
+    {
+      "name": "Fulfillment Form Slug",
+      "values": [
+        "workorder"
+      ]
+    },
+    {
+      "name": "Fulfillment Group",
+      "values": [
+        "Fulfillment::Generic"
+      ]
+    },
+    {
+      "name": "Fulfillment Individual",
+      "values": [
+        "self"
+      ]
+    },
+    {
+      "name": "Image",
+      "values": [
+        "support-request.png"
+      ]
+    }
+  ],
+  "bridgedResources": [
+
+  ],
+  "categorizations": [
+    {
+      "category": {
+        "slug": "hardware-services"
+      }
+    },
+    {
+      "category": {
+        "slug": "it-services"
+      }
+    },
+    {
+      "category": {
+        "slug": "software-services"
+      }
+    }
+  ],
+  "customHeadContent": null,
+  "description": "Use this form to submit a request to the Help Desk for assistance.",
+  "fields": [
+    {
+      "name": "Request Summary"
+    },
+    {
+      "name": "Request Description"
+    },
+    {
+      "name": "Request Urgency"
+    },
+    {
+      "name": "Request Category"
+    },
+    {
+      "name": "Additional Notes"
+    },
+    {
+      "name": "Particular Product"
+    },
+    {
+      "name": "Product Name"
+    },
+    {
+      "name": "Product Version"
+    },
+    {
+      "name": "Part Number"
+    },
+    {
+      "name": "Serial Number"
+    },
+    {
+      "name": "Asset Tag Number"
+    }
+  ],
+  "name": "Support Request",
+  "notes": "",
+  "pages": [
+    {
+      "advanceCondition": null,
+      "displayCondition": null,
+      "displayPage": null,
+      "elements": [
+        {
+          "type": "section",
+          "name": "Request Details",
+          "title": "Request Details",
+          "visible": true,
+          "renderAttributes": {
+
+          },
+          "elements": [
+            {
+              "type": "field",
+              "name": "Request Summary",
+              "label": "Request Summary",
+              "key": "f9",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": true,
+              "requiredMessage": "You must enter a Request Summary...",
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+                "class": "col-sm-12"
+              },
+              "dataType": "string",
+              "renderType": "text",
+              "rows": 1,
+              "omitWhenHidden": null
+            },
+            {
+              "type": "field",
+              "name": "Request Description",
+              "label": "Request Description",
+              "key": "f2",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": true,
+              "requiredMessage": "You must enter a Request Description...",
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+                "class": "col-sm-12"
+              },
+              "dataType": "string",
+              "renderType": "text",
+              "rows": 4,
+              "omitWhenHidden": null
+            },
+            {
+              "type": "field",
+              "name": "Request Urgency",
+              "label": "Request Urgency",
+              "key": "f33",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": true,
+              "requiredMessage": "Please select a Request Urgency...",
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+                "class": "col-xs-12 col-sm-6 col-md-4 col-lg-4"
+              },
+              "dataType": "string",
+              "renderType": "dropdown",
+              "choicesResourceName": null,
+              "choices": [
+                {
+                  "label": "Low",
+                  "value": "Low"
+                },
+                {
+                  "label": "Medium",
+                  "value": "Medium"
+                },
+                {
+                  "label": "High",
+                  "value": "High"
+                }
+              ],
+              "choicesRunIf": null,
+              "omitWhenHidden": null
+            },
+            {
+              "type": "field",
+              "name": "Request Category",
+              "label": "Request Category",
+              "key": "f34",
+              "defaultValue": "",
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": true,
+              "requiredMessage": "Please select a Request Category...",
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+                "class": "col-xs-12 col-sm-6 col-md-4 col-lg-4"
+              },
+              "dataType": "string",
+              "renderType": "dropdown",
+              "choicesResourceName": null,
+              "choices": [
+                {
+                  "label": "Feedback",
+                  "value": "Feedback"
+                },
+                {
+                  "label": "Move, Add or Change",
+                  "value": "Move, Add or Change"
+                },
+                {
+                  "label": "Problem, Fault or Failure",
+                  "value": "Problem, Fault or Failure"
+                },
+                {
+                  "label": "Question",
+                  "value": "Question"
+                }
+              ],
+              "choicesRunIf": null,
+              "omitWhenHidden": null
+            },
+            {
+              "type": "field",
+              "name": "Additional Notes",
+              "label": "Additional Notes (if any)",
+              "key": "f41",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": false,
+              "requiredMessage": null,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+                "class": "col-sm-12 col-sm-12 col-md-12 col-lg-12"
+              },
+              "dataType": "string",
+              "renderType": "text",
+              "rows": 4,
+              "omitWhenHidden": null
+            },
+            {
+              "type": "field",
+              "name": "Particular Product",
+              "label": "Does your request pertain to a particular product?",
+              "key": "f35",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": true,
+              "requiredMessage": "Please select whether your request is related to a specific product...",
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+                "class": "col-sm-6 col-sm-6 col-md-6 col-lg-6"
+              },
+              "dataType": "string",
+              "renderType": "radio",
+              "choicesResourceName": null,
+              "choices": [
+                {
+                  "label": "Yes",
+                  "value": "Yes"
+                },
+                {
+                  "label": "No",
+                  "value": "No"
+                }
+              ],
+              "choicesRunIf": null,
+              "omitWhenHidden": null
+            }
+          ],
+          "renderType": null,
+          "omitWhenHidden": null
+        },
+        {
+          "type": "section",
+          "name": "Product Information",
+          "title": "Product Information",
+          "visible": "values('Particular Product') == \"Yes\"",
+          "renderAttributes": {
+
+          },
+          "elements": [
+            {
+              "type": "content",
+              "renderType": "html",
+              "name": "Description",
+              "text": "<h5>Please populate any of the following fields, as applicable, in order to assist with identifying your product and expediting your request.</h5>\n<br></br>",
+              "visible": true,
+              "renderAttributes": {
+                "class": "col-sm-12"
+              }
+            },
+            {
+              "type": "field",
+              "name": "Product Name",
+              "label": "Product Name",
+              "key": "f36",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": false,
+              "requiredMessage": null,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+                "class": "col-sm-6"
+              },
+              "dataType": "string",
+              "renderType": "text",
+              "rows": 1,
+              "omitWhenHidden": null
+            },
+            {
+              "type": "field",
+              "name": "Product Version",
+              "label": "Product Version",
+              "key": "f37",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": false,
+              "requiredMessage": null,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+                "class": "col-sm-6"
+              },
+              "dataType": "string",
+              "renderType": "text",
+              "rows": 1,
+              "omitWhenHidden": null
+            },
+            {
+              "type": "field",
+              "name": "Part Number",
+              "label": "Part Number",
+              "key": "f38",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": false,
+              "requiredMessage": null,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+                "class": "col-sm-6"
+              },
+              "dataType": "string",
+              "renderType": "text",
+              "rows": 1,
+              "omitWhenHidden": null
+            },
+            {
+              "type": "field",
+              "name": "Serial Number",
+              "label": "Serial Number",
+              "key": "f39",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": false,
+              "requiredMessage": null,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+                "class": "col-sm-6"
+              },
+              "dataType": "string",
+              "renderType": "text",
+              "rows": 1,
+              "omitWhenHidden": null
+            },
+            {
+              "type": "field",
+              "name": "Asset Tag Number",
+              "label": "Asset Tag Number",
+              "key": "f40",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": false,
+              "requiredMessage": null,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+                "class": "col-sm-6"
+              },
+              "dataType": "string",
+              "renderType": "text",
+              "rows": 1,
+              "omitWhenHidden": null
+            }
+          ],
+          "omitWhenHidden": true,
+          "renderType": null
+        },
+        {
+          "type": "section",
+          "name": "Buttons",
+          "title": null,
+          "visible": true,
+          "renderAttributes": {
+            "class": "box-footer"
+          },
+          "elements": [
+            {
+              "type": "button",
+              "label": "Submit",
+              "name": "Submit Button",
+              "visible": true,
+              "enabled": true,
+              "renderType": "submit-page",
+              "renderAttributes": {
+                "class": "pull-right"
+              }
+            }
+          ],
+          "renderType": null,
+          "omitWhenHidden": null
+        }
+      ],
+      "events": [
+
+      ],
+      "name": "Details Page",
+      "renderType": "submittable",
+      "type": "page"
+    }
+  ],
+  "securityPolicies": [
+
+  ],
+  "slug": "support-request",
+  "status": "Active",
+  "submissionLabelExpression": "${values('Request Summary')}",
+  "type": "Service"
+}

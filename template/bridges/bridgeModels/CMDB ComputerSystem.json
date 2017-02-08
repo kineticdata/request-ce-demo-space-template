@@ -1,0 +1,69 @@
+{
+  "activeMappingName": "CMDB ComputerSystem",
+  "attributes": [
+    {
+      "name": "HostName"
+    },
+    {
+      "name": "isVirtual"
+    },
+    {
+      "name": "SystemType"
+    },
+    {
+      "name": "TotalPhysicalMemory"
+    },
+    {
+      "name": "VirtualSystemType"
+    }
+  ],
+  "mappings": [
+    {
+      "attributes": [
+        {
+          "name": "isVirtual",
+          "structureField": "${fields('isVirtual')}"
+        },
+        {
+          "name": "VirtualSystemType",
+          "structureField": "${fields('VirtualSystemType')}"
+        },
+        {
+          "name": "TotalPhysicalMemory",
+          "structureField": "${fields('TotalPhysicalMemory')}"
+        },
+        {
+          "name": "SystemType",
+          "structureField": "${fields('SystemType')}"
+        },
+        {
+          "name": "HostName",
+          "structureField": "${fields('HostName')}"
+        }
+      ],
+      "bridgeName": "Remedy ITSM",
+      "name": "CMDB ComputerSystem",
+      "qualifications": [
+        {
+          "name": "By Reconciliation Id",
+          "query": "'DatasetId' = \"BMC.ASSET\" AND 'ReconciliationIdentity' = \"${parameters('Reconciliation Id')}\""
+        }
+      ],
+      "structure": "BMC.CORE:BMC_ComputerSystem_"
+    }
+  ],
+  "name": "CMDB ComputerSystem",
+  "qualifications": [
+    {
+      "name": "By Reconciliation Id",
+      "parameters": [
+        {
+          "name": "Reconciliation Id",
+          "notes": null
+        }
+      ],
+      "resultType": "Single"
+    }
+  ],
+  "status": "Active"
+}

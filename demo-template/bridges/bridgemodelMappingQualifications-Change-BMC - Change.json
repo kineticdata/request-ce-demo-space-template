@@ -1,6 +1,0 @@
-[
-  {
-    "name": "By Id",
-    "query": "'Infrastructure Change ID' = \"${parameters('Id')}\""
-  }
-]

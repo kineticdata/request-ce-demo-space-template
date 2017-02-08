@@ -1,0 +1,90 @@
+{
+  "anonymous": false,
+  "attributes": [
+
+  ],
+  "bridgedResources": [
+
+  ],
+  "categorizations": [
+
+  ],
+  "customHeadContent": null,
+  "description": "This form displays Help Text next to questions to help the user answer each question",
+  "fields": [
+    {
+      "name": "Field with help text"
+    }
+  ],
+  "name": "Help Text Example",
+  "notes": null,
+  "pages": [
+    {
+      "advanceCondition": null,
+      "displayCondition": null,
+      "displayPage": null,
+      "elements": [
+        {
+          "type": "content",
+          "renderType": "html",
+          "name": "Instructions",
+          "text": "<div class=\"well\">\n  <p>Apply the following code to your bundle.config.ready function within your bundle</p><br>\n  \t<pre><code>\n    // Help Text Setup (Popover / Bootstrap)\n    $(form.element()).find('div[help-text]').each(function(){\n        var hlptxt = $(this).attr('help-text') \n        $(this).children('label').first().append('&amp;nbsp;&amp;nbsp;', $('&lt;i class=\"fa fa-info-circle fa-1x\"' +  '\n        \taria-hidden=\"true\" tabindex=\"-1\" data-toggle=\"popover\" data-trigger=\"hover\" title=\"Help\" role=\"button\"&gt;&lt;/i&gt;').attr('data-content', hlptxt));\n    });\n    $(form.element()).find('[data-toggle=\"popover\"]').popover()\n    </code></pre>\n</div>",
+          "visible": true,
+          "renderAttributes": {
+
+          }
+        },
+        {
+          "type": "field",
+          "name": "Field with help text",
+          "label": "Field with help text",
+          "key": "f1",
+          "defaultValue": null,
+          "defaultResourceName": null,
+          "visible": true,
+          "enabled": true,
+          "required": false,
+          "requiredMessage": null,
+          "omitWhenHidden": null,
+          "pattern": null,
+          "constraints": [
+
+          ],
+          "events": [
+
+          ],
+          "renderAttributes": {
+            "help-text": "Enter whatever help text you would like to show here"
+          },
+          "dataType": "string",
+          "renderType": "text",
+          "rows": 1
+        },
+        {
+          "type": "button",
+          "label": "Submit",
+          "name": "Submit Button",
+          "visible": true,
+          "enabled": true,
+          "renderType": "submit-page",
+          "renderAttributes": {
+
+          }
+        }
+      ],
+      "events": [
+
+      ],
+      "name": "Page 1",
+      "renderType": "submittable",
+      "type": "page"
+    }
+  ],
+  "securityPolicies": [
+
+  ],
+  "slug": "help-text-example",
+  "status": "Active",
+  "submissionLabelExpression": null,
+  "type": "Service"
+}

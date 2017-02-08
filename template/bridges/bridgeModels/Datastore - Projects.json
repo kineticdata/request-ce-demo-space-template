@@ -1,0 +1,80 @@
+{
+  "activeMappingName": "Datastore - Projects",
+  "attributes": [
+    {
+      "name": "Project Code"
+    },
+    {
+      "name": "Project Description"
+    },
+    {
+      "name": "Project Manager"
+    },
+    {
+      "name": "Project Name"
+    },
+    {
+      "name": "Status"
+    }
+  ],
+  "mappings": [
+    {
+      "attributes": [
+        {
+          "name": "Project Code",
+          "structureField": "${fields('values[Project Code]')}"
+        },
+        {
+          "name": "Project Name",
+          "structureField": "${fields('values[Project Name]')}"
+        },
+        {
+          "name": "Project Manager",
+          "structureField": "${fields('values[Project Manager]')}"
+        },
+        {
+          "name": "Project Description",
+          "structureField": "${fields('values[Project Description]')}"
+        },
+        {
+          "name": "Status",
+          "structureField": "${fields('values[Status]')}"
+        }
+      ],
+      "bridgeName": "Kinetic Core",
+      "name": "Datastore - Projects",
+      "qualifications": [
+        {
+          "name": "All",
+          "query": "kappSlug=admin&formSlug=projects&limit=999"
+        },
+        {
+          "name": "By Project Name",
+          "query": "kappSlug=admin&formSlug=projects&limit=999&values[Project Name]=${parameters('Project Name')}"
+        }
+      ],
+      "structure": "Submissions"
+    }
+  ],
+  "name": "Datastore - Projects",
+  "qualifications": [
+    {
+      "name": "All",
+      "parameters": [
+
+      ],
+      "resultType": "Multiple"
+    },
+    {
+      "name": "By Project Name",
+      "parameters": [
+        {
+          "name": "Project Name",
+          "notes": null
+        }
+      ],
+      "resultType": "Single"
+    }
+  ],
+  "status": "Active"
+}

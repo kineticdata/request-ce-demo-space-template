@@ -1,6 +1,0 @@
-[
-  {
-    "name": "By Reconciliation Id",
-    "query": "'DatasetId' = \"BMC.ASSET\" AND 'ReconciliationIdentity' = \"${parameters('Reconciliation Id')}\""
-  }
-]

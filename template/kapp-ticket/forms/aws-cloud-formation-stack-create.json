@@ -1,0 +1,946 @@
+{
+  "anonymous": false,
+  "attributes": [
+    {
+      "name": "Image",
+      "values": [
+        "approval.png"
+      ]
+    }
+  ],
+  "bridgedResources": [
+    {
+      "model": "Datastore - AWS Cloud Formation Templates",
+      "name": "AWS Cloud Formation Templates",
+      "order": [
+
+      ],
+      "parameters": [
+
+      ],
+      "qualification": "All",
+      "status": "Active"
+    },
+    {
+      "model": "Datastore - AWS Cloud Formation Templates",
+      "name": "AWS Cloud Formation Templates by Name",
+      "order": [
+
+      ],
+      "parameters": [
+        {
+          "mapping": "${values('Template to Use')}",
+          "name": "Template Name"
+        }
+      ],
+      "qualification": "By Name",
+      "status": "Active"
+    }
+  ],
+  "categorizations": [
+
+  ],
+  "customHeadContent": "",
+  "description": "Approval Template for Creating new Approval Forms",
+  "fields": [
+    {
+      "name": "Template to Use"
+    },
+    {
+      "name": "Required Parameters"
+    },
+    {
+      "name": "Comments"
+    },
+    {
+      "name": "Work Order Displayed Name"
+    },
+    {
+      "name": "Parameters Output"
+    },
+    {
+      "name": "Template URL"
+    },
+    {
+      "name": "Ready To Work"
+    },
+    {
+      "name": "Assigned Individual Display Name"
+    },
+    {
+      "name": "Assigned Individual"
+    },
+    {
+      "name": "Assigned Group"
+    },
+    {
+      "name": "Assigned Group Display Name"
+    },
+    {
+      "name": "Requested By"
+    },
+    {
+      "name": "Requested By Display Name"
+    },
+    {
+      "name": "Requested For"
+    },
+    {
+      "name": "Requested For Display Name"
+    },
+    {
+      "name": "Due Date"
+    },
+    {
+      "name": "Deferral Token"
+    },
+    {
+      "name": "Details"
+    },
+    {
+      "name": "Originating System"
+    },
+    {
+      "name": "Originating Url"
+    },
+    {
+      "name": "Parent Submission Id"
+    },
+    {
+      "name": "Status"
+    },
+    {
+      "name": "Summary"
+    },
+    {
+      "name": "System Input"
+    },
+    {
+      "name": "Decision"
+    }
+  ],
+  "name": "AWS Cloud Formation Stack Create",
+  "notes": "",
+  "pages": [
+    {
+      "advanceCondition": null,
+      "displayCondition": null,
+      "displayPage": "",
+      "elements": [
+        {
+          "type": "section",
+          "name": "Request Details",
+          "title": "Request Details",
+          "visible": true,
+          "renderAttributes": {
+
+          },
+          "elements": [
+            {
+              "type": "content",
+              "renderType": "html",
+              "name": "Review Request HTML",
+              "text": "<div id=\"requestDetails\"></div>",
+              "visible": "values('Parent Submission Id') !== null",
+              "renderAttributes": {
+
+              }
+            }
+          ],
+          "renderType": null,
+          "omitWhenHidden": null
+        },
+        {
+          "type": "section",
+          "name": "Fulfillment Options",
+          "title": "Fulfillment Options",
+          "visible": true,
+          "renderAttributes": {
+
+          },
+          "elements": [
+            {
+              "type": "field",
+              "name": "Template to Use",
+              "label": "Template to Use",
+              "key": "f18",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": true,
+              "requiredMessage": null,
+              "omitWhenHidden": null,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+                {
+                  "name": "Set Template Details",
+                  "type": "Change",
+                  "action": "Set Fields",
+                  "mappings": [
+                    {
+                      "field": "Required Parameters",
+                      "value": "${resources('AWS Cloud Formation Templates by Name:Template Parameters')}",
+                      "visible": true
+                    },
+                    {
+                      "field": "Template URL",
+                      "value": "${resources('AWS Cloud Formation Templates by Name:Template Url')}",
+                      "visible": true
+                    }
+                  ],
+                  "bridgedResourceName": "AWS Cloud Formation Templates by Name"
+                }
+              ],
+              "renderAttributes": {
+
+              },
+              "dataType": "string",
+              "renderType": "dropdown",
+              "choicesResourceName": "AWS Cloud Formation Templates",
+              "choicesRunIf": null,
+              "choices": {
+                "label": "${resources('AWS Cloud Formation Templates:Template Name')}",
+                "value": "${resources('AWS Cloud Formation Templates:Template Name')}"
+              }
+            },
+            {
+              "type": "field",
+              "name": "Required Parameters",
+              "label": "Required Parameters",
+              "key": "f17",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": false,
+              "enabled": true,
+              "required": false,
+              "requiredMessage": null,
+              "omitWhenHidden": false,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+                {
+                  "name": "Build Parameter HTML",
+                  "type": "Change",
+                  "action": "Custom",
+                  "code": "buildParameterQuestions();\nfunction buildParameterQuestions(){\n    if(K('field[Template to Use]').value() === null || K('field[Required Parameters]').value() === \"\" ){\n        $('#parameters').html(\"\");\n    } else {\n        var parameters = JSON.parse(K('field[Required Parameters]').value());\n        var savedParameters = K('field[Parameters Output]').value();\n        if(savedParameters !== null && savedParameters !== \"\"){\n            savedParameters = JSON.parse(savedParameters);\n        } else {\n            savedParameters = {};\n        }\n        var paramsDiv = $(\"<div id='required-parameters'><div class='alert alert-info'><strong>Required Parameters for this Template</strong></div>  </div>\");\n\n        $.each(Object.keys(parameters), function(i,v){\n            var param = $(\"<div class='col-sm-6'/>\");\n            $(param)\n                .addClass('form-group')\n                .append($(\"<label/>\").html(parameters[v][\"Description\"]));\n            if(parameters[v][\"AllowedValues\"]!== undefined){\n                var select = $(\"<select/>\").addClass('form-control').attr(\"name\",v).html(v).append(\"<option/>\")\n                if(savedParameters[v] !== undefined){\n                    $(select).val(savedParameters[v]);\n                }\n                $.each(parameters[v][\"AllowedValues\"],function(){\n                    $(select).append(\"<option>\" + this + \"</option>\").val(this);\n                });\n                $(param).append($(select));\n            } else{\n                $(param).append($(\"<input/>\").addClass('form-control').attr(\"name\",v).html(v));\n                if(savedParameters[v] !== undefined){\n                    $(param).find('input').val(savedParameters[v]);\n                }\n                if(parameters[v][\"Default\"] !== undefined){\n                    $(param).find('input').attr('placeholder', parameters[v][\"Default\"] ).val(parameters[v][\"Default\"]);\n                }\n            }   \n            $(paramsDiv).append($(param));\n        });\n       $('#parameters').html(paramsDiv);\n   }\n}\n",
+                  "bridgedResourceName": null
+                }
+              ],
+              "renderAttributes": {
+
+              },
+              "dataType": "string",
+              "renderType": "text",
+              "rows": 1
+            },
+            {
+              "type": "content",
+              "renderType": "html",
+              "name": "Parameter Configuration",
+              "text": "<div id=\"parameters\"></div>",
+              "visible": true,
+              "renderAttributes": {
+
+              }
+            },
+            {
+              "type": "field",
+              "name": "Comments",
+              "label": "Comments",
+              "key": "f11",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": false,
+              "requiredMessage": null,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+
+              },
+              "dataType": "string",
+              "renderType": "text",
+              "rows": 4,
+              "omitWhenHidden": null
+            }
+          ],
+          "renderType": null,
+          "omitWhenHidden": null
+        },
+        {
+          "type": "section",
+          "name": "Buttons",
+          "title": null,
+          "visible": true,
+          "renderAttributes": {
+            "class": "box-footer"
+          },
+          "elements": [
+            {
+              "type": "button",
+              "label": "Save",
+              "name": "Save",
+              "visible": true,
+              "enabled": true,
+              "renderType": "save",
+              "renderAttributes": {
+                "onclick": "saveParametersQuestions()"
+              }
+            },
+            {
+              "type": "button",
+              "label": "Submit",
+              "name": "Submit Button",
+              "visible": true,
+              "enabled": true,
+              "renderType": "submit-page",
+              "renderAttributes": {
+
+              }
+            }
+          ],
+          "renderType": null,
+          "omitWhenHidden": null
+        },
+        {
+          "type": "section",
+          "name": "Hidden Fields",
+          "title": null,
+          "visible": false,
+          "renderAttributes": {
+
+          },
+          "elements": [
+            {
+              "type": "field",
+              "name": "Work Order Displayed Name",
+              "label": "Work Order Displayed Name",
+              "key": "f28",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": false,
+              "requiredMessage": null,
+              "omitWhenHidden": null,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+
+              },
+              "dataType": "string",
+              "renderType": "text",
+              "rows": 1
+            },
+            {
+              "type": "field",
+              "name": "Parameters Output",
+              "label": "Parameters Output",
+              "key": "f19",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": false,
+              "requiredMessage": null,
+              "omitWhenHidden": null,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+
+              },
+              "dataType": "string",
+              "renderType": "text",
+              "rows": 1
+            },
+            {
+              "type": "field",
+              "name": "Template URL",
+              "label": "Template URL",
+              "key": "f29",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": false,
+              "requiredMessage": null,
+              "omitWhenHidden": null,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+
+              },
+              "dataType": "string",
+              "renderType": "text",
+              "rows": 1
+            },
+            {
+              "type": "field",
+              "name": "Ready To Work",
+              "label": "Ready To Work",
+              "key": "f27",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": false,
+              "requiredMessage": null,
+              "omitWhenHidden": null,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+
+              },
+              "dataType": "string",
+              "renderType": "text",
+              "rows": 1
+            },
+            {
+              "type": "field",
+              "name": "Assigned Individual Display Name",
+              "label": "Approver Name",
+              "key": "f7",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": "false",
+              "enabled": false,
+              "required": false,
+              "requiredMessage": null,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+
+              },
+              "dataType": "string",
+              "renderType": "text",
+              "rows": 1,
+              "omitWhenHidden": false
+            },
+            {
+              "type": "field",
+              "name": "Assigned Individual",
+              "label": "Assigned Individual",
+              "key": "f9",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": false,
+              "requiredMessage": null,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+
+              },
+              "dataType": "string",
+              "renderType": "text",
+              "rows": 1,
+              "omitWhenHidden": null
+            },
+            {
+              "type": "field",
+              "name": "Assigned Group",
+              "label": "Assigned Group",
+              "key": "f13",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": false,
+              "requiredMessage": null,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+
+              },
+              "dataType": "string",
+              "renderType": "text",
+              "rows": 1,
+              "omitWhenHidden": null
+            },
+            {
+              "type": "field",
+              "name": "Assigned Group Display Name",
+              "label": "Assigned Group Display Name",
+              "key": "f21",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": false,
+              "requiredMessage": null,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+
+              },
+              "dataType": "string",
+              "renderType": "text",
+              "rows": 1,
+              "omitWhenHidden": null
+            },
+            {
+              "type": "field",
+              "name": "Requested By",
+              "label": "Requested By",
+              "key": "f22",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": false,
+              "requiredMessage": null,
+              "omitWhenHidden": null,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+
+              },
+              "dataType": "string",
+              "renderType": "text",
+              "rows": 1
+            },
+            {
+              "type": "field",
+              "name": "Requested By Display Name",
+              "label": "Requested By Display Name",
+              "key": "f23",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": false,
+              "requiredMessage": null,
+              "omitWhenHidden": null,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+
+              },
+              "dataType": "string",
+              "renderType": "text",
+              "rows": 1
+            },
+            {
+              "type": "field",
+              "name": "Requested For",
+              "label": "Requested For",
+              "key": "f24",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": false,
+              "requiredMessage": null,
+              "omitWhenHidden": null,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+
+              },
+              "dataType": "string",
+              "renderType": "text",
+              "rows": 1
+            },
+            {
+              "type": "field",
+              "name": "Requested For Display Name",
+              "label": "Requested For Display Name",
+              "key": "f25",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": false,
+              "requiredMessage": null,
+              "omitWhenHidden": null,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+
+              },
+              "dataType": "string",
+              "renderType": "text",
+              "rows": 1
+            },
+            {
+              "type": "field",
+              "name": "Due Date",
+              "label": "Due Date",
+              "key": "f26",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": false,
+              "requiredMessage": null,
+              "omitWhenHidden": null,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+
+              },
+              "dataType": "string",
+              "renderType": "date"
+            },
+            {
+              "type": "field",
+              "name": "Deferral Token",
+              "label": "Deferral Token",
+              "key": "f1",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": false,
+              "requiredMessage": null,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+
+              },
+              "dataType": "string",
+              "renderType": "text",
+              "rows": 1,
+              "omitWhenHidden": null
+            },
+            {
+              "type": "field",
+              "name": "Details",
+              "label": "Details",
+              "key": "f10",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": false,
+              "requiredMessage": null,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+
+              },
+              "dataType": "string",
+              "renderType": "text",
+              "rows": 1,
+              "omitWhenHidden": null
+            },
+            {
+              "type": "field",
+              "name": "Originating System",
+              "label": "Originating System",
+              "key": "f14",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": false,
+              "requiredMessage": null,
+              "omitWhenHidden": null,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+
+              },
+              "dataType": "string",
+              "renderType": "text",
+              "rows": 1
+            },
+            {
+              "type": "field",
+              "name": "Originating Url",
+              "label": "Originating Url",
+              "key": "f15",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": false,
+              "requiredMessage": null,
+              "omitWhenHidden": null,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+
+              },
+              "dataType": "string",
+              "renderType": "text",
+              "rows": 1
+            },
+            {
+              "type": "field",
+              "name": "Parent Submission Id",
+              "label": "Parent Submission Id",
+              "key": "f8",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": false,
+              "requiredMessage": null,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+
+              },
+              "dataType": "string",
+              "renderType": "text",
+              "rows": 1,
+              "omitWhenHidden": null
+            },
+            {
+              "type": "field",
+              "name": "Status",
+              "label": "Status",
+              "key": "f4",
+              "defaultValue": "In Progress",
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": false,
+              "requiredMessage": null,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+
+              },
+              "dataType": "string",
+              "renderType": "text",
+              "rows": 1,
+              "omitWhenHidden": null
+            },
+            {
+              "type": "field",
+              "name": "Summary",
+              "label": "Summary",
+              "key": "f16",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": false,
+              "requiredMessage": null,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+
+              },
+              "dataType": "string",
+              "renderType": "text",
+              "rows": 1,
+              "omitWhenHidden": null
+            },
+            {
+              "type": "field",
+              "name": "System Input",
+              "label": "System Input",
+              "key": "f12",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": false,
+              "requiredMessage": null,
+              "omitWhenHidden": null,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+
+              },
+              "dataType": "string",
+              "renderType": "text",
+              "rows": 1
+            },
+            {
+              "type": "field",
+              "name": "Decision",
+              "label": "Decision",
+              "key": "f20",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": false,
+              "requiredMessage": null,
+              "omitWhenHidden": null,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+
+              },
+              "dataType": "string",
+              "renderType": "dropdown",
+              "choicesResourceName": null,
+              "choicesRunIf": null,
+              "choices": [
+
+              ]
+            }
+          ],
+          "omitWhenHidden": false,
+          "renderType": null
+        }
+      ],
+      "events": [
+        {
+          "name": "Look for changes in Template Params",
+          "type": "Load",
+          "action": "Custom",
+          "code": "if( K('field[Parent Submission Id]').value() !== null) {\n  var submissionId = K('field[Parent Submission Id]').value();\n  K.load({\n    path: bundle.spaceLocation() + '/submissions/' + submissionId + '?review',\n    container: \"#requestDetails\"\n  })\n}\n$('[data-element-name=\"Required Parameters\"] input').change( function(){\n  alert('yo yo yo'); \n  buildParameterQuestions();\n});\nfunction buildParameterQuestions(){\n    if(K('field[Template to Use]').value() === null || K('field[Required Parameters]').value() === \"\" ){\n        $('#parameters').html(\"\");\n    } else {\n        var parameters = JSON.parse(K('field[Required Parameters]').value());\n        var savedParameters = K('field[Parameters Output]').value();\n        if(savedParameters !== null && savedParameters !== \"\"){\n            savedParameters = JSON.parse(savedParameters);\n        } else {\n            savedParameters = {};\n        }\n        var paramsDiv = $(\"<div id='required-parameters'><div class='alert alert-info'><strong>Required Parameters for this Template</strong></div>  </div>\");\n\n        $.each(Object.keys(parameters), function(i,v){\n            var param = $(\"<div class='col-sm-6'/>\");\n            $(param)\n                .addClass('form-group')\n                .append($(\"<label/>\").html(parameters[v][\"Description\"]));\n            if(parameters[v][\"AllowedValues\"]!== undefined){\n                var select = $(\"<select/>\").addClass('form-control').attr(\"name\",v).html(v).append(\"<option/>\")\n                if(savedParameters[v] !== undefined){\n                    $(select).val(savedParameters[v]);\n                }\n                $.each(parameters[v][\"AllowedValues\"],function(){\n                    $(select).append(\"<option>\" + this + \"</option>\").val(this);\n                });\n                $(param).append($(select));\n            } else{\n                $(param).append($(\"<input/>\").addClass('form-control').attr(\"name\",v).html(v));\n                if(savedParameters[v] !== undefined){\n                    $(param).find('input').val(savedParameters[v]);\n                }\n                if(parameters[v][\"Default\"] !== undefined){\n                    $(param).find('input').attr('placeholder', parameters[v][\"Default\"] ).val(parameters[v][\"Default\"]);\n                }\n            }   \n            $(paramsDiv).append($(param));\n        });\n       $('#parameters').html(paramsDiv);\n   }\n}"
+        },
+        {
+          "name": "Save and Build Parameters Questions JSON",
+          "type": "Submit",
+          "action": "Custom",
+          "code": "saveParametersQuestions();\nfunction saveParametersQuestions(){\n    var paramObj = {};\n    $('#required-parameters').children().find('input, select').each(function(){\n        paramObj[$(this).attr('name')] = $(this).val();\n    });\n    K('field[Parameters Output]').value(JSON.stringify(paramObj));\n}"
+        }
+      ],
+      "name": "Page 1",
+      "renderType": "submittable",
+      "type": "page"
+    },
+    {
+      "advanceCondition": null,
+      "displayCondition": "",
+      "displayPage": "",
+      "elements": [
+
+      ],
+      "events": [
+
+      ],
+      "name": "Confirmation Page",
+      "renderType": "confirmation",
+      "type": "page"
+    }
+  ],
+  "securityPolicies": [
+
+  ],
+  "slug": "aws-cloud-formation-stack-create",
+  "status": "New",
+  "submissionLabelExpression": "${values('Work Order Displayed Name')}",
+  "type": "Ticket"
+}

@@ -1,0 +1,140 @@
+{
+  "anonymous": true,
+  "attributes": [
+
+  ],
+  "bridgedResources": [
+    {
+      "model": "Datastore - Organizations",
+      "name": "Organizations",
+      "order": [
+
+      ],
+      "parameters": [
+
+      ],
+      "qualification": "All",
+      "status": "Active"
+    }
+  ],
+  "categorizations": [
+    {
+      "category": {
+        "slug": "example-services"
+      }
+    }
+  ],
+  "customHeadContent": "<script>\n/*!\n * Bootstrap-submenu v2.0.4 (https://vsn4ik.github.io/bootstrap-submenu/)\n * Copyright 2014-2016 Vasily A. (https://github.com/vsn4ik)\n * Licensed under the MIT license\n */\n\n/**\n * $.inArray: friends with IE8. Use Array.prototype.indexOf in future.\n * $.proxy: friends with IE8. Use Function.prototype.bind in future.\n */\n\n'use strict';\n\n(function(factory) {\n  if (typeof define == 'function' && define.amd) {\n    // AMD. Register as an anonymous module\n    define(['jquery'], factory);\n  }\n  else if (typeof exports == 'object') {\n    // Node/CommonJS\n    module.exports = factory(require('jquery'));\n  }\n  else {\n    // Browser globals\n    factory(jQuery);\n  }\n})(function($) {\n  function Item(element) {\n    this.$element = $(element);\n    this.$menu = this.$element.closest('.dropdown-menu');\n    this.$main = this.$menu.parent();\n    this.$items = this.$menu.children('.dropdown-submenu');\n\n    this.init();\n  }\n\n  Item.prototype = {\n    init: function() {\n      this.$element.on('keydown', $.proxy(this, 'keydown'));\n    },\n    close: function() {\n      this.$main.removeClass('open');\n      this.$items.trigger('hide.bs.submenu');\n    },\n    keydown: function(event) {\n      // 27: Esc\n\n      if (event.keyCode == 27) {\n        event.stopPropagation();\n\n        this.close();\n        this.$main.children('a, button').trigger('focus');\n      }\n    }\n  };\n\n  function SubmenuItem(element) {\n    this.$element = $(element);\n    this.$main = this.$element.parent();\n    this.$menu = this.$main.children('.dropdown-menu');\n    this.$subs = this.$main.siblings('.dropdown-submenu');\n    this.$items = this.$menu.children('.dropdown-submenu');\n\n    this.init();\n  }\n\n  $.extend(SubmenuItem.prototype, Item.prototype, {\n    init: function() {\n      this.$element.on({\n        click: $.proxy(this, 'click'),\n        keydown: $.proxy(this, 'keydown')\n      });\n\n      this.$main.on('hide.bs.submenu', $.proxy(this, 'hide'));\n    },\n    click: function(event) {\n      // Fix a[href=\"#\"]. For community\n      event.preventDefault();\n\n      event.stopPropagation();\n\n      this.toggle();\n    },\n    hide: function(event) {\n      // Stop event bubbling\n      event.stopPropagation();\n\n      this.close();\n    },\n    open: function() {\n      this.$main.addClass('open');\n      this.$subs.trigger('hide.bs.submenu');\n    },\n    toggle: function() {\n      if (this.$main.hasClass('open')) {\n        this.close();\n      }\n      else {\n        this.open();\n      }\n    },\n    keydown: function(event) {\n      // 13: Return, 32: Spacebar\n\n      if (event.keyCode == 32) {\n        // Off vertical scrolling\n        event.preventDefault();\n      }\n\n      if ($.inArray(event.keyCode, [13, 32]) != -1) {\n        this.toggle();\n      }\n    }\n  });\n\n  function Submenupicker(element) {\n    this.$element = $(element);\n    this.$main = this.$element.parent();\n    this.$menu = this.$main.children('.dropdown-menu');\n    this.$items = this.$menu.children('.dropdown-submenu');\n\n    this.init();\n  }\n\n  Submenupicker.prototype = {\n    init: function() {\n      this.$menu.off('keydown.bs.dropdown.data-api');\n      this.$menu.on('keydown', $.proxy(this, 'itemKeydown'));\n\n      this.$menu.find('li > a').each(function() {\n        new Item(this);\n      });\n\n      this.$menu.find('.dropdown-submenu > a').each(function() {\n        new SubmenuItem(this);\n      });\n\n      this.$main.on('hidden.bs.dropdown', $.proxy(this, 'hidden'));\n    },\n    hidden: function() {\n      this.$items.trigger('hide.bs.submenu');\n    },\n    itemKeydown: function(event) {\n      // 38: Arrow up, 40: Arrow down\n\n      if ($.inArray(event.keyCode, [38, 40]) != -1) {\n        // Off vertical scrolling\n        event.preventDefault();\n\n        event.stopPropagation();\n\n        var $items = this.$menu.find('li:not(.disabled):visible > a');\n        var index = $items.index(event.target);\n\n        if (event.keyCode == 38 && index !== 0) {\n          index--;\n        }\n        else if (event.keyCode == 40 && index !== $items.length - 1) {\n          index++;\n        }\n        else {\n          return;\n        }\n\n        $items.eq(index).trigger('focus');\n      }\n    }\n  };\n\n  var old = $.fn.submenupicker;\n\n  // For AMD/Node/CommonJS used elements (optional)\n  // http://learn.jquery.com/jquery-ui/environments/amd/\n  $.fn.submenupicker = function(elements) {\n    var $elements = this instanceof $ ? this : $(elements);\n\n    return $elements.each(function() {\n      var data = $.data(this, 'bs.submenu');\n\n      if (!data) {\n        data = new Submenupicker(this);\n\n        $.data(this, 'bs.submenu', data);\n      }\n    });\n  };\n\n  $.fn.submenupicker.Constructor = Submenupicker;\n  $.fn.submenupicker.noConflict = function() {\n    $.fn.submenupicker = old;\n    return this;\n  };\n\n  return $.fn.submenupicker;\n});\n</script>\n\n<style>\n/*!\n * Bootstrap-submenu v2.0.4 (https://vsn4ik.github.io/bootstrap-submenu/)\n * Copyright 2014-2016 Vasily A. (https://github.com/vsn4ik)\n * Licensed under the MIT license\n */\n\n.dropdown-submenu > a:after {\n  content: \"\";\n}\n@media (min-width: 768px) {\n  .dropdown-submenu {\n    position: relative;\n  }\n  .dropdown-submenu .dropdown-menu {\n    top: 0;\n    left: 100%;\n    margin-top: -6px;\n    border-top-left-radius: 0;\n  }\n  .dropup .dropdown-submenu .dropdown-menu,\n  .navbar-fixed-bottom .dropdown-submenu .dropdown-menu {\n    top: auto;\n    bottom: 0;\n    margin-top: 0;\n    margin-bottom: -6px;\n    border-top-left-radius: 4px;\n    border-bottom-left-radius: 0;\n  }\n  .dropdown-menu-right .dropdown-submenu .dropdown-menu,\n  .navbar-right .dropdown-submenu .dropdown-menu {\n    left: auto;\n    right: 100%;\n    border-top-left-radius: 4px;\n    border-top-right-radius: 0;\n  }\n  .dropup .dropdown-menu-right .dropdown-submenu .dropdown-menu,\n  .dropup .navbar-right .dropdown-submenu .dropdown-menu,\n  .navbar-fixed-bottom .dropdown-menu-right .dropdown-submenu .dropdown-menu,\n  .navbar-fixed-bottom .navbar-right .dropdown-submenu .dropdown-menu {\n    border-radius: 4px 4px 0;\n  }\n  .dropdown-submenu > a:after {\n    float: right;\n    margin-top: 6px;\n    margin-right: -10px;\n    border-left: 4px dashed;\n    border-top: 4px solid transparent;\n    border-bottom: 4px solid transparent;\n  }\n  .dropdown-menu-right .dropdown-submenu > a:after,\n  .navbar-right .dropdown-submenu > a:after {\n    float: left;\n    border-left: none;\n    margin-left: -10px;\n    margin-right: 0;\n    border-right: 4px dashed;\n    border-top: 4px solid transparent;\n    border-bottom: 4px solid transparent;\n  }\n}\n@media (max-width: 767px) {\n  .dropdown-submenu .dropdown-menu {\n    position: static;\n    margin-top: 0;\n    border: 0;\n    box-shadow: none;\n  }\n  .dropdown-submenu > a:after {\n    margin-left: 6px;\n    display: inline-block;\n    vertical-align: middle;\n    border-top: 4px dashed;\n    border-left: 4px solid transparent;\n    border-right: 4px solid transparent;\n  }\n  .dropdown > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li.dropdown-header,\n  .dropup > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li.dropdown-header,\n  .btn-group > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li.dropdown-header,\n  .dropdown > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > a,\n  .dropup > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > a,\n  .btn-group > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > a {\n    padding-left: 30px;\n  }\n  .dropdown > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > .dropdown-menu > li.dropdown-header,\n  .dropup > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > .dropdown-menu > li.dropdown-header,\n  .btn-group > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > .dropdown-menu > li.dropdown-header,\n  .dropdown > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > .dropdown-menu > li > a,\n  .dropup > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > .dropdown-menu > li > a,\n  .btn-group > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > .dropdown-menu > li > a {\n    padding-left: 40px;\n  }\n  .dropdown > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > .dropdown-menu > li > .dropdown-menu > li.dropdown-header,\n  .dropup > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > .dropdown-menu > li > .dropdown-menu > li.dropdown-header,\n  .btn-group > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > .dropdown-menu > li > .dropdown-menu > li.dropdown-header,\n  .dropdown > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > .dropdown-menu > li > .dropdown-menu > li > a,\n  .dropup > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > .dropdown-menu > li > .dropdown-menu > li > a,\n  .btn-group > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > .dropdown-menu > li > .dropdown-menu > li > a {\n    padding-left: 50px;\n  }\n  .dropdown > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > .dropdown-menu > li > .dropdown-menu > li > .dropdown-menu > li.dropdown-header,\n  .dropup > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > .dropdown-menu > li > .dropdown-menu > li > .dropdown-menu > li.dropdown-header,\n  .btn-group > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > .dropdown-menu > li > .dropdown-menu > li > .dropdown-menu > li.dropdown-header,\n  .dropdown > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > .dropdown-menu > li > .dropdown-menu > li > .dropdown-menu > li > a,\n  .dropup > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > .dropdown-menu > li > .dropdown-menu > li > .dropdown-menu > li > a,\n  .btn-group > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > .dropdown-menu > li > .dropdown-menu > li > .dropdown-menu > li > a {\n    padding-left: 60px;\n  }\n  .navbar-nav > .dropdown > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li.dropdown-header,\n  .navbar-nav > .dropdown > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > a {\n    padding-left: 35px;\n  }\n  .navbar-nav > .dropdown > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > .dropdown-menu > li.dropdown-header,\n  .navbar-nav > .dropdown > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > .dropdown-menu > li > a {\n    padding-left: 45px;\n  }\n  .navbar-nav > .dropdown > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > .dropdown-menu > li > .dropdown-menu > li.dropdown-header,\n  .navbar-nav > .dropdown > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > .dropdown-menu > li > .dropdown-menu > li > a {\n    padding-left: 55px;\n  }\n  .navbar-nav > .dropdown > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > .dropdown-menu > li > .dropdown-menu > li > .dropdown-menu > li.dropdown-header,\n  .navbar-nav > .dropdown > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > .dropdown-menu > li > .dropdown-menu > li > .dropdown-menu > li > a {\n    padding-left: 65px;\n  }\n}\n/*# sourceMappingURL=bootstrap-submenu.css.map */\n</style>",
+  "description": "Uses javascript and Kinetic Bridging to Pull in Multi-tiered data to a dropdown list",
+  "fields": [
+    {
+      "name": "Organization Name"
+    },
+    {
+      "name": "Project Description"
+    }
+  ],
+  "name": "Multi-Tier Dropdown Example",
+  "notes": null,
+  "pages": [
+    {
+      "advanceCondition": null,
+      "displayCondition": null,
+      "displayPage": null,
+      "elements": [
+        {
+          "type": "section",
+          "renderType": null,
+          "name": "Project Information",
+          "title": "Project Information",
+          "visible": true,
+          "omitWhenHidden": null,
+          "renderAttributes": {
+
+          },
+          "elements": [
+            {
+              "type": "field",
+              "name": "Organization Name",
+              "label": "Organization Name",
+              "key": "f8",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": false,
+              "required": false,
+              "requiredMessage": null,
+              "omitWhenHidden": null,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+                "help-text": "The Organization this Project belongs to",
+                "placeholder": "Select an organization from the menu"
+              },
+              "dataType": "string",
+              "renderType": "text",
+              "rows": 1
+            },
+            {
+              "type": "field",
+              "name": "Project Description",
+              "label": "Project Description",
+              "key": "f7",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": false,
+              "requiredMessage": null,
+              "omitWhenHidden": null,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+                "help-text": "A Description of the Project you are requesting JITC Services For"
+              },
+              "dataType": "string",
+              "renderType": "text",
+              "rows": 4
+            }
+          ]
+        }
+      ],
+      "events": [
+        {
+          "name": "Build Organizations",
+          "type": "Load",
+          "action": "Custom",
+          "code": "var dropdown = $(K('field[Organization Name]').wrapper()).first();\n$(dropdown).find('input').wrap($('<div class=\"input-group\"/>'));\n\nK('bridgedResource[Organizations]').load({\n    attributes: ['Full Name'],\n    success: function(bridgedData) {\n        var tiers = {};\n        var html = $('<div class=\"input-group-btn\">' +\n                        '<button class=\"btn btn-default dropdown-toggle\" type=\"button\" data-submenu data-toggle=\"dropdown\">Select Organization</button>' + \n                        '<ul class=\"dropdown-menu top-level\"/>' + \n                    '</div>');\n        // Build Map of Dropdown Menu Data\n        _.each(bridgedData,function(item)\n           {\n               var firstKey = item['Center'];\n               var secondKey = item['Organization'];\n               var thirdKey = item['D Code'];\n               tiers[firstKey] = tiers[firstKey] || {};\n               tiers[firstKey][secondKey] = tiers[firstKey][secondKey] || {};\n               tiers[firstKey][secondKey][thirdKey] = tiers[firstKey][secondKey][thirdKey] || {};\n           }\n        );\n\n        // Loop over tier 1's\n        _.each(Object.keys(tiers),function(tier1){\n            var tier1Html = $('<li class=\"dropdown dropdown-submenu\">' + \n                                '<a tabindex=\"-1\" href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">' + tier1 + '</a>' + \n                                '<ul tier-1=\"'+tier1+'\" class=\"dropdown-menu\"/>');\n            // Loop over tier 2's\n            _.each(Object.keys(tiers[tier1]), function(tier2){\n                var tier2Html = $('<li class=\"dropdown dropdown-submenu\">' + \n                                '<a tabindex=\"-1\" href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">' + tier2 + '</a>' + \n                                '<ul tier-2=\"'+tier2+'\" class=\"dropdown-menu\"/>');\n\n                // Loop over tier3's\n                _.each(Object.keys(tiers[tier1][tier2]), function(tier3){\n                    var tier3Html = $('<li><a class=\"tier3Org\" href=\"#\">' + tier3 + '</a></li>');\n                    $(tier2Html).find('ul[tier-2=\"'+tier2+'\"]').append(tier3Html);\n                })\n\n                $(tier1Html).find('ul[tier-1=\"'+tier1+'\"]').append(tier2Html);\n            })\n            $(html).find('ul.top-level').append(tier1Html);\n        })\n        $(dropdown).find('.input-group').prepend(html);\n\n        // Call the dropdown-submenu JS library\n        $('[data-submenu]').submenupicker();\n\n        $('.tier3Org').click(function(e){\n            e.preventDefault();\n            tier2 = $(this).parent().parent().parent().children('a').text()\n            tier1 = $(this).parent().parent().parent().parent().parent().children('a').text();\n            val = tier1 + \"::\" + tier2 + \"::\" + $(this).text();\n            K('field[Organization Name]').value(val);\n        })\n    }\n});",
+          "bridgedResourceName": "Organizations"
+        }
+      ],
+      "name": "Registration Form",
+      "renderType": "submittable",
+      "type": "page"
+    }
+  ],
+  "securityPolicies": [
+    {
+      "endpoint": "Display",
+      "name": "Everyone"
+    },
+    {
+      "endpoint": "Submission Access",
+      "name": "Everyone"
+    }
+  ],
+  "slug": "portal-registration",
+  "status": "Active",
+  "submissionLabelExpression": "${form('name')} - ${values('Organization Name')}",
+  "type": "Console"
+}

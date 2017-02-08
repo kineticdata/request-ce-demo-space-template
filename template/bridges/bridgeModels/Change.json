@@ -1,0 +1,90 @@
+{
+  "activeMappingName": "BMC - Change",
+  "attributes": [
+    {
+      "name": "Id"
+    },
+    {
+      "name": "Impact"
+    },
+    {
+      "name": "Notes"
+    },
+    {
+      "name": "Priority"
+    },
+    {
+      "name": "Status"
+    },
+    {
+      "name": "Status Reason"
+    },
+    {
+      "name": "Summary"
+    },
+    {
+      "name": "Token"
+    }
+  ],
+  "mappings": [
+    {
+      "attributes": [
+        {
+          "name": "Id",
+          "structureField": "${fields('Infrastructure Change ID')}"
+        },
+        {
+          "name": "Impact",
+          "structureField": "${fields('Impact')}"
+        },
+        {
+          "name": "Notes",
+          "structureField": "${fields('Detailed Description')}"
+        },
+        {
+          "name": "Priority",
+          "structureField": "${fields('Priority')}"
+        },
+        {
+          "name": "Status",
+          "structureField": "${fields('Change Request Status')}"
+        },
+        {
+          "name": "Status Reason",
+          "structureField": "${fields('Status Reason')}"
+        },
+        {
+          "name": "Summary",
+          "structureField": "${fields('Description')}"
+        },
+        {
+          "name": "Token",
+          "structureField": "${fields('SRMSAOIGuid')}"
+        }
+      ],
+      "bridgeName": "Remedy ITSM",
+      "name": "BMC - Change",
+      "qualifications": [
+        {
+          "name": "By Id",
+          "query": "'Infrastructure Change ID' = \"${parameters('Id')}\""
+        }
+      ],
+      "structure": "CHG:Infrastructure Change"
+    }
+  ],
+  "name": "Change",
+  "qualifications": [
+    {
+      "name": "By Id",
+      "parameters": [
+        {
+          "name": "Id",
+          "notes": null
+        }
+      ],
+      "resultType": "Single"
+    }
+  ],
+  "status": "Active"
+}
