@@ -13,7 +13,7 @@
   "description": "Stores members within a group.",
   "fields": [
     {
-      "name": "Group Id"
+      "name": "Group Name"
     },
     {
       "name": "Username"
@@ -40,7 +40,7 @@
           "elements": [
             {
               "type": "field",
-              "name": "Group Id",
+              "name": "Group Name",
               "label": "Group Id",
               "key": "f3",
               "defaultValue": null,

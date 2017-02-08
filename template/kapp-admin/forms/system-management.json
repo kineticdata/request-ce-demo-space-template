@@ -10,36 +10,33 @@
 
   ],
   "customHeadContent": null,
-  "description": "Allows for creation and management of groups and their members.",
+  "description": "Allows for management of Space Attributes.",
   "fields": [
 
   ],
-  "name": "Group Management",
+  "name": "System Management",
   "notes": null,
   "pages": [
     {
       "advanceCondition": null,
       "displayCondition": null,
-      "displayPage": "pages/groups/console.jsp",
+      "displayPage": "pages/system-management/console.jsp",
       "elements": [
 
       ],
       "events": [
 
       ],
-      "name": "Group Management",
+      "name": "System Management",
       "renderType": "submittable",
       "type": "page"
     }
   ],
   "securityPolicies": [
-    {
-      "endpoint": "Display",
-      "name": "Admins"
-    }
+
   ],
-  "slug": "group-management",
+  "slug": "system-management",
   "status": "Active",
-  "submissionLabelExpression": null,
+  "submissionLabelExpression": "${form('name')} ${form('slug')}",
   "type": "Console"
 }

@@ -1,0 +1,328 @@
+{
+  "anonymous": false,
+  "attributes": [
+    {
+      "name": "Datastore Configuration",
+      "values": [
+        "[{\"data\":\"Status\",\"title\":\"Status\",\"visible\":false,\"searchable\":true,\"orderable\":true,\"unique\":false},{\"data\":\"Username\",\"title\":\"Username\",\"visible\":true,\"searchable\":true,\"orderable\":true,\"unique\":false},{\"data\":\"Title\",\"title\":\"Title\",\"visible\":true,\"searchable\":true,\"orderable\":true,\"unique\":false},{\"data\":\"Body\",\"title\":\"Body\",\"visible\":true,\"searchable\":true,\"orderable\":true,\"unique\":false},{\"data\":\"Kapp\",\"title\":\"Kapp\",\"visible\":true,\"searchable\":true,\"orderable\":true,\"unique\":false},{\"data\":\"Archive\",\"title\":\"Archive\",\"visible\":true,\"searchable\":true,\"orderable\":true,\"unique\":false},{\"data\":\"Date Time Sent\",\"title\":\"Date Time Sent\",\"visible\":true,\"searchable\":true,\"orderable\":true,\"unique\":false},{\"data\":\"URL\",\"title\":\"URL\",\"visible\":true,\"searchable\":true,\"orderable\":true,\"unique\":false},{\"data\":\"Type\",\"title\":\"Type\",\"visible\":true,\"searchable\":true,\"orderable\":true,\"unique\":false}]"
+      ]
+    }
+  ],
+  "bridgedResources": [
+
+  ],
+  "categorizations": [
+
+  ],
+  "customHeadContent": null,
+  "description": "Datastore for programmatically created messages to the user",
+  "fields": [
+    {
+      "name": "Status"
+    },
+    {
+      "name": "Username"
+    },
+    {
+      "name": "Kapp"
+    },
+    {
+      "name": "Type"
+    },
+    {
+      "name": "Title"
+    },
+    {
+      "name": "Body"
+    },
+    {
+      "name": "Archive"
+    },
+    {
+      "name": "Date Time Sent"
+    }
+  ],
+  "name": "Messages",
+  "notes": null,
+  "pages": [
+    {
+      "advanceCondition": "false",
+      "displayCondition": null,
+      "displayPage": "pages/datastore/datastoreForm.jsp",
+      "elements": [
+        {
+          "type": "field",
+          "name": "Status",
+          "label": "Status",
+          "key": "f1",
+          "defaultValue": null,
+          "defaultResourceName": null,
+          "visible": true,
+          "enabled": true,
+          "required": true,
+          "requiredMessage": null,
+          "omitWhenHidden": null,
+          "pattern": null,
+          "constraints": [
+
+          ],
+          "events": [
+
+          ],
+          "renderAttributes": {
+
+          },
+          "dataType": "string",
+          "renderType": "radio",
+          "choicesResourceName": null,
+          "choicesRunIf": null,
+          "choices": [
+            {
+              "label": "Read",
+              "value": "Read"
+            },
+            {
+              "label": "Unread",
+              "value": "Unread"
+            }
+          ]
+        },
+        {
+          "type": "field",
+          "name": "Username",
+          "label": "Username",
+          "key": "fSample",
+          "defaultValue": null,
+          "defaultResourceName": null,
+          "visible": true,
+          "enabled": true,
+          "required": false,
+          "requiredMessage": null,
+          "omitWhenHidden": null,
+          "pattern": null,
+          "constraints": [
+
+          ],
+          "events": [
+
+          ],
+          "renderAttributes": {
+
+          },
+          "dataType": "string",
+          "renderType": "text",
+          "rows": 1
+        },
+        {
+          "type": "field",
+          "name": "Kapp",
+          "label": "Kapp",
+          "key": "f8",
+          "defaultValue": null,
+          "defaultResourceName": null,
+          "visible": true,
+          "enabled": true,
+          "required": false,
+          "requiredMessage": null,
+          "omitWhenHidden": null,
+          "pattern": null,
+          "constraints": [
+
+          ],
+          "events": [
+
+          ],
+          "renderAttributes": {
+
+          },
+          "dataType": "string",
+          "renderType": "dropdown",
+          "choicesResourceName": null,
+          "choicesRunIf": null,
+          "choices": [
+
+          ]
+        },
+        {
+          "type": "field",
+          "name": "Type",
+          "label": "Type",
+          "key": "f9",
+          "defaultValue": null,
+          "defaultResourceName": null,
+          "visible": true,
+          "enabled": true,
+          "required": false,
+          "requiredMessage": null,
+          "omitWhenHidden": null,
+          "pattern": null,
+          "constraints": [
+
+          ],
+          "events": [
+
+          ],
+          "renderAttributes": {
+
+          },
+          "dataType": "string",
+          "renderType": "text",
+          "rows": 1
+        },
+        {
+          "type": "field",
+          "name": "Title",
+          "label": "Title",
+          "key": "f2",
+          "defaultValue": null,
+          "defaultResourceName": null,
+          "visible": true,
+          "enabled": true,
+          "required": false,
+          "requiredMessage": null,
+          "omitWhenHidden": null,
+          "pattern": null,
+          "constraints": [
+
+          ],
+          "events": [
+
+          ],
+          "renderAttributes": {
+
+          },
+          "dataType": "string",
+          "renderType": "text",
+          "rows": 1
+        },
+        {
+          "type": "field",
+          "name": "Body",
+          "label": "Body",
+          "key": "f7",
+          "defaultValue": null,
+          "defaultResourceName": null,
+          "visible": true,
+          "enabled": true,
+          "required": false,
+          "requiredMessage": null,
+          "omitWhenHidden": null,
+          "pattern": null,
+          "constraints": [
+
+          ],
+          "events": [
+
+          ],
+          "renderAttributes": {
+
+          },
+          "dataType": "string",
+          "renderType": "text",
+          "rows": 5
+        },
+        {
+          "type": "field",
+          "name": "Archive",
+          "label": "",
+          "key": "f4",
+          "defaultValue": null,
+          "defaultResourceName": null,
+          "visible": true,
+          "enabled": true,
+          "required": false,
+          "requiredMessage": null,
+          "omitWhenHidden": null,
+          "pattern": null,
+          "constraints": [
+
+          ],
+          "events": [
+
+          ],
+          "renderAttributes": {
+
+          },
+          "dataType": "json",
+          "renderType": "checkbox",
+          "choicesResourceName": null,
+          "choicesRunIf": null,
+          "choices": [
+            {
+              "label": "Archive",
+              "value": "Archive"
+            }
+          ]
+        },
+        {
+          "type": "field",
+          "name": "Date Time Sent",
+          "label": "Date Time Sent",
+          "key": "f5",
+          "defaultValue": null,
+          "defaultResourceName": null,
+          "visible": true,
+          "enabled": true,
+          "required": false,
+          "requiredMessage": null,
+          "omitWhenHidden": null,
+          "pattern": null,
+          "constraints": [
+
+          ],
+          "events": [
+
+          ],
+          "renderAttributes": {
+
+          },
+          "dataType": "string",
+          "renderType": "datetime"
+        },
+        {
+          "type": "button",
+          "label": "Save",
+          "name": "Save",
+          "visible": "bundle.adminDatastore != null",
+          "enabled": true,
+          "renderType": "submit-page",
+          "renderAttributes": {
+            "class": "btn btn-primary"
+          }
+        },
+        {
+          "type": "button",
+          "label": "Cancel",
+          "name": "Cancel",
+          "visible": "bundle.adminDatastore != null",
+          "enabled": true,
+          "renderType": "custom",
+          "renderAttributes": {
+            "class": "btn btn-link cancel-record"
+          },
+          "events": [
+
+          ]
+        }
+      ],
+      "events": [
+        {
+          "name": "Add Kapp Options",
+          "type": "Load",
+          "action": "Custom",
+          "code": "K.api(\"get\", bundle.apiLocation()+\"/kapps\", {\n  success: function(data){\n    var kappOptions = [];\n    $.each(data.kapps, function(i,v){\n    \tkappOptions.push({'label':v.name,'value':v.slug});\n    });\n    console.log(kappOptions);\n    K('field[Kapp]').options(kappOptions);\n  }\n})"
+        }
+      ],
+      "name": "Datastore",
+      "renderType": "submittable",
+      "type": "page"
+    }
+  ],
+  "securityPolicies": [
+
+  ],
+  "slug": "messages",
+  "status": "Active",
+  "submissionLabelExpression": "${values('Date Time Sent')} ${values('Username')} ${values('Title')}",
+  "type": "Content"
+}

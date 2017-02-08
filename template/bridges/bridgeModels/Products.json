@@ -1,0 +1,73 @@
+{
+  "activeMappingName": "Products from ITSM",
+  "attributes": [
+    {
+      "name": "Product Name"
+    },
+    {
+      "name": "Tier 1"
+    },
+    {
+      "name": "Tier 2"
+    },
+    {
+      "name": "Tier 3"
+    }
+  ],
+  "mappings": [
+    {
+      "attributes": [
+        {
+          "name": "Product Name",
+          "structureField": "${fields('Product Name')}"
+        },
+        {
+          "name": "Tier 1",
+          "structureField": "${fields('Product Categorization Tier 1')}"
+        },
+        {
+          "name": "Tier 2",
+          "structureField": "${fields('Product Categorization Tier 2')}"
+        },
+        {
+          "name": "Tier 3",
+          "structureField": "${fields('Product Categorization Tier 3')}"
+        }
+      ],
+      "bridgeName": "Remedy ITSM",
+      "name": "Products from ITSM",
+      "qualifications": [
+        {
+          "name": "All Products",
+          "query": "'Product Name' != $NULL$ AND '7' = \"Enabled\""
+        },
+        {
+          "name": "By Name",
+          "query": "'Product Name' LIKE \"%${parameters('Name')}%\" AND '7' = \"Enabled\""
+        }
+      ],
+      "structure": "PCT:Product Catalog"
+    }
+  ],
+  "name": "Products",
+  "qualifications": [
+    {
+      "name": "All Products",
+      "parameters": [
+
+      ],
+      "resultType": "Multiple"
+    },
+    {
+      "name": "By Name",
+      "parameters": [
+        {
+          "name": "Name",
+          "notes": null
+        }
+      ],
+      "resultType": "Multiple"
+    }
+  ],
+  "status": "Active"
+}

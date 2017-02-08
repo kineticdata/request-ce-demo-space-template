@@ -147,8 +147,7 @@ puts "Exporting Submissions"
 
 # Build mapping of kapp/forms to export
 formsToExport = {"admin" => [
-                             'broadcast-alerts', 
-                             'group-membership', 
+                             'broadcast-alerts',
                              'group', 
                              'telephone'
                             ]

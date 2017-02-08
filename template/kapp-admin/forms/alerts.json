@@ -1,0 +1,278 @@
+{
+  "anonymous": false,
+  "attributes": [
+    {
+      "name": "Datastore Configuration",
+      "values": [
+        "[{\"data\":\"Source\",\"title\":\"Source\",\"visible\":true,\"searchable\":true,\"orderable\":true,\"unique\":false},{\"data\":\"Title\",\"title\":\"Title\",\"visible\":true,\"searchable\":true,\"orderable\":true,\"unique\":false},{\"data\":\"Content\",\"title\":\"Content\",\"visible\":true,\"searchable\":true,\"orderable\":true,\"unique\":false},{\"data\":\"URL\",\"title\":\"URL\",\"visible\":true,\"searchable\":true,\"orderable\":true,\"unique\":false},{\"data\":\"Display Start Date\",\"title\":\"Display Start Date\",\"visible\":true,\"searchable\":true,\"orderable\":true,\"unique\":false},{\"data\":\"Display end Date\",\"title\":\"Display end Date\",\"visible\":true,\"searchable\":true,\"orderable\":true,\"unique\":false},{\"data\":\"Start Date\",\"title\":\"Start Date\",\"visible\":true,\"searchable\":true,\"orderable\":true,\"unique\":false},{\"data\":\"End Date\",\"title\":\"End Date\",\"visible\":true,\"searchable\":true,\"orderable\":true,\"unique\":false}]"
+      ]
+    }
+  ],
+  "bridgedResources": [
+
+  ],
+  "categorizations": [
+
+  ],
+  "customHeadContent": null,
+  "description": "System Alert notifications",
+  "fields": [
+    {
+      "name": "Status"
+    },
+    {
+      "name": "Title"
+    },
+    {
+      "name": "Content"
+    },
+    {
+      "name": "Start Date Time"
+    },
+    {
+      "name": "URL"
+    },
+    {
+      "name": "Source"
+    }
+  ],
+  "name": "Alerts",
+  "notes": null,
+  "pages": [
+    {
+      "advanceCondition": "false",
+      "displayCondition": null,
+      "displayPage": null,
+      "elements": [
+        {
+          "type": "field",
+          "name": "Status",
+          "label": "Status",
+          "key": "f9",
+          "defaultValue": "Active",
+          "defaultResourceName": null,
+          "visible": true,
+          "enabled": true,
+          "required": true,
+          "requiredMessage": null,
+          "omitWhenHidden": null,
+          "pattern": null,
+          "constraints": [
+
+          ],
+          "events": [
+
+          ],
+          "renderAttributes": {
+
+          },
+          "dataType": "string",
+          "renderType": "radio",
+          "choicesResourceName": null,
+          "choicesRunIf": null,
+          "choices": [
+            {
+              "label": "Active",
+              "value": "Active"
+            },
+            {
+              "label": "Inactive",
+              "value": "Inactive"
+            }
+          ]
+        },
+        {
+          "type": "field",
+          "name": "Title",
+          "label": "Title",
+          "key": "fSample",
+          "defaultValue": null,
+          "defaultResourceName": null,
+          "visible": true,
+          "enabled": true,
+          "required": true,
+          "requiredMessage": null,
+          "omitWhenHidden": null,
+          "pattern": null,
+          "constraints": [
+
+          ],
+          "events": [
+
+          ],
+          "renderAttributes": {
+
+          },
+          "dataType": "string",
+          "renderType": "text",
+          "rows": 1
+        },
+        {
+          "type": "field",
+          "name": "Content",
+          "label": "Content",
+          "key": "f3",
+          "defaultValue": null,
+          "defaultResourceName": null,
+          "visible": true,
+          "enabled": true,
+          "required": false,
+          "requiredMessage": null,
+          "omitWhenHidden": null,
+          "pattern": null,
+          "constraints": [
+
+          ],
+          "events": [
+
+          ],
+          "renderAttributes": {
+
+          },
+          "dataType": "string",
+          "renderType": "text",
+          "rows": 3
+        },
+        {
+          "type": "field",
+          "name": "Start Date Time",
+          "label": "Start Date",
+          "key": "f10",
+          "defaultValue": null,
+          "defaultResourceName": null,
+          "visible": true,
+          "enabled": true,
+          "required": false,
+          "requiredMessage": null,
+          "omitWhenHidden": null,
+          "pattern": null,
+          "constraints": [
+
+          ],
+          "events": [
+
+          ],
+          "renderAttributes": {
+
+          },
+          "dataType": "string",
+          "renderType": "datetime"
+        },
+        {
+          "type": "field",
+          "name": "URL",
+          "label": "URL",
+          "key": "f4",
+          "defaultValue": null,
+          "defaultResourceName": null,
+          "visible": true,
+          "enabled": true,
+          "required": false,
+          "requiredMessage": null,
+          "omitWhenHidden": null,
+          "pattern": null,
+          "constraints": [
+
+          ],
+          "events": [
+
+          ],
+          "renderAttributes": {
+
+          },
+          "dataType": "string",
+          "renderType": "text",
+          "rows": 1
+        },
+        {
+          "type": "button",
+          "label": "Save",
+          "name": "Save",
+          "visible": true,
+          "enabled": true,
+          "renderType": "submit-page",
+          "renderAttributes": {
+            "class": "btn btn-primary"
+          }
+        },
+        {
+          "type": "button",
+          "label": "Cancel",
+          "name": "Cancel",
+          "visible": true,
+          "enabled": true,
+          "renderType": "custom",
+          "renderAttributes": {
+            "class": "btn btn-link cancel-record"
+          },
+          "events": [
+
+          ]
+        },
+        {
+          "type": "section",
+          "renderType": null,
+          "name": "Hidden Questions",
+          "title": null,
+          "visible": false,
+          "omitWhenHidden": false,
+          "renderAttributes": {
+
+          },
+          "elements": [
+            {
+              "type": "field",
+              "name": "Source",
+              "label": "Source",
+              "key": "f2",
+              "defaultValue": "Local",
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": true,
+              "requiredMessage": null,
+              "omitWhenHidden": null,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+
+              },
+              "dataType": "string",
+              "renderType": "dropdown",
+              "choicesResourceName": null,
+              "choicesRunIf": null,
+              "choices": [
+                {
+                  "label": "kinops",
+                  "value": "kinops"
+                },
+                {
+                  "label": "Local",
+                  "value": "Local"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "events": [
+
+      ],
+      "name": "Alerts",
+      "renderType": "submittable",
+      "type": "page"
+    }
+  ],
+  "securityPolicies": [
+
+  ],
+  "slug": "alerts",
+  "status": "Active",
+  "submissionLabelExpression": "${values('Title')}",
+  "type": "Content"
+}

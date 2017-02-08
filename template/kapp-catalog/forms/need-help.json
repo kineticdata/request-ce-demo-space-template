@@ -1,0 +1,387 @@
+{
+  "anonymous": false,
+  "attributes": [
+    {
+      "name": "Icon",
+      "values": [
+        "fa-question"
+      ]
+    },
+    {
+      "name": "Task Source Name",
+      "values": [
+        "CE - ADT"
+      ]
+    }
+  ],
+  "bridgedResources": [
+    {
+      "model": "Products",
+      "name": "Product",
+      "order": [
+        {
+          "attribute": "Product Name",
+          "direction": "asc"
+        }
+      ],
+      "parameters": [
+        {
+          "mapping": "${values('Product')}",
+          "name": "Name"
+        }
+      ],
+      "qualification": "By Name",
+      "status": "Active"
+    }
+  ],
+  "categorizations": [
+    {
+      "category": {
+        "slug": "example-services"
+      }
+    },
+    {
+      "category": {
+        "slug": "promoted-requests"
+      }
+    }
+  ],
+  "customHeadContent": "",
+  "description": "Get help from the service desk",
+  "fields": [
+    {
+      "name": "Product"
+    },
+    {
+      "name": "Impact"
+    },
+    {
+      "name": "Urgency"
+    },
+    {
+      "name": "Describe Your Problem"
+    },
+    {
+      "name": "Tier 1"
+    },
+    {
+      "name": "Tier 2"
+    },
+    {
+      "name": "Tier 3"
+    },
+    {
+      "name": "Product Hidden"
+    }
+  ],
+  "name": "I Need Help",
+  "notes": null,
+  "pages": [
+    {
+      "advanceCondition": null,
+      "displayCondition": null,
+      "displayPage": null,
+      "elements": [
+        {
+          "type": "section",
+          "renderType": null,
+          "name": "What can we help you with",
+          "title": "What can we help you with",
+          "visible": true,
+          "omitWhenHidden": null,
+          "renderAttributes": {
+
+          },
+          "elements": [
+            {
+              "type": "field",
+              "name": "Product",
+              "label": "Product",
+              "key": "f1",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": false,
+              "requiredMessage": null,
+              "omitWhenHidden": null,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+                "uses-typeahead": "yes",
+                "typeahead-query-field": "Product",
+                "typeahead-attributes-to-show": "Product Name",
+                "typeahead-attribute-to-set": "Product Name",
+                "typeahead-bridged-resource": "Product",
+                "typeahead-fa-class": "fa-shopping-cart",
+                "typeahead-fields-to-set": "Tier 1=Tier 1,Tier 2=Tier 2,Tier 3=Tier 3,Product Hidden=Product Name"
+              },
+              "dataType": "string",
+              "renderType": "text",
+              "rows": 1
+            },
+            {
+              "type": "field",
+              "name": "Impact",
+              "label": "Impact",
+              "key": "f8",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": true,
+              "requiredMessage": null,
+              "omitWhenHidden": null,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+
+              },
+              "dataType": "string",
+              "renderType": "dropdown",
+              "choicesResourceName": null,
+              "choicesRunIf": null,
+              "choices": [
+                {
+                  "label": "1-Extensive/Widespread",
+                  "value": "1-Extensive/Widespread"
+                },
+                {
+                  "label": "2-Significant/Large",
+                  "value": "2-Significant/Large"
+                }
+              ]
+            },
+            {
+              "type": "field",
+              "name": "Urgency",
+              "label": "Urgency",
+              "key": "f9",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": true,
+              "requiredMessage": null,
+              "omitWhenHidden": null,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+
+              },
+              "dataType": "string",
+              "renderType": "dropdown",
+              "choicesResourceName": null,
+              "choicesRunIf": null,
+              "choices": [
+                {
+                  "label": "1-Critical",
+                  "value": "1-Critical"
+                },
+                {
+                  "label": "2-High",
+                  "value": "2-High"
+                }
+              ]
+            },
+            {
+              "type": "field",
+              "name": "Describe Your Problem",
+              "label": "Describe Your Problem",
+              "key": "f7",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": true,
+              "requiredMessage": null,
+              "omitWhenHidden": null,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+
+              },
+              "dataType": "string",
+              "renderType": "text",
+              "rows": 4
+            }
+          ]
+        },
+        {
+          "type": "section",
+          "renderType": null,
+          "name": "Typeahead Fields to be Set",
+          "title": "Typeahead Fields to be Set",
+          "visible": false,
+          "omitWhenHidden": false,
+          "renderAttributes": {
+
+          },
+          "elements": [
+            {
+              "type": "field",
+              "name": "Tier 1",
+              "label": "Tier 1",
+              "key": "f4",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": false,
+              "requiredMessage": null,
+              "omitWhenHidden": null,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+
+              },
+              "dataType": "string",
+              "renderType": "text",
+              "rows": 1
+            },
+            {
+              "type": "field",
+              "name": "Tier 2",
+              "label": "Tier 2",
+              "key": "f5",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": false,
+              "requiredMessage": null,
+              "omitWhenHidden": null,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+
+              },
+              "dataType": "string",
+              "renderType": "text",
+              "rows": 1
+            },
+            {
+              "type": "field",
+              "name": "Tier 3",
+              "label": "Tier 3",
+              "key": "f6",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": false,
+              "requiredMessage": null,
+              "omitWhenHidden": null,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+
+              },
+              "dataType": "string",
+              "renderType": "text",
+              "rows": 1
+            },
+            {
+              "type": "field",
+              "name": "Product Hidden",
+              "label": "Product Hidden",
+              "key": "f10",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": false,
+              "requiredMessage": null,
+              "omitWhenHidden": null,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+
+              },
+              "dataType": "string",
+              "renderType": "text",
+              "rows": 1
+            }
+          ]
+        },
+        {
+          "type": "section",
+          "renderType": null,
+          "name": "Buttons",
+          "title": null,
+          "visible": true,
+          "omitWhenHidden": null,
+          "renderAttributes": {
+
+          },
+          "elements": [
+            {
+              "type": "button",
+              "label": "Submit",
+              "name": "Submit",
+              "visible": true,
+              "enabled": true,
+              "renderType": "submit-page",
+              "renderAttributes": {
+
+              }
+            }
+          ]
+        }
+      ],
+      "events": [
+
+      ],
+      "name": "Page 1",
+      "renderType": "submittable",
+      "type": "page"
+    }
+  ],
+  "securityPolicies": [
+
+  ],
+  "slug": "need-help",
+  "status": "Active",
+  "submissionLabelExpression": "Help Request For:  ${values('Product Hidden')}",
+  "type": "Service"
+}

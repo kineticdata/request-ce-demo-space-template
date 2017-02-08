@@ -17,6 +17,16 @@
   {
     "allowsMultiple": true,
     "description": null,
+    "name": "Help Link"
+  },
+  {
+    "allowsMultiple": true,
+    "description": null,
     "name": "Kapp Slug"
+  },
+  {
+    "allowsMultiple": false,
+    "description": null,
+    "name": "Parent Console Slug"
   }
 ]

@@ -33,6 +33,16 @@
         "form": {
           "slug": "multi-tiered-bridge-example"
         }
+      },
+      {
+        "form": {
+          "slug": "need-help"
+        }
+      },
+      {
+        "form": {
+          "slug": "update-user"
+        }
       }
     ],
     "name": "Example Services",
@@ -215,6 +225,16 @@
       {
         "form": {
           "slug": "employee-onboarding"
+        }
+      },
+      {
+        "form": {
+          "slug": "need-help"
+        }
+      },
+      {
+        "form": {
+          "slug": "update-user"
         }
       }
     ],

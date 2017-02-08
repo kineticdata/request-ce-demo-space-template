@@ -10,24 +10,24 @@
 
   ],
   "customHeadContent": null,
-  "description": "Allows for creation and management of groups and their members.",
+  "description": "Allows for creation and management of users and their properties and attributes.",
   "fields": [
 
   ],
-  "name": "Group Management",
+  "name": "User Management",
   "notes": null,
   "pages": [
     {
       "advanceCondition": null,
       "displayCondition": null,
-      "displayPage": "pages/groups/console.jsp",
+      "displayPage": "pages/users/console.jsp",
       "elements": [
 
       ],
       "events": [
 
       ],
-      "name": "Group Management",
+      "name": "User Management",
       "renderType": "submittable",
       "type": "page"
     }
@@ -38,7 +38,7 @@
       "name": "Admins"
     }
   ],
-  "slug": "group-management",
+  "slug": "user-management",
   "status": "Active",
   "submissionLabelExpression": null,
   "type": "Console"

@@ -1,3 +1,7 @@
 [
-
+  {
+    "allowsMultiple": true,
+    "description": null,
+    "name": "Group"
+  }
 ]

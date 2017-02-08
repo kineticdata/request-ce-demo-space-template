@@ -41,6 +41,22 @@
   },
   {
     "category": {
+      "slug": "example-services"
+    },
+    "form": {
+      "slug": "need-help"
+    }
+  },
+  {
+    "category": {
+      "slug": "example-services"
+    },
+    "form": {
+      "slug": "update-user"
+    }
+  },
+  {
+    "category": {
       "slug": "facilities-services"
     },
     "form": {
@@ -165,6 +181,22 @@
     },
     "form": {
       "slug": "employee-onboarding"
+    }
+  },
+  {
+    "category": {
+      "slug": "promoted-requests"
+    },
+    "form": {
+      "slug": "need-help"
+    }
+  },
+  {
+    "category": {
+      "slug": "promoted-requests"
+    },
+    "form": {
+      "slug": "update-user"
     }
   },
   {

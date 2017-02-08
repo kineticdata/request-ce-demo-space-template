@@ -240,6 +240,30 @@
     {
       "endpoint": "Default Submission Modification",
       "name": "Submitter"
+    },
+    {
+      "endpoint": "Modification",
+      "name": "Admins"
+    },
+    {
+      "endpoint": "Form Creation",
+      "name": "Admins"
+    },
+    {
+      "endpoint": "Default Form Modification",
+      "name": "Admins"
+    },
+    {
+      "endpoint": "Default Form Display",
+      "name": "Authenticated Users"
+    },
+    {
+      "endpoint": "Default Submission Access",
+      "name": "Submitter"
+    },
+    {
+      "endpoint": "Default Submission Modification",
+      "name": "Submitter"
     }
   ],
   "slug": "catalog"

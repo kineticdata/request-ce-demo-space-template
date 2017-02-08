@@ -1,0 +1,450 @@
+{
+  "anonymous": false,
+  "attributes": [
+    {
+      "name": "Image",
+      "values": [
+        "personnel-onboarding.png"
+      ]
+    },
+    {
+      "name": "Task Source Name",
+      "values": [
+        "CE - American Tower"
+      ]
+    }
+  ],
+  "bridgedResources": [
+    {
+      "model": "People",
+      "name": "AD People - Myself",
+      "order": [
+
+      ],
+      "parameters": [
+        {
+          "mapping": "${identity('username')}",
+          "name": "Id"
+        }
+      ],
+      "qualification": "By Id",
+      "status": "Active"
+    }
+  ],
+  "categorizations": [
+    {
+      "category": {
+        "slug": "example-services"
+      }
+    },
+    {
+      "category": {
+        "slug": "promoted-requests"
+      }
+    }
+  ],
+  "customHeadContent": "",
+  "description": "Updates a Users AD Info",
+  "fields": [
+    {
+      "name": "Update Type"
+    },
+    {
+      "name": "Typeahead Field"
+    },
+    {
+      "name": "Username"
+    },
+    {
+      "name": "First Name"
+    },
+    {
+      "name": "Last Name"
+    },
+    {
+      "name": "Telephone Number"
+    },
+    {
+      "name": "Email"
+    },
+    {
+      "name": "Manager DN"
+    }
+  ],
+  "name": "Update User - LDAP Example",
+  "notes": null,
+  "pages": [
+    {
+      "advanceCondition": null,
+      "displayCondition": null,
+      "displayPage": null,
+      "elements": [
+        {
+          "type": "section",
+          "renderType": null,
+          "name": "User Selection",
+          "title": "User Selection",
+          "visible": true,
+          "omitWhenHidden": null,
+          "renderAttributes": {
+
+          },
+          "elements": [
+            {
+              "type": "field",
+              "name": "Update Type",
+              "label": "Update Type",
+              "key": "f5",
+              "defaultValue": "",
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": false,
+              "requiredMessage": null,
+              "omitWhenHidden": null,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+                {
+                  "name": "Set User to Update to Self",
+                  "type": "Change",
+                  "action": "Set Fields",
+                  "mappings": [
+                    {
+                      "field": "Username",
+                      "value": "${resources('AD People - Myself:Id')}",
+                      "visible": true
+                    },
+                    {
+                      "field": "First Name",
+                      "value": "${resources('AD People - Myself:First Name')}",
+                      "visible": true
+                    },
+                    {
+                      "field": "Telephone Number",
+                      "value": "${resources('AD People - Myself:Telephone Number')}",
+                      "visible": true
+                    },
+                    {
+                      "field": "Last Name",
+                      "value": "${resources('AD People - Myself:Last Name')}",
+                      "visible": true
+                    },
+                    {
+                      "field": "Manager DN",
+                      "value": "${resources('AD People - Myself:Manager DN')}",
+                      "visible": true
+                    },
+                    {
+                      "field": "Email",
+                      "value": "${resources('AD People - Myself:Email')}",
+                      "visible": true
+                    }
+                  ],
+                  "runIf": "values('Update Type') == \"Myself\"",
+                  "bridgedResourceName": "AD People - Myself"
+                },
+                {
+                  "name": "Clear Existing Fields",
+                  "type": "Change",
+                  "action": "Set Fields",
+                  "mappings": [
+                    {
+                      "field": "Username",
+                      "value": "${null}",
+                      "visible": true
+                    },
+                    {
+                      "field": "First Name",
+                      "value": "${null}",
+                      "visible": true
+                    },
+                    {
+                      "field": "Last Name",
+                      "value": "${null}",
+                      "visible": true
+                    },
+                    {
+                      "field": "Telephone Number",
+                      "value": "${null}",
+                      "visible": true
+                    },
+                    {
+                      "field": "Manager DN",
+                      "value": "${null}",
+                      "visible": true
+                    },
+                    {
+                      "field": "Email",
+                      "value": "${null}",
+                      "visible": true
+                    }
+                  ],
+                  "runIf": "values('Update Type') == \"Other User\""
+                }
+              ],
+              "renderAttributes": {
+
+              },
+              "dataType": "string",
+              "renderType": "radio",
+              "choicesResourceName": null,
+              "choicesRunIf": null,
+              "choices": [
+                {
+                  "label": "Myself",
+                  "value": "Myself"
+                },
+                {
+                  "label": "Other User",
+                  "value": "Other User"
+                }
+              ]
+            },
+            {
+              "type": "field",
+              "name": "Typeahead Field",
+              "label": "Search for User",
+              "key": "f1",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": "values('Update Type') === \"Other User\"",
+              "enabled": true,
+              "required": false,
+              "requiredMessage": null,
+              "omitWhenHidden": true,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+                "uses-typeahead": "yes",
+                "typeahead-fa-class": "fa-user",
+                "typeahead-bridge-location": "shared-resources",
+                "typeahead-query-field": "Name",
+                "typeahead-attributes-to-show": "Full Name,Email,Telephone Number",
+                "typeahead-bridged-resource": "People - By Name",
+                "typeahead-attribute-to-set": "Full Name",
+                "typeahead-fields-to-set": "Email=Email,Telephone Number=Telephone Number,Username=Id,First Name=First Name,Last Name=Last Name,Manager DN=Manager DN"
+              },
+              "dataType": "string",
+              "renderType": "text",
+              "rows": 1
+            }
+          ]
+        },
+        {
+          "type": "section",
+          "renderType": null,
+          "name": "User Info",
+          "title": "User Info",
+          "visible": true,
+          "omitWhenHidden": null,
+          "renderAttributes": {
+
+          },
+          "elements": [
+            {
+              "type": "field",
+              "name": "Username",
+              "label": "Username",
+              "key": "f8",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": false,
+              "required": false,
+              "requiredMessage": null,
+              "omitWhenHidden": null,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+
+              },
+              "dataType": "string",
+              "renderType": "text",
+              "rows": 1
+            },
+            {
+              "type": "field",
+              "name": "First Name",
+              "label": "First Name",
+              "key": "f2",
+              "defaultValue": "",
+              "defaultResourceName": "AD People",
+              "visible": true,
+              "enabled": true,
+              "required": false,
+              "requiredMessage": null,
+              "omitWhenHidden": null,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+
+              },
+              "dataType": "string",
+              "renderType": "text",
+              "rows": 1
+            },
+            {
+              "type": "field",
+              "name": "Last Name",
+              "label": "Last Name",
+              "key": "f3",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": false,
+              "requiredMessage": null,
+              "omitWhenHidden": null,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+
+              },
+              "dataType": "string",
+              "renderType": "text",
+              "rows": 1
+            },
+            {
+              "type": "field",
+              "name": "Telephone Number",
+              "label": "Telephone Number",
+              "key": "f6",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": false,
+              "requiredMessage": null,
+              "omitWhenHidden": null,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+
+              },
+              "dataType": "string",
+              "renderType": "text",
+              "rows": 1
+            },
+            {
+              "type": "field",
+              "name": "Email",
+              "label": "Email",
+              "key": "f9",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": false,
+              "requiredMessage": null,
+              "omitWhenHidden": null,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+
+              },
+              "dataType": "string",
+              "renderType": "text",
+              "rows": 1
+            },
+            {
+              "type": "field",
+              "name": "Manager DN",
+              "label": "Manager DN",
+              "key": "f7",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": false,
+              "enabled": true,
+              "required": false,
+              "requiredMessage": null,
+              "omitWhenHidden": false,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+
+              },
+              "dataType": "string",
+              "renderType": "text",
+              "rows": 1
+            }
+          ]
+        },
+        {
+          "type": "section",
+          "renderType": null,
+          "name": "Buttons",
+          "title": null,
+          "visible": true,
+          "omitWhenHidden": null,
+          "renderAttributes": {
+
+          },
+          "elements": [
+            {
+              "type": "button",
+              "label": "Submit",
+              "name": "Submit",
+              "visible": true,
+              "enabled": true,
+              "renderType": "submit-page",
+              "renderAttributes": {
+
+              }
+            }
+          ]
+        }
+      ],
+      "events": [
+
+      ],
+      "name": "Page 1",
+      "renderType": "submittable",
+      "type": "page"
+    }
+  ],
+  "securityPolicies": [
+
+  ],
+  "slug": "update-user",
+  "status": "Active",
+  "submissionLabelExpression": "${values('First Name')} - ${values('Last Name')}",
+  "type": "Service"
+}
