@@ -5,5 +5,9 @@ server: "http://test.company.com/kinetic"
 adminUser: "admin"
 ## System Admin Password
 adminPassword: ""
+## Integration User
+integrationUser: "test@kineticdata.com"
+## Integration Password
+integrationPassword: "xyz"
 ## log level (info | debug)
 log_level: "info"

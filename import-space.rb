@@ -61,6 +61,17 @@ ceSystem.create_user({
     "spaceAdmin" => true
 })
 
+# Create Demo Integration User in Space
+ceSystem.create_user({
+    "space_slug" => space_slug,
+    "username" => env["integrationUser"],
+    "password" => env["integrationPassword"],
+    "displayName" => "Integration User",
+    "email" => "demo.taskman@kineticdata.com",
+    "enabled" => true,
+    "spaceAdmin" => true
+})
+
 # Build Space Connection with Temp User
 ceSdk = Kinetic::RequestCeApi::SDK.new({
     app_server_url: env["server"],
@@ -211,13 +222,6 @@ Dir["#{spacesDir}/kapp-*"].each do |dirname|
   end
 
 end
-
-
-
-#--------------------------------------------------------------------------
-# Generate Password Reset Token for requesting user
-#--------------------------------------------------------------------------
-puts "RESET TOKEN: " + JSON.parse(ceSdk.generate_password_token(tempUser))['token']
 
 # Remove Temporary User
 ceSystem.delete_user({
